@@ -1,0 +1,14 @@
+/.buildpath
+/.settings
+/.project
+/resources
+/tags
+*~
+/vendor/
+/composer.phar
+/.twgit*
+/.idea/
+/build/
+composer.phar
+/cache.properties
+/doc/build/
