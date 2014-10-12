@@ -1,6 +1,6 @@
 # Test documentation
 
-This test documentation is available on [Read the Docs](http://padocc-engine.readthedocs.org/).
+This test documentation is available on [Read the Docs](http://hipay-tpp-gateway-api.readthedocs.org/).
 
 
 ## Details
