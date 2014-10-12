@@ -8,6 +8,7 @@ Welcome to xyz documentation!
     </a>
 
 *Coming soon…*
+>> un test ici  <<
 
 Project's home
 --------------
