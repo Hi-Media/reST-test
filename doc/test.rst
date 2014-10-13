@@ -20,12 +20,13 @@ Images are simple pictures:
 A figure add to an image an optional caption and an optional legend:
 
 .. figure:: images/hipay_fullservice.png
-   :alt: logo HiPay Fullservice
+    :alt: logo HiPay Fullservice
 
-   This is the caption of the figure (a simple paragraph).
+    This is the caption of the figure (a simple paragraph).
 
-   The legend consists of all elements after the caption. In this
-   case, the legend consists of this paragraph.
+    The legend consists of all elements after the caption. In this
+    case, the legend consists of this paragraph.
+
 
 To create a `symbolic link` to use at the command line.
 
