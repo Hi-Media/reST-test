@@ -16,7 +16,7 @@ Intended Audience
 
 The intended audience is the merchant's technical staff or the merchant's system integrator.
 Because almost all communication between the merchant's system and the REST API is realized
-through predefined XML or JSON messages over the Internet using standard protocols,
+through predefined :term:`XML` or :term:`JSON` messages over the Internet using standard protocols,
 you will need basic XML/JSON programming skills and knowledge of HTTP(S).
 Furthermore, it is recommended that you are familiar with the basics of tokenization concepts.
 
