@@ -35,37 +35,54 @@ To create a `symbolic link` to use at the command line.
 
 Bloc XML v1:
 
-.. code-block:: xml
-  :number-lines: 1
+.. code-block:: ruby
+    :linenos:
 
-  <?xml version="1.0" encoding="UTF-8"?>
-  <response>
-    <state>completed</state>
-    <reason/>
-    <forward_url/>
-    <test>false</test>
-    <mid>00035167042</mid>
-    <attempt_id>2015</attempt_id>
-    <authorization_code>59351</authorization_code>
-    ...
-  </response>
+    <?xml version="1.0" encoding="UTF-8"?>
+    <response>
+        <state>completed</state>
+        <reason/>
+        <forward_url/>
+        <test>false</test>
+        <mid>00035167042</mid>
+        <attempt_id>2015</attempt_id>
+        <authorization_code>59351</authorization_code>
+        ...
+    </response>
 
 Bloc XML v2:
 
 .. code:: xml
-  :number-lines: 1
+    :number-lines: 1
 
-  <?xml version="1.0" encoding="UTF-8"?>
-  <response>
-    <state>completed</state>
-    <reason/>
-    <forward_url/>
-    <test>false</test>
-    <mid>00035167042</mid>
-    <attempt_id>2015</attempt_id>
-    <authorization_code>59351</authorization_code>
-    ...
-  </response>
+    <?xml version="1.0" encoding="UTF-8"?>
+    <response>
+        <state>completed</state>
+        <reason/>
+        <forward_url/>
+        <test>false</test>
+        <mid>00035167042</mid>
+        <attempt_id>2015</attempt_id>
+        <authorization_code>59351</authorization_code>
+        ...
+    </response>
+
+Bloc XML v3:
+
+.. highlight:: xml
+    :linenothreshold: 1
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <response>
+        <state>completed</state>
+        <reason/>
+        <forward_url/>
+        <test>false</test>
+        <mid>00035167042</mid>
+        <attempt_id>2015</attempt_id>
+        <authorization_code>59351</authorization_code>
+        ...
+    </response>
 
 Definition lists:
 
