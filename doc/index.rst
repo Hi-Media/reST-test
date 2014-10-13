@@ -20,7 +20,7 @@ Please report bugs or ask questions using the `Issue Tracker`_.
 Contents
 --------
 .. toctree::
-  installation
+  introguide
   configuration
   userguide
   demos
