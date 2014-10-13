@@ -1,5 +1,5 @@
-Welcome to xyz documentation!
-=========================================
+HiPay-TPP-GatewayAPI documentation
+===================================
 
 .. raw:: html
 
@@ -21,11 +21,9 @@ Contents
 --------
 .. toctree::
   introguide
-  configuration
-  userguide
-  demos
-  changelog
-  copyright
+  readguide
+  glossary
+  
 
 
 Indices and tables
