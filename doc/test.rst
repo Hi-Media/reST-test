@@ -35,7 +35,7 @@ To create a `symbolic link` to use at the command line.
 
 Bloc XML v1:
 
-.. code-block:: ruby
+.. code-block:: xml
     :linenos:
 
     <?xml version="1.0" encoding="UTF-8"?>
