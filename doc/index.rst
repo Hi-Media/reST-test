@@ -8,6 +8,7 @@ Contents
   readguide
   Chap6-ServerToServer
   Chap7-Signatureverif
+  Chap8-DeviceFingerprintIntegration
   test
   glossary
 
