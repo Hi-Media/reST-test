@@ -280,66 +280,70 @@ The following are examples XML and HTTP Post responses.
 
 :HTTP POST Response Example:
 		
-		.. code-block:: xml
+.. code-block:: xml
     :linenos:
+
+   	state = completed
+  	reason = 
+  	test = false
+  	mid = 00001326581
+   	attempt_id = 1
+   	authorization_code = test123
+   	transaction_reference = 781357613392
+   	date_created = 2012-10-14T13:10:36+0000
+   	date_updated = 2012-10-14T13:10:38+0000
+   	date_authorized = 2012-10-14T13:10:38+0000
+   	status = 116
+   	message = Authorized
+   	authorized_amount = 5.00
+   	captured_amount = 0.00
+   	refunded_amount = 0.00
+  	decimals = 2
+   	currency = EUR
+   	ip_address = 83.167.62.196
+   	ip_country = FR
+   	device_id = 
+   	cdata1 = My data 1
+   	cdata2 = My data 2
+   	cdata3 = My data 3
+   	cdata4 = My data 4
+   	avs_result = 
+   	cvc_result = 
+   	eci = 7
+   	payment_product = visa
+   	payment_method[token] = ce5x096fx6xx05989x170x7x96f94432600491xx
+   	payment_method[brand] = VISA
+   	payment_method[pan] = 400000******0000
+   	payment_method[card_holder] = Jhon Doe
+   	payment_method[card_expiry_month] = 07
+   	payment_method[card_expiry_year] = 2015
+   	payment_method[issuer] = MYBANK 
+   	payment_method[country] = FR 
+   	three_d_secure[eci] = 5
+   	three_d_secure[enrollment_status] = Y
+   	three_d_secure[enrollment_message]=Authentication Available
+   	three_d_secure[authentication_status]=Y
+   	three_d_secure[authentication_message]=Authentication Successful
+   	three_d_secure[authentication_token]=
+   	three_d_secure[xid]=
+   	fraud_screening[scoring] = 120
+   	fraud_screening[result] = accepted
+   	fraud_screening[review] = 
+   	order[id] = 1381756231
+   	order[date_created] = 2013-10-14T13:10:36+0000
+   	order[attempts] = 1
+   	order[amount] = 5.00
+   	order[shipping] = 10.00
+   	order[tax] = 0.98
+   	order[decimals] = 2
+   	order[currency] = EUR
+   	order[customer_id] = UID1381756236
+   	order[language] = fr_FR
+   	order[email] = customer@mail.com
+
 	
-1   	state = completed
-2   	reason = 
-3   	test = false
-4   	mid = 00001326581
-5   	attempt_id = 1
-6   	authorization_code = test123
-7   	transaction_reference = 781357613392
-8   	date_created = 2012-10-14T13:10:36+0000
-9   	date_updated = 2012-10-14T13:10:38+0000
-10   	date_authorized = 2012-10-14T13:10:38+0000
-11   	status = 116
-12   	message = Authorized
-13   	authorized_amount = 5.00
-14   	captured_amount = 0.00
-15   	refunded_amount = 0.00
-16   	decimals = 2
-17   	currency = EUR
-18   	ip_address = 83.167.62.196
-19   	ip_country = FR
-20   	device_id = 
-21   	cdata1 = My data 1
-22   	cdata2 = My data 2
-23   	cdata3 = My data 3
-24   	cdata4 = My data 4
-25   	avs_result = 
-26   	cvc_result = 
-27   	eci = 7
-28   	payment_product = visa
-29   	payment_method[token] = ce5x096fx6xx05989x170x7x96f94432600491xx
-30   	payment_method[brand] = VISA
-31   	payment_method[pan] = 400000******0000
-32   	payment_method[card_holder] = Jhon Doe
-33   	payment_method[card_expiry_month] = 07
-34   	payment_method[card_expiry_year] = 2015
-35   	payment_method[issuer] = MYBANK 
-36   	payment_method[country] = FR 
-37   	three_d_secure[eci] = 5
-38   	three_d_secure[enrollment_status] = Y
-39   	three_d_secure[enrollment_message]=Authentication Available
-40   	three_d_secure[authentication_status]=Y
-41   	three_d_secure[authentication_message]=Authentication Successful
-42   	three_d_secure[authentication_token]=
-43   	three_d_secure[xid]=
-44   	fraud_screening[scoring] = 120
-45   	fraud_screening[result] = accepted
-46   	fraud_screening[review] = 
-47   	order[id] = 1381756231
-48   	order[date_created] = 2013-10-14T13:10:36+0000
-49   	order[attempts] = 1
-50   	order[amount] = 5.00
-51   	order[shipping] = 10.00
-52   	order[tax] = 0.98
-53   	order[decimals] = 2
-54   	order[currency] = EUR
-55   	order[customer_id] = UID1381756236
-56   	order[language] = fr_FR
-57   	order[email] = customer@mail.com
+	
+ 	
 	
 	
 		
