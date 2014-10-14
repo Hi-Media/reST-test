@@ -1,7 +1,7 @@
 .. _Chap8-DeviceFingerprintIntegration:
 
-Chapter 8 - DeviceFingerprintIntegration
-========================================
+Chapter 8 - Device Fingerprint Integration
+===========================================
 
 Overview
 --------
@@ -26,6 +26,19 @@ Generate blackbox content
 	This adds the black box as another field to be submitted along the other details in the form.		
 		
 :Recommendation:	
+
+=============  =========================================================
+Acronym        Full Name
+=============  =========================================================
+BIN				Bank Identification Number
+-------------  ---------------------------------------------------------
+PAN				Primary Account Number
+-------------  ---------------------------------------------------------
+PCI DSS			Payment Card Industry Data Security Standards
+-------------  ---------------------------------------------------------
+REST			Representational State Transfer
+=============  =========================================================
+
 
 +---------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+ 
 |YOU MUST                                                                               | YOU MUST NOT| 
