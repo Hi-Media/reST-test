@@ -41,8 +41,7 @@ The following table lists and describes the response fields received on the noti
 ========================== 	===================================================================================================================================================================
 Field Name        			Description
 ========================== 	===================================================================================================================================================================
-state						transaction state.
-							Value must be a member of the following list.
+state						transaction state. Value must be a member of the following list.
 								-	completed
 								-	pending
 								-	declined
@@ -123,8 +122,7 @@ Three_d_secure				optional element. Result of the 3-D Secure Authentication.
 --------------------------	-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Fraud_screening				Result of the fraud screening.
 	scoring					total score assigned to the transaction (main risk indicator).
-	result					The overall result of risk assessment returned by the Payment Gateway.
-							Value must be a member of the following list.
+	result					The overall result of risk assessment returned by the Payment Gateway.Value must be a member of the following list.
 								-	pending 	:rules were not checked.
 								-	accepted	:transaction accepted.
 								-	blocked		:transaction rejected due to system rules.
@@ -151,10 +149,3 @@ Order						information about the customer and his order.
 	language				language code of the customer.
 	email					email address of the customer.
 ========================== 	===================================================================================================================================================================
-
-
-
-
-
-
-
