@@ -7,6 +7,7 @@ Contents
   introguide
   readguide
   Chap6-ServerToServer
+  Chap7-Signatureverif
   test
   glossary
 
