@@ -1,7 +1,7 @@
 .. _Chap8-DeviceFingerprintIntegration:
 
-Chapter 7 - Signature verification
-===================================
+Chapter 8 - DeviceFingerprintIntegration
+========================================
 
 Overview
 --------
