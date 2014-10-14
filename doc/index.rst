@@ -6,6 +6,7 @@ Contents
 .. toctree::
   introguide
   readguide
+  Chap6-ServerToServer
   test
   glossary
 
