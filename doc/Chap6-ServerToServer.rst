@@ -42,7 +42,6 @@ The following table lists and describes the response fields received on the noti
 Field Name        			Description
 ========================== 	===================================================================================================================================================================
 state						transaction state. Value must be a member of the following list.
-
 								-	completed
 								-	pending
 								-	declined
@@ -68,6 +67,7 @@ Date_updated				time when transaction was last updated.
 date_authorized				time when transaction was authorized.
 --------------------------	-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 status						transaction status.
+
 							A list of available statuses can be found in the appendices.
 							appendices – Appendix B *Payment Status Definitions*.
 --------------------------	-------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -82,6 +82,7 @@ refunded_amount				refunded amount.
 decimals					decimal precision of transaction amount.
 -------------------------- 	-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 currency					base currency for this transaction.
+
 							This three-character currency code complies with ISO 4217.
 -------------------------- 	-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ip_address					the IP address of the customer making the purchase.				
@@ -99,6 +100,7 @@ cdata3						custom data.
 cdata4						custom data.
 -------------------------- 	-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 avs_result					result of the Address Verification Service (AVS).
+
 							Possible result codes can be found in the appendices
 --------------------------	-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 cvc_result					result of the CVC (Card Verification Code) check.
@@ -107,6 +109,7 @@ cvc_result					result of the CVC (Card Verification Code) check.
 eci							Electronic Commerce Indicator (ECI).
 --------------------------	-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 payment_product				payment product used to complete the transaction.
+
 							Informs about the payment_method section type
 --------------------------	-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 payment_method				See tables below for further details.
@@ -123,16 +126,15 @@ Three_d_secure				optional element. Result of the 3-D Secure Authentication.
 Fraud_screening				Result of the fraud screening.
 - scoring					total score assigned to the transaction (main risk indicator).
 - result					The overall result of risk assessment returned by the Payment Gateway.Value must be a member of the following list.
-
 								-	pending 	:rules were not checked.
 								-	accepted	:transaction accepted.
 								-	blocked		:transaction rejected due to system rules.
 								-	challenged	:transaction has been marked for review.
 								
 - review					The decision made when the overall risk result returns challenged.
+
 							An empty value means no review is required.
 							Value must be a member of the following list.
-							
 								-	pending		:a decision to release or cancel the transaction is pending.
 								-	allowed		:the transaction has been released for processing.
 								-	denied		:the transaction has been cancelled.
@@ -149,4 +151,23 @@ Order						information about the customer and his order.
 - customer_id				unique identifier of the customer as provided by Merchant.
 - language					language code of the customer.
 - email						email address of the customer.
+========================== 	===================================================================================================================================================================
+
+Response fields specific to the payment product
+-----------------------------------------------
+
+:Credit Card payments:
+	The following table lists and describes the response fields returned for transactions by credit/debit card.
+	
+========================== 	===================================================================================================================================================================
+Field Name        			Description
+========================== 	===================================================================================================================================================================
+token 						Card token.
+brand 						Card brand. (e.g., VISA, MASTERCARD, AMERICANEXPRESS, MAESTRO).
+pan 						Card number (up to 19 characters). Note that, due to the PCI DSS security standards, our system has to mask credit card numbers in any output (e.g., 549619******4769).
+card_holder 				Cardholder name.
+card_expiry_month 			Card expiry month (2 digits).
+card_expiry_year 			Card expiry year (4 digits).
+issuer 						Card issuing bank name. Do not rely on this value to remain static over time. Bank names may change over time due to acquisitions and mergers.
+country 					Bank country code where card was issued. This two-letter country code complies with ISO 3166-1 (alpha 2).
 ========================== 	===================================================================================================================================================================
