@@ -27,7 +27,8 @@ Secret passphrase
 Verification
 -------------
 
-**URL Notification**
+URL Notification
+`````````````````
 
 Description
   For the URL notification, the signature is sent on the HTTP header under the *HTTP_X_ALLOPASS_SIGNATURE” parameter* 
@@ -35,25 +36,24 @@ Description
 Verification
   To check this point, you just need to concatenate the passphrase with the POST content of the query.
 
-Algorithm verification
+  Algorithm verification
   *Algorithm:
   SHA Signature = SHA1(Raw POST Data + Secret Passphrase)*
 
-**URL Redirection**
+URL Redirection
+`````````````````
 
 Description
   For each redirection page (accept page, decline page, etc.) the signature is sent under the *hash* parameter,
   
 Verification
-
- To check this point, you must to concatenate the parameters, the values of each and the passphrase under the following conditions:
+  To check this point, you must to concatenate the parameters, the values of each and the passphrase under the following conditions:
 
   a) The parameter must be predefined.
   b) The value can’t be empty.
   c) The parameter must be sorted in alphabetical order.
 
-Algorithm verification
-
+  Algorithm verification
   *Algorithm:*
   
   a) paramC = val3

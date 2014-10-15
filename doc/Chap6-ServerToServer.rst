@@ -61,13 +61,14 @@ transaction_rerefence       the unique identifier of the transaction.
 date_created                time when transaction was created.
 Date_updated                time when transaction was last updated.
 date_authorized             time when transaction was authorized.
+--------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+status                      transaction status.
+                            A list of available statuses can be found in the appendices.
+							appendices – Appendix B *Payment Status Definitions*.
+--------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+message                     transaction message.				
 ==========================  ===================================================================================================================================================================							
 
---------------------------	-------------------------------------------------------------------------------------------------------------------------------------------------------------------
-status						transaction status.
-
-							A list of available statuses can be found in the appendices.
-							appendices – Appendix B *Payment Status Definitions*.
 --------------------------	-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 message						transaction message.
 authorized_amount			the transaction amount.
