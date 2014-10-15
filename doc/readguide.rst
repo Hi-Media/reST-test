@@ -40,30 +40,12 @@ attributes (columns) that define a data element.
 =============  ============================================================================================================
 Convention     Meaning
 =============  ============================================================================================================
-Field Name     Name of the data element.
--------------  ------------------------------------------------------------------------------------------------------------
-Format         Format of the element.
--------------  ------------------------------------------------------------------------------------------------------------
-Length         Maximum size of the data element.
-              (i.e. a size of 6 means the data value cannot exceed six characters)
-               Note : there is no limitation on the length of the size, when no size is specified.
--------------  ------------------------------------------------------------------------------------------------------------
-Req.           Specifies whether an element is required or not.
-               M = Mandatory -> must always be provided
-               C = Conditional -> requirement depends on value or appearance of other elements.
--------------  ------------------------------------------------------------------------------------------------------------
-Description    Brief description of the data element and where necessary, a list of valid values and element dependencies.
-=============  ============================================================================================================
-
-=============  ============================================================================================================
-Convention     Meaning
-=============  ============================================================================================================
 Field Name     Name of the data element
 Format         Format of the element
 Length         Maximum size of the data element.(i.e. a size of 6 means the data value cannot exceed six characters)
                Note : there is no limitation on the length of the size, when no size is specified.
 Reg.           Specifies whether an element is required or not.
-               **M** = Mandatory -> must always be provided
+               **M** = Mandatory -> must always be provided.
                **C** = Conditional -> requirement depends on value or appearance of other elements.
 =============  ============================================================================================================
 

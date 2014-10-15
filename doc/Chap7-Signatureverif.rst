@@ -15,7 +15,7 @@ Procedure
   First of all you need to set a Secret Passphrase in your HiPay TPP back office 
   under *Integration -> Security Settings -> Secret Passphrase*.
 
-Login Screen
+:Login Screen:
 
 .. image:: images/SignatureVerification_LoginScreen.jpeg
 
@@ -45,16 +45,20 @@ Description
   For each redirection page (accept page, decline page, etc.) the signature is sent under the *hash* parameter,
   
 Verification
+
  To check this point, you must to concatenate the parameters, the values of each and the passphrase under the following conditions:
-		a)	The parameter must be predefined.
-		b)	The value can’t be empty.
-		c)	The parameter must be sorted in alphabetical order.
+
+  a) The parameter must be predefined.
+  b) The value can’t be empty.
+  c) The parameter must be sorted in alphabetical order.
 
 Algorithm verification
+
   *Algorithm:*
-		a)	paramC = val3
-		b)	paramA = val1
-		c)	paramB = val2
+  
+  a) paramC = val3
+  b) paramA = val1
+  c) paramB = val2
 	
 	*SHA Signature = SHA1SHA1(paramAval1<passphrase>paramBval2<passphrase>paramCval3<passphrase>)*
 	

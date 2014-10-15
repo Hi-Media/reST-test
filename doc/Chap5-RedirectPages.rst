@@ -18,7 +18,7 @@ Objective
 Redirect pages setup
 --------------------
 Description
-  You can find redirect pages configuration over *Intergation -> Redirect Pages* on your HiPay TPP back-office.
+  You can find redirect pages configuration over *Integration -> Redirect Pages* on your HiPay TPP back-office.
   You can overwrite the default redirect pages by sending custom URLs along with the order details in 
   your requests to the payment gateway *(please refer to 3.1 section)*.
 
@@ -96,6 +96,7 @@ cdata4						custom data.
 score						total score assigned to the transaction (main risk indicator).
 --------------------------	-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 fraud						The overall result of risk assessment returned by the Payment Gateway.
+							
 							Value must be a member of the following list:
 							
 							- pending 	    :rules were not checked.
@@ -104,6 +105,7 @@ fraud						The overall result of risk assessment returned by the Payment Gateway
 							- challenged	:transaction has been marked for review.
 --------------------------	-------------------------------------------------------------------------------------------------------------------------------------------------------------------						
 review						The decision made when the overall risk result returns challenged. An empty value means no review is required.
+							
 							Value must be a member of the following list:
 							
 							  -	Pending 	:a decision to release or cancel the transaction is pending.
