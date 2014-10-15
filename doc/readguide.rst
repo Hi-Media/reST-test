@@ -27,6 +27,15 @@ $               At the beginning of a command, indicates an operating system she
 <placeholder>   Indicates placeholders, most often method or function parameters; these placeholders represent information that must be supplied by the implementation or the user. For command-line input, indicates parameter values.
 ==============  =======================================================================================================================================================================================================================
 
+.. table:: Truth table for "not"
+
+   =====  =====
+     A    not A
+   =====  =====
+   False  True
+   True   False
+   =====  =====
+
 
 Abbreviations used in tables
 ----------------------------
