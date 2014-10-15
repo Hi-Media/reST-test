@@ -73,7 +73,7 @@ Field Name        		Description
 ===================== 	===========================================================================
 Notification URL		The URL or IP on which you want to receive server-to-server notifications.
 ---------------------  	---------------------------------------------------------------------------
-Request method			The method you wish to receive the requests:
+Request method			The method you wish to receive the requests
 							- XML
 							- HTTP POST
 --------------------- 	---------------------------------------------------------------------------
@@ -88,7 +88,7 @@ Field Name        		Description
 ===================== 	===========================================================================
 Notification URL		The URL or IP on which you want to receive server-to-server notifications.
 ---------------------  	---------------------------------------------------------------------------
-Request method			The method you wish to receive the requests:
+Request method			The method you wish to receive the requests
 					    - XML
 					    - HTTP POST
 --------------------- 	---------------------------------------------------------------------------
@@ -103,7 +103,7 @@ Field Name        		Description
 ===================== 	===========================================================================
 Notification URL		The URL or IP on which you want to receive server-to-server notifications.
 ---------------------  	---------------------------------------------------------------------------
-Request method			The method you wish to receive the requests:
+Request method			The method you wish to receive the requests
 					      - XML
 					      - HTTP POST
 --------------------- 	---------------------------------------------------------------------------
