@@ -90,6 +90,7 @@ table
 -----
 
 .. table:: Truth table for "not"
+   :align: left
 
    =====  =====
      A    not A
