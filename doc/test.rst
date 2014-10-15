@@ -63,3 +63,67 @@ how
   body elements, indented relative to the
   term. Blank lines are not allowed
   between term and definition.
+
+
+Configuration Parameters
+------------------------
+
+===================== 	===========================================================================
+Field Name        		Description
+===================== 	===========================================================================
+Notification URL		The URL or IP on which you want to receive server-to-server notifications.
+---------------------  	---------------------------------------------------------------------------
+Request method			The method you wish to receive the requests:
+							- XML
+							- HTTP POST
+--------------------- 	---------------------------------------------------------------------------
+Desired notifications	Payment Card Industry Data Security Standards
+=====================  	===========================================================================
+
+
+Configuration Parameters
+------------------------
+===================== 	===========================================================================
+Field Name        		Description
+===================== 	===========================================================================
+Notification URL		The URL or IP on which you want to receive server-to-server notifications.
+---------------------  	---------------------------------------------------------------------------
+Request method			The method you wish to receive the requests:
+					    - XML
+					    - HTTP POST
+--------------------- 	---------------------------------------------------------------------------
+Desired notifications	Payment Card Industry Data Security Standards
+=====================  	===========================================================================
+
+
+Configuration Parameters
+------------------------
+===================== 	===========================================================================
+Field Name        		Description
+===================== 	===========================================================================
+Notification URL		The URL or IP on which you want to receive server-to-server notifications.
+---------------------  	---------------------------------------------------------------------------
+Request method			The method you wish to receive the requests:
+					      - XML
+					      - HTTP POST
+--------------------- 	---------------------------------------------------------------------------
+Desired notifications	Payment Card Industry Data Security Standards
+=====================  	===========================================================================
+
+
+
+
+Configuration Parameters
+------------------------
+===================== 	===========================================================================
+Field Name        		Description
+===================== 	===========================================================================
+Notification URL		The URL or IP on which you want to receive server-to-server notifications.
+---------------------  	---------------------------------------------------------------------------
+Request method			The method you wish to receive the requests:
+
+					      - XML
+					      - HTTP POST
+--------------------- 	---------------------------------------------------------------------------
+Desired notifications	Payment Card Industry Data Security Standards
+=====================  	===========================================================================
