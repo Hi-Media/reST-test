@@ -18,6 +18,7 @@ Procedure
 :Login Screen:
 
 .. image:: images/SignatureVerification_LoginScreen.jpeg
+   :name: Data Verification login screen
 
 Secret passphrase
   The secret passphrase is used to generate a unique character string (signature) hashed with SHA algorithm.

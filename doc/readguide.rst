@@ -12,7 +12,7 @@ specific pieces of information.
 The following table clarifies the conventions used across this guide.
 
 
-.. table:: Table1 Typographic conventions that apply across this guide
+.. table:: Table 1 Typographic conventions that apply across this guide
 
    ==============  =======================================================================================================================================================================================================================
    Convention      Meaning
@@ -37,7 +37,8 @@ The tables of this document describe data elements. These data elements are equi
 in a query or to fields of a response message. The following table helps understanding the different
 attributes (columns) that define a data element.
 
-.. table:: Table 2 Description of data elements
+
+.. table:: Table 2  Description of data elements
 
    =============  ============================================================================================================
    Convention     Meaning

@@ -1,7 +1,7 @@
 .. _Chap8-DeviceFingerprintIntegration:
 
 Chapter 8 - Device Fingerprint Integration
-===========================================
+==========================================
 
 Overview
 --------

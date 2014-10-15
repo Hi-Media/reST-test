@@ -16,6 +16,7 @@ Test
 Images are simple pictures:
 
 .. image:: images/hipay_fullservice.png
+   :name: Logo
 
 A figure add to an image an optional caption and an optional legend:
 
@@ -79,6 +80,9 @@ Request method			The method you wish to receive the requests:
 --------------------- 	---------------------------------------------------------------------------
 Desired notifications	Payment Card Industry Data Security Standards
 =====================  	===========================================================================
+
+table
+-----
 
 .. table:: Truth table for "not"
 
