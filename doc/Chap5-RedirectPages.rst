@@ -5,22 +5,22 @@ Chapter 5 - Redirect Pages
 
 Redirect your customer to a page of your choice
 ------------------------------------------------
-:Description:
-	The redirect pages are pages to which HiPay TPP redirects your customer's brower after
-	the transaction is processed if it was made out of your website (hosted payment page, 
-	local payments, 3-D Secure authentication, etc.).
+Description
+  The redirect pages are pages to which HiPay TPP redirects your customer's brower after
+  the transaction is processed if it was made out of your website (hosted payment page, 
+  local payments, 3-D Secure authentication, etc.).
 
-:Objective:
-	Typically, this is a secure page on your site. The main purpose is to redirect 
-	your customers back to your website once they have completed a payment.
+Objective
+  Typically, this is a secure page on your site. The main purpose is to redirect 
+  your customers back to your website once they have completed a payment.
 
 	
 Redirect pages setup
 --------------------
-:Description:
-	You can find redirect pages configuration over *Intergation -> Redirect Pages* on your HiPay TPP back-office.
-	You can overwrite the default redirect pages by sending custom URLs along with the order details in 
-	your requests to the payment gateway *(please refer to 3.1 section)*.
+Description
+  You can find redirect pages configuration over *Intergation -> Redirect Pages* on your HiPay TPP back-office.
+  You can overwrite the default redirect pages by sending custom URLs along with the order details in 
+  your requests to the payment gateway *(please refer to 3.1 section)*.
 
 	
 Default redirect pages
@@ -31,7 +31,7 @@ Field Name        		Description
 ===================== 	===============================================================================================================================================================================================================================
 Accept page				Page to redirect your customer if transaction was successful.
 Decline page			Page to redirect your customer if transaction was refused.
-Pending page			Page to redirect your customer if transaction is pending[1]_ .
+Pending page			Page to redirect your customer if transaction is pending[1].
 Cancel page				Page to redirect your customer if transaction was cancelled.
 Exception page			Page to which the customer's browser is redirected after a system failure or when the payment gateway is temporarily unavailable. If page is not defined, the default page for exceptions is displayed by the payment gateway.
 =====================  	===============================================================================================================================================================================================================================
@@ -41,13 +41,13 @@ Exception page			Page to which the customer's browser is redirected after a syst
 Feedback Parameters
 -------------------
 
-:Description:
-	Select this option if you want that HiPay TPP send back the transaction parameters to your redirect pages
-	for further processing within your own website.
+Description
+  Select this option if you want that HiPay TPP send back the transaction parameters to your redirect pages
+  for further processing within your own website.
 
-:Procedure:
-	To activate this option you MUST” specify at least an “Accept Page” URL.
-	Sent parameters are included in your redirect pages on HTTP GET.
+Procedure
+  To activate this option you MUST” specify at least an “Accept Page” URL.
+  Sent parameters are included in your redirect pages on HTTP GET.
 
 Fields sent
 -----------
@@ -60,10 +60,11 @@ Field Name        			Description
 orderid						unique identifier of the order as provided by Merchant.
 cid							unique identifier of the customer as provided by Merchant.
 state						transaction state. Value must be a member of the following list.
-								-	completed
-								-	pending
-								-	declined
-								-	error
+
+							  -	completed
+							  -	pending
+							  -	declined
+							  -	error
 								
 							Please report to the following section below — Transaction Workflow — for further details.
 --------------------------	-------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -95,17 +96,19 @@ cdata4						custom data.
 score						total score assigned to the transaction (main risk indicator).
 --------------------------	-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 fraud						The overall result of risk assessment returned by the Payment Gateway.
-								Value must be a member of the following list.
-									-	pending 	:rules were not checked.
-									-	accepted	:transaction accepted.
-									-	blocked		:transaction rejected due to system rules.
-									-	challenged	:transaction has been marked for review.
+							Value must be a member of the following list:
+							
+							  -	pending 	:rules were not checked.
+							  -	accepted	:transaction accepted.
+							  -	blocked		:transaction rejected due to system rules.
+							  -	challenged	:transaction has been marked for review.
 --------------------------	-------------------------------------------------------------------------------------------------------------------------------------------------------------------						
 review						The decision made when the overall risk result returns challenged. An empty value means no review is required.
-								Value must be a member of the following list.
-									-	Pending 	:a decision to release or cancel the transaction is pending.
-									-	allowed	 	:the transaction has been released for processing.
-									-	Denied		:the transaction has been cancelled.
+							Value must be a member of the following list:
+							
+							  -	Pending 	:a decision to release or cancel the transaction is pending.
+							  -	allowed	 	:the transaction has been released for processing.
+							  -	Denied		:the transaction has been cancelled.
 --------------------------	-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 avscheck				    result of the Address Verification Service (AVS). Possible result codes can be found in the appendices
 --------------------------	-------------------------------------------------------------------------------------------------------------------------------------------------------------------
