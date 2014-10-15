@@ -19,9 +19,8 @@ Images
 
 Images are simple pictures:
 
-.. my picture: Logo
-
 .. image:: images/hipay_fullservice.png
+   :name: my picture
 
 
 A figure add to an image an optional caption and an optional legend:

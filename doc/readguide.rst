@@ -13,6 +13,7 @@ The following table clarifies the conventions used across this guide.
 
 
 .. table:: Table 1 Typographic conventions that apply across this guide
+   :align: left
 
    ==============  =======================================================================================================================================================================================================================
    Convention      Meaning
