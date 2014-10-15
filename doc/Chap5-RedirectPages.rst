@@ -1,7 +1,7 @@
 .. _Chap5-RedirectPages:
 
 Chapter 5 - Redirect Pages
-===========================
+==========================
 
 Redirect your customer to a page of your choice
 ------------------------------------------------

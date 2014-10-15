@@ -1,7 +1,7 @@
 .. _Chap7-Signatureverif:
 
 Chapter 7 - Signature verification
-===================================
+==================================
 
 Introduction
 ------------

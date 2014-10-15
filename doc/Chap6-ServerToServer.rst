@@ -114,9 +114,9 @@ Fraud_screening             Result of the fraud screening.
       						
 							An empty value means no review is required.	
 							Value must be a member of the following list.
-							  - pending   :a decision to release or cancel the transaction is pending.
-                              - allowed   :the transaction has been released for processing.
-							  - denied    :the transaction has been cancelled.
+                               - pending   :a decision to release or cancel the transaction is pending.
+                               - allowed   :the transaction has been released for processing.
+                               - denied    :the transaction has been cancelled.
 --------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Order                       information about the customer and his order.
  a) Id                        a) unique identifier of the order as provided by Merchant.
@@ -183,7 +183,7 @@ Examples
 
 The following are examples XML and HTTP Post responses.
 
-XML Response Example
+:XML Response Example:
 		
 .. code-block:: xml
     :linenos:
@@ -258,7 +258,7 @@ XML Response Example
    	</notification>
 
 :HTTP POST Response Example:
-		
+	
 .. code-block:: php
     :linenos:
 

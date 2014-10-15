@@ -1,8 +1,8 @@
 .. _readguide:
-======================
+
 How to read this guide
 ======================
--------------------------
+
 Documentation Conventions
 -------------------------
 
@@ -11,6 +11,7 @@ This guide uses several typographic conventions to highlight certain words, phra
 specific pieces of information.
 The following table clarifies the conventions used across this guide.
 
+.. table:: Typographic conventions that apply across this guide
 
 ==============  =======================================================================================================================================================================================================================
 Convention      Meaning
@@ -26,9 +27,7 @@ $               At the beginning of a command, indicates an operating system she
 <placeholder>   Indicates placeholders, most often method or function parameters; these placeholders represent information that must be supplied by the implementation or the user. For command-line input, indicates parameter values.
 ==============  =======================================================================================================================================================================================================================
 
-Table1:Typographic conventions that apply across this guide
 
-----------------------------
 Abbreviations used in tables
 ----------------------------
 
@@ -68,7 +67,7 @@ TM                   Time in the format HH:MM with optional seconds (HH:MM:SS)  
 
 Table 3:Available formats of data elements
 
---------------------------
+
 Acronyms and Abbreviations
 --------------------------
 The following acronyms and abbreviations are used in this guide.
