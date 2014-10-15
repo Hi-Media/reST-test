@@ -54,7 +54,7 @@ Verification
   c) The parameter must be sorted in alphabetical order.
 
   Algorithm verification
-   *Algorithm:*
+   *Algorithm*
   
   a) paramC = val3
   b) paramA = val1
