@@ -12,6 +12,7 @@ specific pieces of information.
 The following table clarifies the conventions used across this guide.
 
 .. table:: Typographic conventions that apply across this guide
+.. table:: Table1 Typographic conventions that apply across this guide
 
 ==============  =======================================================================================================================================================================================================================
 Convention      Meaning
