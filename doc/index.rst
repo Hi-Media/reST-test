@@ -6,6 +6,7 @@ Contents
 .. toctree::
   introguide
   readguide
+  Chap1-APIOverview
   Chap5-RedirectPages
   Chap6-ServerToServer
   Chap7-Signatureverif
