@@ -80,22 +80,13 @@ Request method			The method you wish to receive the requests:
 Desired notifications	Payment Card Industry Data Security Standards
 =====================  	===========================================================================
 
+.. table:: Truth table for "not"
 
-===============
- Section Title
-===============
-
----------------
- Section Title
----------------
-
-Section Title
-=============
-
-Section Title
--------------
-
-Section Title
-`````````````
+   =====  =====
+     A    not A
+   =====  =====
+   False  True
+   True   False
+   =====  =====
 
 
