@@ -46,7 +46,7 @@ Description
   for further processing within your own website.
 
 Procedure
-  To activate this option you MUST” specify at least an “Accept Page” URL.
+  To activate this option you MUST specify at least an *Accept Page* URL.
   Sent parameters are included in your redirect pages on HTTP GET.
 
 Fields sent
@@ -61,10 +61,10 @@ orderid						unique identifier of the order as provided by Merchant.
 cid							unique identifier of the customer as provided by Merchant.
 state						transaction state. Value must be a member of the following list.
 
-							  -	completed
-							  -	pending
-							  -	declined
-							  -	error
+							- completed
+							- pending
+							- declined
+							- error
 								
 							Please report to the following section below — Transaction Workflow — for further details.
 --------------------------	-------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -98,10 +98,10 @@ score						total score assigned to the transaction (main risk indicator).
 fraud						The overall result of risk assessment returned by the Payment Gateway.
 							Value must be a member of the following list:
 							
-							  -	pending 	:rules were not checked.
-							  -	accepted	:transaction accepted.
-							  -	blocked		:transaction rejected due to system rules.
-							  -	challenged	:transaction has been marked for review.
+							- pending 	    :rules were not checked.
+							- accepted	    :transaction accepted.
+							- blocked		:transaction rejected due to system rules.
+							- challenged	:transaction has been marked for review.
 --------------------------	-------------------------------------------------------------------------------------------------------------------------------------------------------------------						
 review						The decision made when the overall risk result returns challenged. An empty value means no review is required.
 							Value must be a member of the following list:
