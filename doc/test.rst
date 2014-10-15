@@ -13,10 +13,14 @@ Test
 
 .. seealso:: This is a admonition of type `seealso`.
 
+Images
+------
+
 Images are simple pictures:
 
+.._my picture:
 .. image:: images/hipay_fullservice.png
-   :name: Logo
+
 
 A figure add to an image an optional caption and an optional legend:
 
