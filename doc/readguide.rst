@@ -57,13 +57,17 @@ Description    Brief description of the data element and where necessary, a list
 
 Table 2:Description of data elements
 
-===================  =====================  ===================
-Format Abbreviation  Description            Example
-===================  =====================  ===================
-test                  test                   test
--------------------  ---------------------  -------------------
-test                  test                   test
-===================  =====================  ===================
+===================  =========================================================  ===================
+Format Abbreviation  Description                                                Example
+===================  =========================================================  ===================
+AN                   Alphanumeric characters (a-z, A-Z, 0-9)                    -
+-------------------  ---------------------------------------------------------  -------------------
+A                    Alphabetic characters only (a-z, A-Z)                      -
+N                    Numerical only                                             -
+R                    Decimal number with explicit decimal point, signed         12.34
+DT                   Date in the format YYYY-MM-DD                              2012-12-31
+TM                   Time in the format HH:MM with optional seconds (HH:MM:SS)  15:30
+===================  =========================================================  ===================
 
 
 ===================  =========================================================  ==========
