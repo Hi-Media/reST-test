@@ -127,3 +127,17 @@ Request method			The method you wish to receive the requests:
 --------------------- 	---------------------------------------------------------------------------
 Desired notifications	Payment Card Industry Data Security Standards
 =====================  	===========================================================================
+
+
+The method you wish to receive the requests:
+- XML
+- HTTP POST
+
+The method you wish to receive the requests:
+
+- XML
+- HTTP POST
+
+The method you wish to receive the requests:
+  - XML
+  - HTTP POST
