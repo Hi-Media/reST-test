@@ -12,6 +12,9 @@ specific pieces of information.
 The following table clarifies the conventions used across this guide.
 
 
+Table1:Typographic conventions that apply across this guide
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ==============  =======================================================================================================================================================================================================================
 Convention      Meaning
 
@@ -35,6 +38,9 @@ The tables of this document describe data elements. These data elements are equi
 in a query or to fields of a response message. The following table helps understanding the different
 attributes (columns) that define a data element.
 
+Table 2:Description of data elements
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 =============  =======================================================================================================================================================================================================================
 Convention     Meaning
 
@@ -54,6 +60,9 @@ Req.           Specifies whether an element is required or not.
 Description    Brief description of the data element and where necessary, a list of valid values and element dependencies.
 ====================================================================================================================================================================================================================================
 
+
+Table 3:Available formats of data elements
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 =============  =========================================================  =================
 Format         Description												   Example
@@ -77,6 +86,9 @@ TM             Time in the format HH:MM with optional seconds (HH:MM:SS)   15:30
 Acronyms and Abbreviations
 --------------------------
 The following acronyms and abbreviations are used in this guide.
+
+Table 4:Acronyms and Abbreviations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 =============  =========================================================
 Acronym        Full Name

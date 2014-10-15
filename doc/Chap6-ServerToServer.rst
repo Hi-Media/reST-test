@@ -1,7 +1,7 @@
 .. _Chap6-ServerToServer:
 
 Chapter 6 - Server-to-Server
-===========================
+============================
 
 What is a Server-to-Server Notification?
 ----------------------------------------
@@ -33,6 +33,7 @@ Request method			The method you wish to receive the requests:
 --------------------- 	---------------------------------------------------------------------------
 Desired notifications	Payment Card Industry Data Security Standards
 =====================  	===========================================================================
+
 
 Response Fields
 ---------------
