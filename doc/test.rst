@@ -13,12 +13,14 @@ Test
 
 .. seealso:: This is a admonition of type `seealso`.
 
+
 Images
 ------
 
 Images are simple pictures:
 
-.._my picture:
+.. my picture: Logo
+
 .. image:: images/hipay_fullservice.png
 
 
