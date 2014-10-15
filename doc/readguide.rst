@@ -37,8 +37,7 @@ The tables of this document describe data elements. These data elements are equi
 in a query or to fields of a response message. The following table helps understanding the different
 attributes (columns) that define a data element.
 
-.. table:: 
-Table 2 Description of data elements
+.. table:: Table 2 Description of data elements
 
    =============  ============================================================================================================
    Convention     Meaning
