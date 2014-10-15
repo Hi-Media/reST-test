@@ -67,54 +67,6 @@ how
 
 Configuration Parameters
 ------------------------
-
-===================== 	===========================================================================
-Field Name        		Description
-===================== 	===========================================================================
-Notification URL		The URL or IP on which you want to receive server-to-server notifications.
----------------------  	---------------------------------------------------------------------------
-Request method			The method you wish to receive the requests
-							- XML
-							- HTTP POST
---------------------- 	---------------------------------------------------------------------------
-Desired notifications	Payment Card Industry Data Security Standards
-=====================  	===========================================================================
-
-
-Configuration Parameters
-------------------------
-===================== 	===========================================================================
-Field Name        		Description
-===================== 	===========================================================================
-Notification URL		The URL or IP on which you want to receive server-to-server notifications.
----------------------  	---------------------------------------------------------------------------
-Request method			The method you wish to receive the requests
-					    - XML
-					    - HTTP POST
---------------------- 	---------------------------------------------------------------------------
-Desired notifications	Payment Card Industry Data Security Standards
-=====================  	===========================================================================
-
-
-Configuration Parameters
-------------------------
-===================== 	===========================================================================
-Field Name        		Description
-===================== 	===========================================================================
-Notification URL		The URL or IP on which you want to receive server-to-server notifications.
----------------------  	---------------------------------------------------------------------------
-Request method			The method you wish to receive the requests
-					      - XML
-					      - HTTP POST
---------------------- 	---------------------------------------------------------------------------
-Desired notifications	Payment Card Industry Data Security Standards
-=====================  	===========================================================================
-
-
-
-
-Configuration Parameters
-------------------------
 ===================== 	===========================================================================
 Field Name        		Description
 ===================== 	===========================================================================
@@ -127,17 +79,3 @@ Request method			The method you wish to receive the requests:
 --------------------- 	---------------------------------------------------------------------------
 Desired notifications	Payment Card Industry Data Security Standards
 =====================  	===========================================================================
-
-
-The method you wish to receive the requests:
-- XML
-- HTTP POST
-
-The method you wish to receive the requests:
-
-- XML
-- HTTP POST
-
-The method you wish to receive the requests:
-  - XML
-  - HTTP POST
