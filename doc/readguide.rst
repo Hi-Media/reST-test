@@ -55,36 +55,34 @@ Req.           Specifies whether an element is required or not.
 Description    Brief description of the data element and where necessary, a list of valid values and element dependencies.
 =============  ============================================================================================================
 
+=============  ============================================================================================================
+Convention     Meaning
+=============  ============================================================================================================
+Field Name     Name of the data element
+Format         Format of the element
+Length         Maximum size of the data element.(i.e. a size of 6 means the data value cannot exceed six characters)
+               Note : there is no limitation on the length of the size, when no size is specified.
+Reg.           Specifies whether an element is required or not.
+               **M** = Mandatory -> must always be provided
+               **C** = Conditional -> requirement depends on value or appearance of other elements.
+=============  ============================================================================================================
+
+
+
 Table 2:Description of data elements
 
 ===================  =========================================================  ===================
 Format Abbreviation  Description                                                Example
 ===================  =========================================================  ===================
-AN                   Alphanumeric characters (a-z, A-Z, 0-9)                    -
+AN                   Alphanumeric characters (a-z, A-Z, 0-9)                    
 -------------------  ---------------------------------------------------------  -------------------
-A                    Alphabetic characters only (a-z, A-Z)                      -
-N                    Numerical only                                             -
+A                    Alphabetic characters only (a-z, A-Z)                      
+N                    Numerical only                                             
 R                    Decimal number with explicit decimal point, signed         12.34
 DT                   Date in the format YYYY-MM-DD                              2012-12-31
 TM                   Time in the format HH:MM with optional seconds (HH:MM:SS)  15:30
 ===================  =========================================================  ===================
 
-
-===================  =========================================================  ==========
-Format Abbreviation  Description												 Example
-===================  =========================================================  ==========
-AN                   Alphanumeric characters (a-z, A-Z, 0-9)
--------------------  ---------------------------------------------------------  ----------
-A			         Alphabetic characters only (a-z, A-Z)
--------------------  ---------------------------------------------------------  ----------
-N			         Numerical only
--------------------  ---------------------------------------------------------  ----------
-R			         Decimal number with explicit decimal point, signed		    12.34
--------------------  ---------------------------------------------------------  ----------
-DT                   Date in the format YYYY-MM-DD							    2012-12-31
--------------------  ---------------------------------------------------------  ----------
-TM                   Time in the format HH:MM with optional seconds (HH:MM:SS)  15:30
-===================  =========================================================  ==========
 
 Table 3:Available formats of data elements
 
