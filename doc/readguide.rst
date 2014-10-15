@@ -11,7 +11,7 @@ This guide uses several typographic conventions to highlight certain words, phra
 specific pieces of information.
 The following table clarifies the conventions used across this guide.
 
-.. table:: Typographic conventions that apply across this guide
+
 .. table:: Table1 Typographic conventions that apply across this guide
 
    ==============  =======================================================================================================================================================================================================================
@@ -28,14 +28,6 @@ The following table clarifies the conventions used across this guide.
    <placeholder>   Indicates placeholders, most often method or function parameters; these placeholders represent information that must be supplied by the implementation or the user. For command-line input, indicates parameter values.
    ==============  =======================================================================================================================================================================================================================
 
-.. table:: Truth table for "not"
-
-   =====  =====
-     A    not A
-   =====  =====
-   False  True
-   True   False
-   =====  =====
 
 
 Abbreviations used in tables
@@ -45,57 +37,58 @@ The tables of this document describe data elements. These data elements are equi
 in a query or to fields of a response message. The following table helps understanding the different
 attributes (columns) that define a data element.
 
+.. table:: 
+Table 2 Description of data elements
 
-=============  ============================================================================================================
-Convention     Meaning
-=============  ============================================================================================================
-Field Name     Name of the data element
-Format         Format of the element
-Length         Maximum size of the data element.(i.e. a size of 6 means the data value cannot exceed six characters)
-               Note : there is no limitation on the length of the size, when no size is specified.
-Reg.           Specifies whether an element is required or not.
-               **M** = Mandatory -> must always be provided.
-               **C** = Conditional -> requirement depends on value or appearance of other elements.
-=============  ============================================================================================================
-
-
-
-Table 2:Description of data elements
-
-===================  =========================================================  ===================
-Format Abbreviation  Description                                                Example
-===================  =========================================================  ===================
-AN                   Alphanumeric characters (a-z, A-Z, 0-9)                    
--------------------  ---------------------------------------------------------  -------------------
-A                    Alphabetic characters only (a-z, A-Z)                      
-N                    Numerical only                                             
-R                    Decimal number with explicit decimal point, signed         12.34
-DT                   Date in the format YYYY-MM-DD                              2012-12-31
-TM                   Time in the format HH:MM with optional seconds (HH:MM:SS)  15:30
-===================  =========================================================  ===================
+   =============  ============================================================================================================
+   Convention     Meaning
+   =============  ============================================================================================================
+   Field Name     Name of the data element
+   Format         Format of the element
+   Length         Maximum size of the data element.(i.e. a size of 6 means the data value cannot exceed six characters)
+                  Note : there is no limitation on the length of the size, when no size is specified.
+   Reg.           Specifies whether an element is required or not.
+                  **M** = Mandatory -> must always be provided.
+                  **C** = Conditional -> requirement depends on value or appearance of other elements.
+   =============  ============================================================================================================
 
 
-Table 3:Available formats of data elements
+
+.. table:: Table 3 Available formats of data elements
+
+   ===================  =========================================================  ===================
+   Format Abbreviation  Description                                                Example
+   ===================  =========================================================  ===================
+   AN                   Alphanumeric characters (a-z, A-Z, 0-9)                    
+   -------------------  ---------------------------------------------------------  -------------------
+   A                    Alphabetic characters only (a-z, A-Z)                      
+   N                    Numerical only                                             
+   R                    Decimal number with explicit decimal point, signed         12.34
+   DT                   Date in the format YYYY-MM-DD                              2012-12-31
+   TM                   Time in the format HH:MM with optional seconds (HH:MM:SS)  15:30
+   ===================  =========================================================  ===================
+
 
 
 Acronyms and Abbreviations
 --------------------------
 The following acronyms and abbreviations are used in this guide.
 
+.. table:: Table 4:Acronyms and Abbreviations
 
-=============  =========================================================
-Acronym        Full Name
-=============  =========================================================
-BIN				Bank Identification Number
--------------  ---------------------------------------------------------
-PAN				Primary Account Number
--------------  ---------------------------------------------------------
-PCI DSS			Payment Card Industry Data Security Standards
--------------  ---------------------------------------------------------
-REST			Representational State Transfer
-=============  =========================================================
+   =============  =========================================================
+   Acronym        Full Name
+   =============  =========================================================
+   BIN            Bank Identification Number
+   -------------  ---------------------------------------------------------
+   PAN            Primary Account Number
+   -------------  ---------------------------------------------------------
+   PCI DSS        Payment Card Industry Data Security Standards
+   -------------  ---------------------------------------------------------
+   REST           Representational State Transfer
+   =============  =========================================================
 
-Table 4:Acronyms and Abbreviations
+
 
 
 
