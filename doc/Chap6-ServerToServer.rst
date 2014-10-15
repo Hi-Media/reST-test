@@ -51,18 +51,18 @@ state                       transaction state. Value must be a member of the fol
 							  -	declined
 							  -	error
 								
-                            Please report to the following section below — Transaction Workflow — for further details.
-==========================  ===================================================================================================================================================================							
---------------------------	-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                            Please report to the following section below *Transaction Workflow* for further details.
 reason                      optional element. Reason why transaction was declined.
-test						Payment Card Industry Data Security Standards
-mid							your merchant account number (issued to you by HiPay TPP).
-Attempt_id					attempt id of the payment.
-authorization_code			an authorization code (up to 35 characters) generated for each approved or pending transaction by the acquiring provider.
-transaction_rerefence		the unique identifier of the transaction.
-date_created				time when transaction was created.
-Date_updated				time when transaction was last updated.
-date_authorized				time when transaction was authorized.
+test                        Payment Card Industry Data Security Standards
+mid                         your merchant account number (issued to you by HiPay TPP).
+Attempt_id                  attempt id of the payment.
+authorization_code          an authorization code (up to 35 characters) generated for each approved or pending transaction by the acquiring provider.
+transaction_rerefence       the unique identifier of the transaction.
+date_created                time when transaction was created.
+Date_updated                time when transaction was last updated.
+date_authorized             time when transaction was authorized.
+==========================  ===================================================================================================================================================================							
+
 --------------------------	-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 status						transaction status.
 
