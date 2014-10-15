@@ -64,29 +64,27 @@ date_authorized             time when transaction was authorized.
 --------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 status                      transaction status.
                             A list of available statuses can be found in the appendices.
-							appendices – Appendix B *Payment Status Definitions*.
+							See appendices: Appendix B *Payment Status Definitions*.
 --------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-message                     transaction message.				
+message                     transaction message.
+authorized_amount           the transaction amount.
+captured_amount             captured amount.
+refunded_amount             refunded amount.
+decimals                    decimal precision of transaction amount.
+--------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+currency                    base currency for this transaction.
+                            This three-character currency code complies with ISO 4217.
+--------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ip_address                  the IP address of the customer making the purchase.				
+ip_country                  country code associated to the customer's IP address.
+device_id                   unique identifier assigned to device (the customer's brower) by HiPay TPP.
+cdata1                      custom data.
+cdata2                      custom data.
+cdata3                      custom data.
+cdata4                      custom data.							
 ==========================  ===================================================================================================================================================================							
 
---------------------------	-------------------------------------------------------------------------------------------------------------------------------------------------------------------
-message						transaction message.
-authorized_amount			the transaction amount.
-captured_amount				captured amount.
-refunded_amount				refunded amount.
-decimals					decimal precision of transaction amount.
--------------------------- 	-------------------------------------------------------------------------------------------------------------------------------------------------------------------
-currency					base currency for this transaction.
 
-							This three-character currency code complies with ISO 4217.
--------------------------- 	-------------------------------------------------------------------------------------------------------------------------------------------------------------------
-ip_address					the IP address of the customer making the purchase.				
-ip_country					country code associated to the customer's IP address.
-device_id					unique identifier assigned to device (the customer's brower) by HiPay TPP.
-cdata1						custom data.
-cdata2						custom data.
-cdata3						custom data.
-cdata4						custom data.
 -------------------------- 	-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 avs_result					result of the Address Verification Service (AVS).
 

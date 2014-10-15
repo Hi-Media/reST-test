@@ -37,8 +37,8 @@ Verification
   To check this point, you just need to concatenate the passphrase with the POST content of the query.
 
   Algorithm verification
-  *Algorithm:
-  SHA Signature = SHA1(Raw POST Data + Secret Passphrase)*
+   *Algorithm:
+    SHA Signature = SHA1(Raw POST Data + Secret Passphrase)*
 
 URL Redirection
 `````````````````
@@ -54,7 +54,7 @@ Verification
   c) The parameter must be sorted in alphabetical order.
 
   Algorithm verification
-  *Algorithm:*
+   *Algorithm:*
   
   a) paramC = val3
   b) paramA = val1
