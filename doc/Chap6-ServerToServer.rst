@@ -81,7 +81,18 @@ device_id                   unique identifier assigned to device (the customer's
 cdata1                      custom data.
 cdata2                      custom data.
 cdata3                      custom data.
-cdata4                      custom data.							
+cdata4                      custom data.
+--------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+avs_result                  result of the Address Verification Service (AVS).	
+                            Possible result codes can be found in the appendices
+--------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+cvc_result                  result of the CVC (Card Verification Code) check.
+                            Possible result codes can be found in the appendices
+eci                         Electronic Commerce Indicator (ECI).
+--------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+payment_product             payment product used to complete the transaction.
+                            Informs about the payment_method section type
+payment_method              See tables below for further details.							
 ==========================  ===================================================================================================================================================================							
 
 
