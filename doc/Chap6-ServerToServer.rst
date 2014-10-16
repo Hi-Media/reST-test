@@ -19,9 +19,7 @@ Procedure
 :Login Screen:
 
 .. image:: images/ServerToServer_LoginScreen.png
-   :name: Server-to-Server Notification login screen
-
-   Server-To-Server Notification login screen
+ 
    
 Configuration Parameters
 ------------------------
