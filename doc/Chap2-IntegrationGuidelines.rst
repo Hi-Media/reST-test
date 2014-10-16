@@ -210,7 +210,6 @@ Catching exceptions in your integration
 
 Catching exceptions in your integration
 ----------------------------------------
-
 Overview
   When you implement the API, you will need to catch the exception and extract the message.
   
