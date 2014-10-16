@@ -14,19 +14,21 @@ Service Endpoints
 ==================
 
 There are two endpoints (base URLs) that you can make your API calls to. 
+
    - Stage if you are testing your integration, and 
    - Production for when you have finished testing and want your application to go live.
 
 All URLs referenced in this guide must have one of the following bases:
 
 .. table:: Table 5 Service endpoints
+
 ==============	=====================================================
 Environment      Endpoint
 ============== 	=====================================================
 Stage            https://stage-secure-gateway.allopass.com/rest/v1/
 -------------- 	-----------------------------------------------------
 Production       https://secure-gateway.allopass.com/rest/v1/
-==============  ======================================================
+==============  =====================================================
 
 Authentication
 =============== 
@@ -54,7 +56,7 @@ All other encodings must be converted to UTF-8 before sending them to the HiPay 
 Response Handling
 --------------------
 The HTTP status code indicates whether a request succeeded or not.
-i.e. a 2xx status code indicates a success, whereas a 4xx or a 5xx status code indicates a failure.
+  i.e. a 2xx status code indicates a success, whereas a 4xx or a 5xx status code indicates a failure.
 
 Response Status Codes
 =====================
@@ -64,6 +66,7 @@ The HiPay TPP API attempts to return appropriate HTTP status codes for every req
 These are the HTTP status codes you may receive and their meaning; they are listed below:
 
 .. table:: Table 6 HTTP status codes
+
 =======================  =============================================================================
 HTTP status              Description
 =======================  =============================================================================
@@ -76,12 +79,14 @@ HTTP status              Description
                          Your credentials are invalid.
 -----------------------  -----------------------------------------------------------------------------						 
 403 Forbidden            You are making a call to a resource you don't have permission to.
+
                            * i.g. you are trying to retrieve information about a token you don't own.
                          An error message is displayed with an explanation of the error situation.
 -----------------------  -----------------------------------------------------------------------------						 
 404 Not Found            The resource requested, such as a token, does not exist.
 -----------------------  -----------------------------------------------------------------------------
 405 Method Not Allowed   The HTTP method you used is not allowed for the requested URL.
+
                            * i.g. you are trying to retrieve information about a token you don't own. 
 -----------------------  -----------------------------------------------------------------------------
 500 Server Error         HiPay TPP server error. Report this to the HiPay TPP Technical Support
@@ -97,6 +102,7 @@ Overview
 
 Authentication
   Here are examples of possible headers.
+  
     - Accept: application/json
     - Accept: application/xml
     - Accept: application/json, application/xml;q=0.8, */*;q=0.5
