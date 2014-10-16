@@ -7,8 +7,9 @@ From Wikipedia, the free encyclopedia
 
 .. glossary::
 
-	JSON
-      JavaScript Object Notation, is an open standard format that uses human-readable textA set of functions and procedures that allow the creation of applications which access the features or data of an operating system, application, or other service.
+
+    JSON
+	  JavaScript Object Notation, is an open standard format that uses human-readable textA set of functions and procedures that allow the creation of applications which access the features or data of an operating system, application, or other service.
       to transmit data objects consisting of attribute–value pairs.
       It is used primarily to transmit data between a server and web application, as an alternative to :term:`XML`.
 

@@ -4,8 +4,7 @@
 Chapter 1 - API Overview
 ==========================
 
-The:term:`API`is based on REST principles; thus it is very easy to write and test applications. 
-:term:`XML` 
+The API is based on REST principles; thus it is very easy to write and test applications. 
 
 How to access the API : 
 
