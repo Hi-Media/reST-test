@@ -21,7 +21,7 @@ There are two endpoints (base URLs) that you can make your API calls to.
 All URLs referenced in this guide must have one of the following bases:
 
    
-.. table:: Service endpoints
+.. table:: Table:Service endpoints
 
   ==============  =====================================================
   Environment      Endpoint
@@ -69,7 +69,7 @@ The HiPay TPP API attempts to return appropriate HTTP status codes for every req
 
 These are the HTTP status codes you may receive and their meaning; they are listed below:
 
-.. table:: HTTP status codes
+.. table:: Table:HTTP status codes
 
   =======================  =============================================================================
   HTTP status              Description
@@ -178,7 +178,7 @@ Exception properties
   An exception has up to three properties.
   
   
-.. table:: Properties of an error message
+.. table:: Table:Properties of an error message
 
    ==============  ======================================================
    Environment     Endpoint
@@ -219,9 +219,11 @@ Catching exceptions in your integration
 ----------------------------------------
 
 Overview
+
   When you implement the API, you will need to catch the exception and extract the message.
   
 Sample code illustration
+
   The following sample code illustrates how to handle an error using PHP.
   
 .. code-block:: php
