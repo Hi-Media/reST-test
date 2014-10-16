@@ -14,7 +14,6 @@ Description
   The JavaScript determines what information is available and generates a blackbox from all available sources.
 
 Blackbox content
-
   A black box will typically:
 		-	Range up to 4,000 bytes (the average length being just under 1,000 bytes)
 		-	Contain alphanumeric values and the special characters: + / ; =
@@ -26,7 +25,7 @@ Description
   To integrate the client you must specify a hidden field that the JavaScript will populate. 
   This adds the black box as another field to be submitted along the other details in the form.		
 		
-:Recommendation:
+**Recommendation**
 
 =======================================================================================  =======================================================================================================================================================
 YOU MUST        																		  YOU MUST NOT

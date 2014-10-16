@@ -128,7 +128,7 @@ Order                       information about the customer and his order.
  f) tax                       f) the order tax fee.
  g) decimals                  g) decimal precision of the order amount.
  h) currency                  h) base currency for this order.This three-character currency code complies with ISO 4217
- i) customer_id               i) unique identifier of the customer as provided by Merchant.
+ i) customer_id               i) unique identifier of the customer as provided by Merchant.              
  j) language                  j) language code of the customer.
  k) email                     k) email address of the customer.
 ==========================  ===================================================================================================================================================================							
