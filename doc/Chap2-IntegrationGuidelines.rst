@@ -204,8 +204,10 @@ JSON Error Example
    	  "description":"Username and/or password is incorrect."
    	}		
 
+
 Catching exceptions in your integration
 ----------------------------------------
+
 Overview
   When you implement the API, you will need to catch the exception and extract the message.
   
