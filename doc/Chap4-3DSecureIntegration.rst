@@ -89,7 +89,7 @@ The following table lists the Enrolment message and status:
 
   =======  =========================  ====================  ====  ===================================================================================================================================================================================================
   Status   Enrollment Message         3DSecure Available?   ECI   Description
-  =======  =========================  ====================  ====  ===================================================================================================================================================================================================  =======  =========================  ====================  ====  =======================
+  =======  =========================  ====================  ====  =================================================================================================================================================================================================== 
   Y        Authentication Available   Yes                         Card is enrolled in the 3-D Secure program and the payer is eligible for authentication processing.                         
   N        Cardholder Not Enrolled    No                    6     Card is not enrolled in 3-D Secure program.
                                                                   Card is eligible for authentication processing (it is within the card associations range of accepted cards) but the card-issuing bank does not participate in the 3-D Secure program.
@@ -99,5 +99,5 @@ The following table lists the Enrolment message and status:
                                                                   Chargeback Liability Shift: The Acquirer/Merchant retains liability if the cardholder later disputes making the purchase.
   E        *Any error message here*   No                    7     An error occurred during the enrollment verification process.
                                                                   Chargeback Liability Shift: The card can be accepted for authorization processing, yet the merchant may not claim a liability shift on this transaction in case of a dispute with the cardholder.
-  =======  =========================  ====================  ====  ===================================================================================================================================================================================================  =======  =========================  ====================  ====  =======================
+  =======  =========================  ====================  ====  =================================================================================================================================================================================================== 
 
