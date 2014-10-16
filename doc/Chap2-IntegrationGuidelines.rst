@@ -20,24 +20,16 @@ There are two endpoints (base URLs) that you can make your API calls to.
 
 All URLs referenced in this guide must have one of the following bases:
 
-.. table:: Truth table for "not"
-
-   =====  =====
-     A    not A
-   =====  =====
-   False  True
-   True   False
-   =====  =====
    
 .. table:: Table 5 Service endpoints
 
-==============	=====================================================
-Environment      Endpoint
-============== 	=====================================================
-Stage            https://stage-secure-gateway.allopass.com/rest/v1/
--------------- 	-----------------------------------------------------
-Production       https://secure-gateway.allopass.com/rest/v1/
-==============  =====================================================
+  ==============  =====================================================
+  Environment      Endpoint
+  ==============  =====================================================
+  Stage            https://stage-secure-gateway.allopass.com/rest/v1/
+  --------------  -----------------------------------------------------
+  Production       https://secure-gateway.allopass.com/rest/v1/
+  ==============  =====================================================
 
 Authentication
 =============== 
@@ -76,31 +68,31 @@ These are the HTTP status codes you may receive and their meaning; they are list
 
 .. table:: Table 6 HTTP status codes
 
-=======================  =============================================================================
-HTTP status              Description
-=======================  =============================================================================
-200 OK                   The request was understood and successfully processed.
------------------------  -----------------------------------------------------------------------------
-400 Bad Request          The request was rejected due to a validation error.
-                         An error message is displayed with an explanation of the error situation.
------------------------  -----------------------------------------------------------------------------
-401 Unauthorized         Payment Card Industry Data Security Standards
-                         Your credentials are invalid.
------------------------  -----------------------------------------------------------------------------						 
-403 Forbidden            You are making a call to a resource you don't have permission to.
+  =======================  =============================================================================
+  HTTP status              Description
+  =======================  =============================================================================
+  200 OK                   The request was understood and successfully processed.
+  -----------------------  -----------------------------------------------------------------------------
+  400 Bad Request          The request was rejected due to a validation error.
+                           An error message is displayed with an explanation of the error situation.
+  -----------------------  -----------------------------------------------------------------------------
+  401 Unauthorized         Payment Card Industry Data Security Standards
+                           Your credentials are invalid.
+  -----------------------  -----------------------------------------------------------------------------						 
+  403 Forbidden            You are making a call to a resource you don't have permission to.
 
-                           * i.g. you are trying to retrieve information about a token you don't own.
-                         An error message is displayed with an explanation of the error situation.
------------------------  -----------------------------------------------------------------------------						 
-404 Not Found            The resource requested, such as a token, does not exist.
+                             * i.g. you are trying to retrieve information about a token you don't own.
+                           An error message is displayed with an explanation of the error situation.
+  -----------------------  -----------------------------------------------------------------------------						 
+  404 Not Found            The resource requested, such as a token, does not exist.
 -----------------------  -----------------------------------------------------------------------------
-405 Method Not Allowed   The HTTP method you used is not allowed for the requested URL.
+  405 Method Not Allowed   The HTTP method you used is not allowed for the requested URL.
 
-                           * i.g. you are trying to retrieve information about a token you don't own. 
------------------------  -----------------------------------------------------------------------------
-500 Server Error         HiPay TPP server error. Report this to the HiPay TPP Technical Support
-503 Service Unavailable  HiPay TPP API is temporarily unable to process the request. Try again later.
-=======================  =============================================================================
+                             * i.g. you are trying to retrieve information about a token you don't own. 
+  -----------------------  -----------------------------------------------------------------------------
+  500 Server Error         HiPay TPP server error. Report this to the HiPay TPP Technical Support
+  503 Service Unavailable  HiPay TPP API is temporarily unable to process the request. Try again later.
+  =======================  =============================================================================
 
 
 Response Formats
