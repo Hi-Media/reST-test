@@ -167,6 +167,7 @@ Overview
 Exception properties
   An exception has up to three properties.
   
+  
 .. table:: Table 7 Properties of an error message
 
    ==============  ======================================================
@@ -177,8 +178,8 @@ Exception properties
    description     A further descriptive message regarding the exception.
    ==============  ======================================================
  
-   i.e. if you receive an exception with status code 400 (Bad Request), 
-   the code and message properties are useful for debugging what went wrong.
+i.e. if you receive an exception with status code 400 (Bad Request), 
+the code and message properties are useful for debugging what went wrong.
   
 XML Error Example
 
