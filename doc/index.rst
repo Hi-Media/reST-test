@@ -7,6 +7,7 @@ Contents
   introguide
   readguide
   Chap1-APIOverview
+  Chap2-IntegrationGuidelines
   Chap5-RedirectPages
   Chap6-ServerToServer
   Chap7-Signatureverif
