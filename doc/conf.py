@@ -241,3 +241,28 @@ texinfo_documents = [
 
 # How to display URL addresses: 'footnote', 'no', or 'inline'.
 #texinfo_show_urls = 'footnote'
+
+# -- ReadTheDoc requirements and local template generation---------------------
+
+
+# —————————————————————————————————————————————————————————————————————————————
+# THX to https://blog.deimos.fr/2014/10/02/sphinxdoc-and-readthedocs-theme-tricks-2/
+# on_rtd is whether we are on readthedocs.org, this line of code grabbed from docs.readthedocs.org
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+
+if not on_rtd:  # only import and set the theme if we're building docs locally
+    html_theme = 'sphinx_rtd_theme'
+    html_theme_path = ['themes']
+    # Override default css
+    def setup(app):
+        #app.add_javascript("custom.js")
+        app.add_stylesheet('himedia/sphinx_rtd_overrides.css')
+else:
+    # Override default css to get a larger width for ReadTheDoc build
+    html_context = {
+        'css_files': [
+            'https://media.readthedocs.org/css/sphinx_rtd_theme.css',
+            'https://media.readthedocs.org/css/readthedocs-doc-embed.css',
+            '_static/himedia/sphinx_rtd_overrides.css',
+        ],
+    }
