@@ -23,4 +23,5 @@ From Wikipedia, the free encyclopedia
 
   API
     Application Programming Interface is a set of functions and procedures that allow the creation of applications which access the features or data of an operating system, application, or other service.
-	 
+
+    .. seealso:: <http://en.wikipedia.org/wiki/Application_programming_interface>
