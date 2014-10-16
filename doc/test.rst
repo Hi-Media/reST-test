@@ -13,6 +13,22 @@ Test
 
 .. seealso:: This is a admonition of type `seealso`.
 
+.. versionadded:: 2.5
+    The *spam* parameter.
+
+.. versionchanged:: 2.5
+    The *spam* parameter.
+
+.. deprecated:: 3.1
+    Use :func:`spam` instead.
+
+.. seealso::
+
+   Module :py:mod:`zipfile`
+      Documentation of the :py:mod:`zipfile` standard module.
+
+   `GNU tar manual, Basic Tar Format <http://link>`_
+      Documentation for tar archive files, including GNU tar extensions.
 
 Images
 ------
