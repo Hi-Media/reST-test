@@ -101,3 +101,11 @@ The following table lists the Enrolment message and status:
                                                                   Chargeback Liability Shift: The card can be accepted for authorization processing, yet the merchant may not claim a liability shift on this transaction in case of a dispute with the cardholder.
   =======  =========================  ====================  ====  =================================================================================================================================================================================================== 
 
+.. table:: Truth table for "not"
+
+   =====  =====  =================  ==========
+     A    not A  test               test
+   =====  =====  =================  ========== 
+   False  True   test               test
+   True   False  test               test
+   =====  =====  =================  ==========
