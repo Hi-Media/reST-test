@@ -204,6 +204,9 @@ JSON Error Example
    	  "description":"Username and/or password is incorrect."
    	}		
 
+----------------------------------------
+Catching exceptions in your integration
+----------------------------------------
 
 Catching exceptions in your integration
 ----------------------------------------
