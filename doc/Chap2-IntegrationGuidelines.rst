@@ -156,8 +156,111 @@ Here is the response to above request, represented as JSON.
    	  ...
 	  }
 	
- 	
-	
-	
-		
-		
+-----------------
+Error Handling
+-----------------
+Overview
+  HiPay TPP Gateway API returns two levels of error information:
+    - an HTTP Status Code in the header
+    - a response body with additional details that can help you determine how to handle the exception.
+
+Exception properties
+  An exception has up to three properties.
+  
+.. table:: Table 7 Properties of an error message
+
+  ==============  ======================================================
+  Environment     Endpoint
+  ==============  ======================================================
+  code            An error code to find help for the exception.
+  production      A descriptive message regarding the exception.
+  description     A further descriptive message regarding the exception.
+  ==============  ======================================================
+ 
+   i.e. if you receive an exception with status code 400 (Bad Request), 
+   the code and message properties are useful for debugging what went wrong.
+  
+XML Error Example
+
+.. code-block:: xml
+    :linenos:
+  	
+   	<?xml version="1.0" encoding="UTF-8"?>
+   	<response>
+   	  <code>1000001</code>
+   	  <message>Incorrect Credentials</message>
+   	  <description>Username and/or password is incorrect.</description>
+   	</response>
+
+JSON Error Example
+
+.. code-block:: json
+    :linenos:
+
+   	{
+   	  "code":"1000001",
+   	  "message":"Incorrect Credentials",
+   	  "description":"Username and/or password is incorrect."
+   	}		
+
+Catching exceptions in your integration
+----------------------------------------
+Overview
+  When you implement the API, you will need to catch the exception and extract the message.
+  
+Sample code illustration
+  The following sample code illustrates how to handle an error using PHP.
+  
+.. code-block:: php
+    :linenos:
+
+   	define('API_ENDPOINT', 'https://secure-gateway.allopass.com/rest/v1');
+   	define('API_USERNAME', '<API login>');
+   	define('API_PASSWORD', '<API password>');
+   	
+   	$credentials = API_USERNAME . ':' . API_PASSWORD;
+   	$resource    = API_ENDPOINT . '/order';
+   	
+   	// create a new cURL resource
+   	$curl = curl_init();
+   	
+   	// request parameters
+   	$data = array(
+   	    'orderid'         => 'test13659745896',
+   	    'operation'       => 'authorization',
+   	    'payment_product' => 'visa',
+   	    ...
+   	);
+   	// set appropriate options
+   	$options = array(
+   	    CURLOPT_URL            => $resource,
+   	    CURLOPT_USERPWD        => $credentials,
+   	    CURLOPT_HTTPHEADER     => array('Accept: application/json'),
+   	    CURLOPT_RETURNTRANSFER => true,
+   	    CURLOPT_FAILONERROR    => false,
+   	    CURLOPT_HEADER         => false,
+   	    CURLOPT_POST           => true,
+   	    CURLOPT_POSTFIELDS     => http_build_query($data)
+   	);
+   	
+   	foreach ($options as $option => $value) {
+   	    curl_setopt($curl, $option, $value);
+   	}
+   	
+   	// execute the given cURL session
+   	if (false === ($result = curl_exec($curl))) {
+   	    throw new RuntimeException(curl_error($curl), curl_errno($curl));
+   	}
+   	
+   	$status   = (int)curl_getinfo($curl, CURLINFO_HTTP_CODE);
+   	$response = json_decode($result);
+   	
+   	if (floor($status/100) != 2) {
+   	    throw new RuntimeException($response->message, $response->code);
+   	}
+   	
+   	printf('Payment Reference: %s', $response->transactionReference);
+   	
+   	curl_close($curl);
+  
+  
