@@ -85,7 +85,7 @@ These are the HTTP status codes you may receive and their meaning; they are list
                            An error message is displayed with an explanation of the error situation.
   -----------------------  -----------------------------------------------------------------------------						 
   404 Not Found            The resource requested, such as a token, does not exist.
------------------------  -----------------------------------------------------------------------------
+  -----------------------  -----------------------------------------------------------------------------
   405 Method Not Allowed   The HTTP method you used is not allowed for the requested URL.
 
                              * i.g. you are trying to retrieve information about a token you don't own. 
