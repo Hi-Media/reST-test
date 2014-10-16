@@ -67,8 +67,8 @@ Step    Action
 **3**	If the Issuer is participating for the card range, the Directory sends a Verify Enrollment Request message to the Issuer ACS to determine whether authentication is available for the account number.
 **4**   The ACS returns a Verify Enrolment Response to the Directory Server
         
-		 **IF** Authentication is available for this card number…**THEN**…the response provides the URL of the ACS where the cardholder can be authenticated.
-         **IF** Authentication is not available…**THEN**…the Merchant server receives a Cardholder Not Enrolled or Authentication Not Available message and returns the transaction to the Merchant’s commerce server to proceed with a standard transaction processing.
+		  **IF** Authentication is available for this card number **THEN** the response provides the URL of the ACS where the cardholder can be authenticated.
+          **IF** Authentication is not available **THEN** the Merchant server receives a Cardholder Not Enrolled or Authentication Not Available message and returns the transaction to the Merchant’s commerce server to proceed with a standard transaction processing.
 ------  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 **5**   The Directory Server forwards the ACS response to the MPI.
 **6**   The MPI sends an Authentication Request message to the cardholder s browser for routing to the ACS.
@@ -85,18 +85,19 @@ Authentication Results
 -----------------------
 The following table lists the Enrolment message and status:
 
+.. table:: Table 18  Enrollment Message and Status
 
-========================== 	========================================================================================================================================================================
-Field Name        			Description
-========================== 	========================================================================================================================================================================
-token 						Card token.
-brand 						Card brand. (e.g., VISA, MASTERCARD, AMERICANEXPRESS, MAESTRO).
-pan 						Card number (up to 19 characters). Note that, due to the PCI DSS security standards, our system has to mask credit card numbers in any output (e.g., 549619******4769).
-card_holder 				Cardholder name.
-card_expiry_month 			Card expiry month (2 digits).
-card_expiry_year 			Card expiry year (4 digits).
-issuer 						Card issuing bank name. Do not rely on this value to remain static over time. Bank names may change over time due to acquisitions and mergers.
-country 					Bank country code where card was issued. This two-letter country code complies with ISO 3166-1 (alpha 2).
-========================== 	========================================================================================================================================================================
-
+  =======  =========================  ====================  ====  =======================
+  Status   Enrollment Message         3DSecure Available?   ECI   Description
+  =======  =========================  ====================  ====  =======================
+  Y        Authentication Available   Yes                         Card is enrolled in the 3-D Secure program and the payer is eligible for authentication processing.                         
+  N        Cardholder Not Enrolled    No                    6     Card is not enrolled in 3-D Secure program.
+                                                                  Card is eligible for authentication processing (it is within the card associations range of accepted cards) but the card-issuing bank does not participate in the 3-D Secure program.
+                                                                  **Chargeback Liability Shift** If the cardholder later disputes the purchase, the issuer may not submit a chargeback to the merchant.
+  U        Unable to Authenticate     No                    7     The card associations were unable to verify if the cardholder is enrolled in the 3-D Secure program.
+                                                                  Merchants can choose to accept the card nonetheless and proceed the purchase as non-authenticated when submitting the authorization.
+                                                                  Chargeback Liability Shift: The Acquirer/Merchant retains liability if the cardholder later disputes making the purchase.
+  E        *Any error message here*   No                    7     An error occurred during the enrollment verification process.
+                                                                  Chargeback Liability Shift: The card can be accepted for authorization processing, yet the merchant may not claim a liability shift on this transaction in case of a dispute with the cardholder.
+  =======  =========================  ====================  ====  =======================
 
