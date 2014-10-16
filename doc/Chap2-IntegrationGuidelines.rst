@@ -169,13 +169,13 @@ Exception properties
   
 .. table:: Table 7 Properties of an error message
 
-  ==============  ======================================================
-  Environment     Endpoint
-  ==============  ======================================================
-  code            An error code to find help for the exception.
-  production      A descriptive message regarding the exception.
-  description     A further descriptive message regarding the exception.
-  ==============  ======================================================
+   ==============  ======================================================
+   Environment     Endpoint
+   ==============  ======================================================
+   code            An error code to find help for the exception.
+   production      A descriptive message regarding the exception.
+   description     A further descriptive message regarding the exception.
+   ==============  ======================================================
  
    i.e. if you receive an exception with status code 400 (Bad Request), 
    the code and message properties are useful for debugging what went wrong.
