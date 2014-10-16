@@ -20,6 +20,15 @@ There are two endpoints (base URLs) that you can make your API calls to.
 
 All URLs referenced in this guide must have one of the following bases:
 
+.. table:: Truth table for "not"
+
+   =====  =====
+     A    not A
+   =====  =====
+   False  True
+   True   False
+   =====  =====
+   
 .. table:: Table 5 Service endpoints
 
 ==============	=====================================================
