@@ -67,8 +67,8 @@ Step    Action
 **3**	If the Issuer is participating for the card range, the Directory sends a Verify Enrollment Request message to the Issuer ACS to determine whether authentication is available for the account number.
 **4**   The ACS returns a Verify Enrolment Response to the Directory Server
         
-		  **IF** Authentication is available for this card number **THEN** the response provides the URL of the ACS where the cardholder can be authenticated.
-          **IF** Authentication is not available **THEN** the Merchant server receives a Cardholder Not Enrolled or Authentication Not Available message and returns the transaction to the Merchant’s commerce server to proceed with a standard transaction processing.
+		  - **IF** Authentication is available for this card number **THEN** the response provides the URL of the ACS where the cardholder can be authenticated.
+          - **IF** Authentication is not available **THEN** the Merchant server receives a Cardholder Not Enrolled or Authentication Not Available message and returns the transaction to the Merchant’s commerce server to proceed with a standard transaction processing.
 ------  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 **5**   The Directory Server forwards the ACS response to the MPI.
 **6**   The MPI sends an Authentication Request message to the cardholder s browser for routing to the ACS.
@@ -87,9 +87,9 @@ The following table lists the Enrolment message and status:
 
 .. table:: Table 18  Enrollment Message and Status
 
-  =======  =========================  ====================  ====  =======================
+  =======  =========================  ====================  ====  ===================================================================================================================================================================================================
   Status   Enrollment Message         3DSecure Available?   ECI   Description
-  =======  =========================  ====================  ====  =======================
+  =======  =========================  ====================  ====  ===================================================================================================================================================================================================  =======  =========================  ====================  ====  =======================
   Y        Authentication Available   Yes                         Card is enrolled in the 3-D Secure program and the payer is eligible for authentication processing.                         
   N        Cardholder Not Enrolled    No                    6     Card is not enrolled in 3-D Secure program.
                                                                   Card is eligible for authentication processing (it is within the card associations range of accepted cards) but the card-issuing bank does not participate in the 3-D Secure program.
@@ -99,5 +99,5 @@ The following table lists the Enrolment message and status:
                                                                   Chargeback Liability Shift: The Acquirer/Merchant retains liability if the cardholder later disputes making the purchase.
   E        *Any error message here*   No                    7     An error occurred during the enrollment verification process.
                                                                   Chargeback Liability Shift: The card can be accepted for authorization processing, yet the merchant may not claim a liability shift on this transaction in case of a dispute with the cardholder.
-  =======  =========================  ====================  ====  =======================
+  =======  =========================  ====================  ====  ===================================================================================================================================================================================================  =======  =========================  ====================  ====  =======================
 

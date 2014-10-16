@@ -161,6 +161,7 @@ Error Handling
 -----------------
 Overview
   HiPay TPP Gateway API returns two levels of error information:
+  
     - an HTTP Status Code in the header
     - a response body with additional details that can help you determine how to handle the exception.
 
@@ -204,12 +205,10 @@ JSON Error Example
    	  "description":"Username and/or password is incorrect."
    	}		
 
-----------------------------------------
-Catching exceptions in your integration
-----------------------------------------
 
 Catching exceptions in your integration
 ----------------------------------------
+
 Overview
   When you implement the API, you will need to catch the exception and extract the message.
   
