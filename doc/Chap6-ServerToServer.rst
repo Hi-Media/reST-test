@@ -6,6 +6,7 @@ Chapter 6 - Server-to-Server
 What is a Server-to-Server Notification?
 ----------------------------------------
 Description
+
   In order to notify events related to your payment system, such as a new transaction 
   or a 3-D Secure transaction, our platform can send to your application
   a Server-to-Server notification.
@@ -13,6 +14,7 @@ Description
 Setup
 -----
 Procedure
+
   To set your Notification URL you must login into your Hipay TPP back office 
   and go to *Integration -> Notifications*.
 
@@ -137,6 +139,7 @@ Response fields specific to the payment product
 -----------------------------------------------
 
 Credit Card payments
+
   The following table lists and describes the response fields returned for transactions by credit/debit card.
 	
 ========================== 	===================================================================================================================================================================
@@ -153,6 +156,7 @@ country 					Bank country code where card was issued. This two-letter country co
 ========================== 	===================================================================================================================================================================
 
 QIWI payments
+
   The following table lists and describes the response fields returned for transactions by VISA QIWI Wallet.
 
 ========================== 	===================================================================================================================================================================
@@ -165,6 +169,7 @@ Transaction Workflow
 --------------------
 
 Description
+
   The HiPay TPP payment gateway can process transactions through many different acquirers using different payment methods and involving some anti-fraud checks. 
   All these aspects change the transaction processing flow significantly for you.
   When you activate a server-to-server notification on Hipay TPP, you receive a response describing the transaction state. 

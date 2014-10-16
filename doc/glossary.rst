@@ -7,6 +7,11 @@ From Wikipedia, the free encyclopedia
 
 .. glossary::
 
+  API
+    Application Programming Interface is a set of functions and procedures that allow the creation of applications which access the features or data of an operating system, application, or other service.
+
+    .. seealso:: <http://en.wikipedia.org/wiki/Application_programming_interface>
+
   JSON
     JavaScript Object Notation, is an open standard format that uses human-readable textA set of functions and procedures that allow the creation of applications which access the features or data of an operating system, application, or other service.
     to transmit data objects consisting of attribute–value pairs.
@@ -21,7 +26,3 @@ From Wikipedia, the free encyclopedia
 
     .. seealso:: <http://www.wikipedia.org/wiki/XML>
 
-  API
-    Application Programming Interface is a set of functions and procedures that allow the creation of applications which access the features or data of an operating system, application, or other service.
-
-    .. seealso:: <http://en.wikipedia.org/wiki/Application_programming_interface>

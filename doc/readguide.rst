@@ -12,7 +12,7 @@ specific pieces of information.
 The following table clarifies the conventions used across this guide.
 
 
-.. table:: Table 1 Typographic conventions that apply across this guide
+.. table:: Typographic conventions that apply across this guide
 
    ==============  =======================================================================================================================================================================================================================
    Convention      Meaning
@@ -38,7 +38,7 @@ in a query or to fields of a response message. The following table helps underst
 attributes (columns) that define a data element.
 
 
-.. table:: Table 2  Description of data elements
+.. table:: Description of data elements
 
    =============  ============================================================================================================
    Convention     Meaning
@@ -54,7 +54,7 @@ attributes (columns) that define a data element.
 
 
 
-.. table:: Table 3 Available formats of data elements
+.. table:: Available formats of data elements
 
    ===================  =========================================================  ===================
    Format Abbreviation  Description                                                Example
@@ -74,7 +74,7 @@ Acronyms and Abbreviations
 --------------------------
 The following acronyms and abbreviations are used in this guide.
 
-.. table:: Table 4:Acronyms and Abbreviations
+.. table:: Acronyms and Abbreviations
 
    =============  =========================================================
    Acronym        Full Name
