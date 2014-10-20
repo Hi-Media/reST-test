@@ -149,10 +149,10 @@ table
 Footnotes
 -----------
 
-This is a test [#1]
-This is another test [#2]
+This is a test [1]_
+This is another test [2]_
 
 .. rubric:: Footnotes
 
-.. [#1] Text of the first footnote.
-.. [#2] Text of the second footnote.
+.. [1] Text of the first footnote.
+.. [2] Text of the second footnote.
