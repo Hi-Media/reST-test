@@ -335,14 +335,14 @@ fraudScreening (json)
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 fraud_screening (xml)         Result of the fraud screening.
 - scoring                     - total score assigned to the transaction (main risk indicator).
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 - result                      The overall result of risk assessment returned by the Payment Gateway.
                               Value must be a member of the following list.:
                               - pending: rules were not checked.
                               - accepted: transaction accepted.
                               - blocked: transaction rejected due to system rules.
                               - challenged:	transaction has been marked for review.
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 - review                      The decision made when the overall risk result returns challenged.
                               An empty value means no review is required.
                               Value must be a member of the following list.
@@ -361,6 +361,7 @@ Order                         information about the customer and his order.
 - decimals                    - decimal precision of the order amount base currency for this order
 - currency                    - This three-character currency code complies with ISO 4217.
 - customerId (json)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 - customer_id (xml)           - unique identifier of the customer as provided by Merchant.
 - language                    - language code of the customer.
 - email                       - email address of the customer.                         
@@ -434,6 +435,41 @@ Depending on the transaction state there are five options to action:
   error               Transaction was not processed due to some reasons.                      
   ==================  =====================================================================================================================================================================
  	
-	
-		
-		
+--------------------------
+3.2	Maintenance Operations
+--------------------------
+Description
+
+  To perform maintenance on an existing transaction, make an HTTP POST request to the following resource.
+  POST /rest/v1/maintenance/transaction/{transaction_reference}
+ 
+The payment gateway supports the following types of maintenance transactions.
+ 
+.. table:: Table:Types of maintenance transactions
+
+  ==================  =====================================================================================================================================================================
+  Operation Type      Description
+  ==================  =====================================================================================================================================================================
+  capture             A request instructing the payment gateway to capture a previously-authorized transaction, i.e. transfer the funds from the customer's bank account to the merchant's bank account. This transaction is always preceded by an authorization.
+  refund              A request instructing the payment gateway to refund a previously captured transaction. A captured transaction can be partly or fully refunded.
+  cancel              A request instructing the payment gateway to cancel a previously-authorized transaction. Only authorized transactions can be canceled, captured transactions must be refunded.
+  ==================  =====================================================================================================================================================================
+ 
+URL Parameters
+--------------
+ 
+  =========================  =======  =======  ====  ===============================
+  Parameter        	         Format   Length   Req   Description
+  =========================  =======  =======  ====  ===============================
+  {transaction_reference}    N                 M     The unique identifier of the transaction.
+  =========================  =======  =======  ====  ===============================
+
+Request Parameters
+------------------
+ 
+  =========================  =======  =======  ====  ===============================
+  Parameter        	         Format   Length   Req   Description
+  =========================  =======  =======  ====  ===============================
+  operation
+  {transaction_reference}    N                 M     The unique identifier of the transaction.
+  =========================  =======  =======  ====  ===============================
