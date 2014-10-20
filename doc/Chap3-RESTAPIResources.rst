@@ -325,27 +325,30 @@ threeDSecure (json)
 three_d_secure (xml)          optional element. Result of the 3-D Secure Authentication
 
 - enrollmentStatus (json)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 - enrollment_status (xml)     the enrollment status.
 - enrollmentMessage (json)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 - enrollment_message (xml)    the enrollment status.
 ----------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 fraudScreening (json)
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 fraud_screening (xml)         Result of the fraud screening.
-- scoring                     total score assigned to the transaction (main risk indicator).
+- scoring                     - total score assigned to the transaction (main risk indicator).
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 - result                      The overall result of risk assessment returned by the Payment Gateway.
                               Value must be a member of the following list.:
                               - pending: rules were not checked.
                               - accepted: transaction accepted.
                               - blocked: transaction rejected due to system rules.
                               - challenged:	transaction has been marked for review.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 - review                      The decision made when the overall risk result returns challenged.
                               An empty value means no review is required.
                               Value must be a member of the following list.
                               - pending: a decision to release or cancel the transaction is pending.
                               - allowed: the transaction has been released for processing.
                               - denied: the transaction has been cancelled.
-
 ----------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Order                         information about the customer and his order.
 - Id                          - unique identifier of the order as provided by Merchant.
@@ -363,10 +366,74 @@ Order                         information about the customer and his order.
 - email                       - email address of the customer.                         
 ============================  =====================================================================================================================================================================
   
-	
-	
+Response fields specific to the payment product
+-----------------------------------------------
+Credit Card payments
+
+  The following table lists and describes the response fields returned for transactions by credit/debit card.
+  
+=========================  =====================================================================================================================================================================
+Field Name                 Description
+=========================  =====================================================================================================================================================================
+token                      Card token 
+-------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+brand                      Card brand. (e.g., VISA, MASTERCARD, AMERICANEXPRESS, MAESTRO).
+pan                        Card number (up to 19 characters). Note that, due to the PCI DSS security standards, our system has to mask credit card numbers in any output (e.g., 549619******4769).
+-------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+cardHolder (json)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+card_holder (xml)          Cardholder name.
+-------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+cardExpiryMonth (json)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+card_expiry_month (xml)    Card expiry month (2 digits).
+-------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+cardExpiryYear (json)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+card_expiry_year (xml)     Card expiry year (4 digits).
+-------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+issuer                     Card issuing bank name.
+                           Do not rely on this value to remain static over time. Bank names may change over time due to acquisitions and mergers.
+country                    Bank country code where card was issued.
+                           This two-letter country code complies with ISO 3166-1 (alpha 2).
+=========================  =====================================================================================================================================================================
+    
+QIWI payments
+
+  The following table lists and describes the response fields returned for transactions by VISA QIWI Wallet.
+  
+=========================  =====================================================================================================================================================================
+Field Name                 Description
+=========================  =====================================================================================================================================================================
+user                       The Qiwi user's ID, to whom the invoice is issued.
+                           It is the user's phone number, in international format. Example: 79263745223
+=========================  =====================================================================================================================================================================
+    	
+Transaction Workflow
+--------------------
+Overview
+
+  The HiPay TPP payment gateway can process transactions through many different acquirers using different payment methods and involving some anti-fraud checks. All these aspects change the transaction processing flow significantly for you.
+  	
+Description
+
+  When you send a transaction request to the gateway, you receive a response describing the transaction state. 
+
+Depending on the transaction state there are five options to action:  	
+
+.. table:: Table:Transaction states
+
+  ==================  =====================================================================================================================================================================
+  Translation state   Description
+  ==================  =====================================================================================================================================================================
+  completed           if the transaction state is completed you are done.
+                      This is the most common case for credit card transaction processing. Almost all credit card acquirers works in that way. Then you have to look into the status fied of the response to know the exact transaction status.
+  forwarding          if the transaction state is forwarding you have to redirect your customer to an URL provided in the forward_url field of the response. In that case the transaction processing is not yet done. You will have to wait until the customer returned to your website after doing all redirects.
+  pending             Transaction request was submitted to the acquirer but response is not yet available.
+  declined            Transaction was processed and was declined by gateway.
+  error               Transaction was not processed due to some reasons.                      
+  ==================  =====================================================================================================================================================================
  	
-	
 	
 		
 		
