@@ -28,9 +28,9 @@ Order Parameters
 
 .. table:: Table:Order-related parameters
 
-  ====================  ===========  =======  =======   =====================================================================================================================================================================================================================================================================
-  Field Name        	Format[1]_   Length   Req[2]_   Description
-  ====================  ===========  =======  =======   =====================================================================================================================================================================================================================================================================
+  ====================  ===========  =======  ========  =====================================================================================================================================================================================================================================================================
+  Field Name        	Format [1]_  Length   Req [2]_  Description
+  ====================  ===========  =======  ========  =====================================================================================================================================================================================================================================================================
   orderid               AN           32       M         Unique order id     
   operation             AN                              Transaction type.
                                                         Indicates how you want to process the payment. The default transaction type is set in the Merchant Interface (Default payment procedure in the Integration section). A transaction type sent along with the transaction will overwrite the default payment procedure.
@@ -72,7 +72,7 @@ Order Parameters
   cdata2                                                
   cdata3                                                
   cdata4                                                
-  ====================  ===========  =======  =======   =====================================================================================================================================================================================================================================================================
+  ====================  ===========  =======  ========  =====================================================================================================================================================================================================================================================================
 
 
 Customer Parameters
@@ -84,26 +84,26 @@ The following table lists the customer related parameters
 
 .. table:: Table:Customer-related parameter
 
-  ====================  ==========  =======  =======  =====================================================================================================================================================================
-  Field Name            Format[1]_  Length   Req[2]_  Description
-  ====================  ==========  =======  =======  =====================================================================================================================================================================
-  email                 AN                   M        The customer's e-mail address.     
-  phone                 AN                            The customer's phone number.
-  birthdate             N           8                 Birth date of the customer (YYYYMMDD).
-                                                      **For fraud detection reasons.**
-  birthdate             A           1                 Gender of the customer (M=male, F=female, U=unknown).    
-  firstname	            AN                   M        The customer's first name. 
-  lastname              AN                   M        The customer's last name.
-  recipientinfo         AN                            Additional information about the customer (e.g., quality or function, company name, department, etc.).      
-  streetaddress         AN                            Street address of the customer.
-                                                      It can be omitted if the shipping fee value is zero.
-  streetaddress2        AN                            Additional address information of the customer (e.g., building, floor, flat, etc.).
-  city                  AN                            The customer's city.
-  state                 AN                            The USA state or the Canada state of the customer making the purchase. Send this information only if the address country of the customer is US (USA) or CA (Canada). 
-  zipcode               AN                            The zip or postal code of the customer.     
-  country               A           2        M        The country code of the customer.
-                                                      This two-letter country code complies with ISO 3166-1 (alpha 2).                                  
-  ====================  ==========  =======  =======  =====================================================================================================================================================================
+  ====================  ===========  =======  ========  =====================================================================================================================================================================
+  Field Name            Format [1]_  Length   Req [2]_  Description
+  ====================  ===========  =======  ========  =====================================================================================================================================================================
+  email                 AN                    M         The customer's e-mail address.     
+  phone                 AN                              The customer's phone number.
+  birthdate             N            8                  Birth date of the customer (YYYYMMDD).
+                                                        **For fraud detection reasons.**
+  birthdate             A            1                  Gender of the customer (M=male, F=female, U=unknown).    
+  firstname	            AN                    M         The customer's first name. 
+  lastname              AN                    M         The customer's last name.
+  recipientinfo         AN                              Additional information about the customer (e.g., quality or function, company name, department, etc.).      
+  streetaddress         AN                              Street address of the customer.
+                                                        It can be omitted if the shipping fee value is zero.
+  streetaddress2        AN                              Additional address information of the customer (e.g., building, floor, flat, etc.).
+  city                  AN                              The customer's city.
+  state                 AN                              The USA state or the Canada state of the customer making the purchase. Send this information only if the address country of the customer is US (USA) or CA (Canada). 
+  zipcode               AN                              The zip or postal code of the customer.     
+  country               A            2        M         The country code of the customer.
+                                                        This two-letter country code complies with ISO 3166-1 (alpha 2).                                  
+  ====================  ===========  =======  ========  =====================================================================================================================================================================
 
 The following table lists the Parameters specific to shipping information
 
@@ -133,37 +133,37 @@ The following table lists the Parameters specific to credit or debit card paymen
 
 .. table:: Table:Parameters specific to credit or debit card payments
 
-  =========================  ==========  =======  =======  =====================================================================================================================================================================
-  Field Name        	     Format[1]_  Length   Req[2]_  Description
-  =========================  ==========  =======  =======  =====================================================================================================================================================================
-  cardtoken                  AN          40       M        Card token.
-                                                           For further details about the card token and its integration, refer to the Secure Vault API documentation.
-  eci                        N           1                 Electronic Commerce Indicator (ECI).
-                                                           The ECI indicates the security level at which the payment information is processed between the cardholder and merchant. 
-                                                           Possible values:
-                                                           1 = MO/TO (Card Not Present)
-                                                           2 = MO/TO – Recurring
-                                                           3 = Instalment Payment
-                                                           4 = Manually Keyed (Card Present)
-                                                           7 = E-commerce with SSL/TLS Encryption
-                                                           9 = Recurring E-commerce
-                                                           A default ECI value can be set in the preferences page. An ECI value sent along in the transaction will overwrite the default ECI value. Refer to the appendices (Appendix C) to get further information.
-                                                           
-  authentication_indicator   N           1                 Indicates if the 3DS authentication should be performed. Can be used to overrule the merchant level configuration.
-                                                           0 = Bypass authentication
-                                                           1 = Continue if possible (Default)                                                              
-  =========================  ==========  =======  =======  =====================================================================================================================================================================
+  =========================  ===========  =======  ========  =====================================================================================================================================================================
+  Field Name        	     Format [1]_  Length   Req [2]_  Description
+  =========================  ===========  =======  ========  =====================================================================================================================================================================
+  cardtoken                  AN           40       M         Card token.
+                                                             For further details about the card token and its integration, refer to the Secure Vault API documentation.
+  eci                        N            1                  Electronic Commerce Indicator (ECI).
+                                                             The ECI indicates the security level at which the payment information is processed between the cardholder and merchant. 
+                                                             Possible values:
+                                                             1 = MO/TO (Card Not Present)
+                                                             2 = MO/TO – Recurring
+                                                             3 = Instalment Payment
+                                                             4 = Manually Keyed (Card Present)
+                                                             7 = E-commerce with SSL/TLS Encryption
+                                                             9 = Recurring E-commerce
+                                                             A default ECI value can be set in the preferences page. An ECI value sent along in the transaction will overwrite the default ECI value. Refer to the appendices (Appendix C) to get further information.
+                                                             
+  authentication_indicator   N            1                  Indicates if the 3DS authentication should be performed. Can be used to overrule the merchant level configuration.
+                                                             0 = Bypass authentication
+                                                             1 = Continue if possible (Default)                                                              
+  =========================  ===========  =======  ========  =====================================================================================================================================================================
 
 The following table lists the Parameters specific to Qiwi Wallet
 
 .. table:: Table:Parameters specific to Qiwi Wallet
 
-  =========================  ==========  =======  =======  ===============================================================================
-  Field Name        	     Format[1]_  Length   Req[2]_  Description
-  =========================  ==========  =======  =======  ===============================================================================
-  qiwiuser                   AN          12       M        The Qiwi user's ID, to whom the invoice is issued.
-                                                           It is the user's phone number, in international format. Example: +79263745223	
-  =========================  ==========  =======  =======  ===============================================================================
+  =========================  ===========  =======  ========  ===============================================================================
+  Field Name        	     Format [1]_  Length   Req [2]_  Description
+  =========================  ===========  =======  ========  ===============================================================================
+  qiwiuser                   AN           12       M         The Qiwi user's ID, to whom the invoice is issued.
+                                                             It is the user's phone number, in international format. Example: +79263745223	
+  =========================  ===========  =======  ========  ===============================================================================
 
 The following table lists the Parameters specific to iDeal
 
@@ -172,10 +172,10 @@ The following table lists the Parameters specific to iDeal
   =========================  =======  =======  ====  =================================
   Field Name        	     Format   Length   Req   Description
   =========================  =======  =======  ====  =================================
-  issuer_bank_id             AN        4       M     Issuers' bank Id list [#table1]_
+  issuer_bank_id             AN        4       M     Issuers' bank Id list [ref1]_ 
   =========================  =======  =======  ====  =================================
 
-..[#table1] Table:Issuers’ bank Id list 
+.. [ref1] Table:Issuers’ bank Id list 
   
 ===========  ===================
 Field Name   Bank description
@@ -440,7 +440,7 @@ URL Parameters
 --------------
  
 =========================  =======  =======  ====  ===============================
-Parameter        	         Format   Length   Req   Description
+Parameter        	       Format   Length   Req   Description
 =========================  =======  =======  ====  ===============================
 {transaction_reference}    N                 M     The unique identifier of the transaction.
 =========================  =======  =======  ====  ===============================
@@ -449,7 +449,7 @@ Request Parameters
 ------------------
  
 =========================  =======  =======  ====  ===============================
-Parameter        	         Format   Length   Req   Description
+Parameter        	       Format   Length   Req   Description
 =========================  =======  =======  ====  ===============================
 operation
 {transaction_reference}    N                 M     The unique identifier of the transaction.
