@@ -1,6 +1,7 @@
+=====================================
 HiPay - TPP Gateway API documentation
 =====================================
-
+--------
 Contents
 --------
 .. toctree::
@@ -8,6 +9,7 @@ Contents
   readguide
   Chap1-APIOverview
   Chap2-IntegrationGuidelines
+  Chap3-RESTAPIResources
   Chap4-3DSecureIntegration
   Chap5-RedirectPages
   Chap6-ServerToServer
@@ -17,7 +19,7 @@ Contents
   glossary
 
 
-
+==================
 Indices and tables
 ==================
 
