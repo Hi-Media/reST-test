@@ -184,27 +184,28 @@ The following table lists the Parameters specific to iDeal
 
 .. table:: Table:Parameters specific to Qiwi Wallet
 
-  =========================  =======  =======  ====  ===========================
+  =========================  =======  =======  ====  ===============================
   Field Name        	     Format   Length   Req   Description
-  =========================  =======  =======  ====  ===========================
-  issuer_bank_id             AN         4        M   Issuers' bank Id list [*]
-  =========================  =======  =======  ====  ===========================
+  =========================  =======  =======  ====  ===============================
+  issuer_bank_id             AN        4       M     Issuers' bank Id list [#table1]
+  =========================  =======  =======  ====  ===============================
 
-  [*] Table:Issuers’ bank Id list 
-  ===========  ===========================
-  Field Name   Bank description
-  ===========  ===========================
-  ABNANL2A     ABN AMRO
-  INGBNL2A     ING
-  RABONL2U     Rabobank
-  SNSBNL2A     SNS Bank
-  ASNBNL21     ASN Bank
-  FRBKNL2L     Friesland Bank
-  KNABNL2H     Knab
-  RBRBNL21     SNS Regio Bank
-  TRIONL2U     Triodos bank
-  FVLBNL22     Van Lanschot
-  ===========  ===========================
+..[#table1] Table:Issuers’ bank Id list 
+  
+===========  ===================
+Field Name   Bank description
+===========  ===================
+ABNANL2A     ABN AMRO
+INGBNL2A     ING
+RABONL2U     Rabobank
+SNSBNL2A     SNS Bank
+ASNBNL21     ASN Bank
+FRBKNL2L     Friesland Bank
+KNABNL2H     Knab
+RBRBNL21     SNS Regio Bank
+TRIONL2U     Triodos bank
+FVLBNL22     Van Lanschot
+===========  ===================
   
 	
 	
