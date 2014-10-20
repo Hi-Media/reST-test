@@ -1,13 +1,13 @@
-.rst-content dl dd, p {
-    text-align: justify;
-}
-.rst-content table.docutils td {
-    vertical-align: top;
-}
-.rst-content table.field-list caption {
+.rst-content dl dd, p {text-align: justify;}
+.rst-content table.docutils td {vertical-align: top;}
+.wy-table caption, .rst-content table.docutils caption, .rst-content table.field-list caption {
     text-align: left;
 }
 .wy-table caption, .rst-content table.docutils caption,
 .wy-nav-content {
     max-width: 1050px
+}
+div.linenodiv pre {
+    background-color: #f1f1f1;
+    color: #666;
 }

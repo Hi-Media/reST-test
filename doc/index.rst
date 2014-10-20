@@ -1,5 +1,5 @@
-HiPay-TPP-GatewayAPI documentation
-==================================
+HiPay - TPP Gateway API documentation
+=====================================
 
 Contents
 --------
