@@ -1,4 +1,4 @@
-.. _Chap3-Test:
+.. _Chap3-RESTAPIResources:
 
 ==============================
 Chapter 3 - REST API Resources
