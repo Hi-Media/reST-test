@@ -76,7 +76,7 @@ Order Parameters
   ====================  =========   =======  ======  =====================================================================================================================================================================================================================================================================
 
 ..[1] The format of the element. Refer to "Table:Available formats of data elements” for the list of available formats.
-..[#] Specifies whether an element is required or not.
+..[2] Specifies whether an element is required or not.
 
 Customer Parameters
 -------------------
@@ -110,7 +110,7 @@ The following table lists the customer related parameters
   ====================  =========   =======  ======  =====================================================================================================================================================================
 
 ..[1] The format of the element. Refer to "Table:Available formats of data elements” for the list of available formats.
-..[#] Specifies whether an element is required or not.
+..[2] Specifies whether an element is required or not.
 
 
 The following table lists the Parameters specific to shipping information
@@ -118,34 +118,94 @@ The following table lists the Parameters specific to shipping information
 .. table:: Table:Parameters specific to shipping information
 
   ======================  =========  =======  =====================================================================================================================================================================
-  Field Name        	    Format     Length   Description                                                                                                                                                          
+  Field Name        	  Format     Length   Description                                                                                                                                                          
   ======================  =========  =======  =====================================================================================================================================================================
-  shipto_firstname        AN                  T                                                                                                                                       
-  shipto_lastname         AN                  The customer's phone number.                                                                                                                                         
-  shipto_recipientinfo    AN                  Birth date of the customer (YYYYMMDD).                                                                                                                               
-                                              **For fraud detection reasons.**                                                                                                                                     
-  shipto_streetaddress    AN                  Gender of the customer (M=male, F=female, U=unknown).                                                                                                                
-  shipto_streetaddress2   AN                  The customer's first name.                                                                                                                                           
-  shipto_city             AN                  The customer's last name.                                                                                                                                            
-  shipto_state            AN                  Additional information about the customer (e.g., quality or function, company name, department, etc.).                                                               
-  shipto_zipcode          AN                  Street address of the customer.                                                                                                                                      
-                                              It can be omitted if the shipping fee value is zero.                                                                                                                 
-  shipto_country          A           2       Additional address information of the customer (e.g., building, floor, flat, etc.).                                                                                  
+  shipto_firstname        AN                  The first name of the order recipient.                                                                                                                                      
+  shipto_lastname         AN                  The last name of the order recipient.                                                                                                                                         
+  shipto_recipientinfo    AN                  Additional information about the order recipient (e.g., quality or function, company name, department, etc.).                                                                                                                                     
+  shipto_streetaddress    AN                  Street address to which the order is to be shipped.                                                                                                                
+  shipto_streetaddress2   AN                  The additional information about address to which the order is to be shipped (e.g., building, floor, flat, etc.).                                                                                                                                          
+  shipto_city             AN                  The city to which the order is to be shipped.                                                                                                                                           
+  shipto_state            AN                  The USA state or Canada state to which the order is being shipped. Send this information only if the shipping country is US (USA) or CA (Canada).                                                               
+  shipto_zipcode          AN                  The zip or postal code to which the order is being shipped                                                                                                                                                                                                                                                       
+  shipto_country          A           2       Country code to which the order is being shipped.This two-letter country code complies with ISO 3166-1 (alpha 2).                                                                                  
   ======================  =========  =======  =====================================================================================================================================================================
 
 
+Parameters specific to the payment product
+------------------------------------------
+Overview
 
+  Depending on the payment product, the Merchant is supposed to send additional request parameters. 
 
+The following table lists the Parameters specific to credit or debit card payments.
 
+.. table:: Table:Parameters specific to credit or debit card payments
 
+  =========================  =========  =======  ======  =====================================================================================================================================================================
+  Field Name        	     Format[1]  Length   Req[2]  Description
+  =========================  =========  =======  ======  =====================================================================================================================================================================
+  cardtoken                  AN         40       M       Card token.
+                                                         For further details about the card token and its integration, refer to the Secure Vault API documentation.
+  eci                        N          1                Electronic Commerce Indicator (ECI).
+                                                         The ECI indicates the security level at which the payment information is processed between the cardholder and merchant. 
+                                                         Possible values:
+                                                         1 = MO/TO (Card Not Present)
+                                                         2 = MO/TO – Recurring
+                                                         3 = Instalment Payment
+                                                         4 = Manually Keyed (Card Present)
+                                                         7 = E-commerce with SSL/TLS Encryption
+                                                         9 = Recurring E-commerce
+                                                         A default ECI value can be set in the preferences page. An ECI value sent along in the transaction will overwrite the default ECI value. Refer to the appendices (Appendix C) to get further information.
 
+  authentication_indicator   N          1                Indicates if the 3DS authentication should be performed. Can be used to overrule the merchant level configuration.
+                                                         0 = Bypass authentication
+                                                         1 = Continue if possible (Default)                                                              
+  =========================  =========  =======  ======  =====================================================================================================================================================================
 
+..[1] The format of the element. Refer to "Table:Available formats of data elements” for the list of available formats.
+..[2] Specifies whether an element is required or not.
 
+The following table lists the Parameters specific to Qiwi Wallet
 
+.. table:: Table:Parameters specific to Qiwi Wallet
 
+  =========================  =========  =======  ======  ===============================================================================
+  Field Name        	     Format[1]  Length   Req[2]  Description
+  =========================  =========  =======  ======  ===============================================================================
+  qiwiuser                   AN         12       M       The Qiwi user's ID, to whom the invoice is issued.
+                                                         It is the user's phone number, in international format. Example: +79263745223	
+  =========================  =========  =======  ======  ===============================================================================
 
+..[1] The format of the element. Refer to "Table:Available formats of data elements” for the list of available formats.
+..[2] Specifies whether an element is required or not.
 
+The following table lists the Parameters specific to iDeal
 
+.. table:: Table:Parameters specific to Qiwi Wallet
+
+  =========================  =======  =======  ====  ===========================
+  Field Name        	     Format   Length   Req   Description
+  =========================  =======  =======  ====  ===========================
+  issuer_bank_id             AN         4        M   Issuers' bank Id list [*]
+  =========================  =======  =======  ====  ===========================
+
+  [*] Table:Issuers’ bank Id list 
+  ===========  ===========================
+  Field Name   Bank description
+  ===========  ===========================
+  ABNANL2A     ABN AMRO
+  INGBNL2A     ING
+  RABONL2U     Rabobank
+  SNSBNL2A     SNS Bank
+  ASNBNL21     ASN Bank
+  FRBKNL2L     Friesland Bank
+  KNABNL2H     Knab
+  RBRBNL21     SNS Regio Bank
+  TRIONL2U     Triodos bank
+  FVLBNL22     Van Lanschot
+  ===========  ===========================
+  
 	
 	
  	
