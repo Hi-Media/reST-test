@@ -83,27 +83,51 @@ Overview
 
 The following table lists the customer related parameters
 
-====================  =========   =======  ======  =====================================================================================================================================================================================================================================================================
+.. table:: Table:Customer-related parameter
+
+====================  =========   =======  ======  =====================================================================================================================================================================
 Field Name        	  Format[1]   Length   Req[#]  Description
-====================  =========   =======  ======  =====================================================================================================================================================================================================================================================================
-email                 AN          32       M       The customer's e-mail address.     
+====================  =========   =======  ======  =====================================================================================================================================================================
+email                 AN                   M       The customer's e-mail address.     
 phone                 AN                           The customer's phone number.
-birthdate             N           8        M       Birth date of the customer (YYYYMMDD).
+birthdate             N           8                Birth date of the customer (YYYYMMDD).
                                                    **For fraud detection reasons.**
 birthdate             A           1                Gender of the customer (M=male, F=female, U=unknown).    
 firstname	          AN                   M       The customer's first name. 
-lastname              A           3        M       The customer's last name.
-                                                   This three-character currency code complies with ISO 4217.
+lastname              AN                   M       The customer's last name.
 recipientinfo         AN                           Additional information about the customer (e.g., quality or function, company name, department, etc.).      
 streetaddress         AN                           Street address of the customer.
                                                    It can be omitted if the shipping fee value is zero.
 streetaddress2        AN                           Additional address information of the customer (e.g., building, floor, flat, etc.).
 city                  AN                           The customer's city.
-state                 AN                           The USA state or the Canada state of the customer making the purchase. Send this information only if the address country of the customer is US (USA) or CA (Canada).     
+state                 AN                           The USA state or the Canada state of the customer making the purchase. Send this information only if the address country of the customer is US (USA) or CA (Canada). 
 zipcode               AN                           The zip or postal code of the customer.     
 country               A           2        M       The country code of the customer.
                                                    This two-letter country code complies with ISO 3166-1 (alpha 2).                                  
-====================  =========   =======  ======  =====================================================================================================================================================================================================================================================================
+====================  =========   =======  ======  =====================================================================================================================================================================
+..[1] The format of the element. Refer to "Table:Available formats of data elements” for the list of available formats.
+..[#] Specifies whether an element is required or not.
+
+
+The following table lists the Parameters specific to shipping information
+
+.. table:: Table:Parameters specific to shipping information
+
+======================  =========  =======  =====================================================================================================================================================================
+Field Name        	    Format     Length   Description                                                                                                                                                          
+======================  =========  =======  =====================================================================================================================================================================
+shipto_firstname        AN                  T                                                                                                                                       
+shipto_lastname         AN                  The customer's phone number.                                                                                                                                         
+shipto_recipientinfo    AN                  Birth date of the customer (YYYYMMDD).                                                                                                                               
+                                            **For fraud detection reasons.**                                                                                                                                     
+shipto_streetaddress    AN                  Gender of the customer (M=male, F=female, U=unknown).                                                                                                                
+shipto_streetaddress2   AN                  The customer's first name.                                                                                                                                           
+shipto_city             AN                  The customer's last name.                                                                                                                                            
+shipto_state            AN                  Additional information about the customer (e.g., quality or function, company name, department, etc.).                                                               
+shipto_zipcode          AN                  Street address of the customer.                                                                                                                                      
+                                            It can be omitted if the shipping fee value is zero.                                                                                                                 
+shipto_country          A           2       Additional address information of the customer (e.g., building, floor, flat, etc.).                                                                                  
+======================  =========  =======  =====================================================================================================================================================================
 ..[1] The format of the element. Refer to "Table:Available formats of data elements” for the list of available formats.
 ..[#] Specifies whether an element is required or not.
 
@@ -124,97 +148,6 @@ country               A           2        M       The country code of the custo
 
 
 
-  
-==========================  ==============================================================================================================================================================================================================================================================================================
-Field Name                  Description
-==========================  =================================================================================================================================================================================================================================================================================================
-state                       transaction state. Value must be a member of the following list.
-							  
-							  -	completed
-							  -	pending
-							  -	declined
-							  -	error
-								
-                            Please report to the following section below *Transaction Workflow* for further details.
-reason                      optional element. Reason why transaction was declined.
-test                        Payment Card Industry Data Security Standards
-mid                         your merchant account number (issued to you by HiPay TPP).
-Attempt_id                  attempt id of the payment.
-authorization_code          an authorization code (up to 35 characters) generated for each approved or pending transaction by the acquiring provider.
-transaction_rerefence       the unique identifier of the transaction.
-date_created                time when transaction was created.
-Date_updated                time when transaction was last updated.
-date_authorized             time when transaction was authorized.
---------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-status                      transaction status.
-                            A list of available statuses can be found in the appendices.
-							See appendices: Appendix B *Payment Status Definitions*.
---------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-message                     transaction message.
-authorized_amount           the transaction amount.
-captured_amount             captured amount.
-refunded_amount             refunded amount.
-decimals                    decimal precision of transaction amount.
---------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-currency                    base currency for this transaction.
-                            This three-character currency code complies with ISO 4217.
---------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-ip_address                  the IP address of the customer making the purchase.				
-ip_country                  country code associated to the customer's IP address.
-device_id                   unique identifier assigned to device (the customer's brower) by HiPay TPP.
-cdata1                      custom data.
-cdata2                      custom data.
-cdata3                      custom data.
-cdata4                      custom data.
---------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-avs_result                  result of the Address Verification Service (AVS).	
-                            Possible result codes can be found in the appendices
---------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-cvc_result                  result of the CVC (Card Verification Code) check.
-                            Possible result codes can be found in the appendices
-eci                         Electronic Commerce Indicator (ECI).
---------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-payment_product             payment product used to complete the transaction.
-                            Informs about the payment_method section type
-payment_method              See tables below for further details.	
---------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Three_d_secure              optional element. Result of the 3-D Secure Authentication.
- a) eci                      a) the 3-D Secure (3DS) electronic commerce indicator time
- b) enrollment_status        b) the enrollment status.
- c) enrollment_status        c) the enrollment message
- d) authentication_status    d) the authentication status. This field is only included if payment authentication was attempted and a value was received.
- e) authentication_message   e) the authentication message. This field is only included if payment authentication was attempted and a value was received.
- f) authentication_token     f) this is a value generated by the card issuer as a token to prove that the cardholder was successfully authenticated.
- g) xid                      g) a unique transaction identifier that is generated by the payment server on behalf of the merchant to identify the 3DS transaction.	
---------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Fraud_screening             Result of the fraud screening.
- a) scoring                  a) total score assigned to the transaction (main risk indicator).
- b) result                   b) The overall result of risk assessment returned by the Payment Gateway.Value must be a member of the following list.
-                              - pending    :rules were not checked
-                              - accepted   :transaction accepted.
-                              - blocked    :transaction rejected due to system rules.
-                              - challenged :transaction has been marked for review.
- c) review                   c) The decision made when the overall risk result returns challenged.
-      						
-							An empty value means no review is required.	
-							Value must be a member of the following list.
-                               - pending   :a decision to release or cancel the transaction is pending.
-                               - allowed   :the transaction has been released for processing.
-                               - denied    :the transaction has been cancelled.
---------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Order                       information about the customer and his order.
- a) Id                        a) unique identifier of the order as provided by Merchant.
- b) dateCreated               b) time when order was created. 
- c) attempts                  c) indicates how many payment attempts have been made for this order.
- d) amount                    d) the total order amount (e.g., 150.00). It should be calculated as a sum of the items purchased, plus the shipping fee (if present), plus the tax fee (if present).
- e) shipping                  e) the order shipping fee.
- f) tax                       f) the order tax fee.
- g) decimals                  g) decimal precision of the order amount.
- h) currency                  h) base currency for this order.This three-character currency code complies with ISO 4217
- I) customer_id               I) unique identifier of the customer as provided by Merchant.              
- J) language                  J) language code of the customer.
- k) email                     k) email address of the customer.
-==========================  ===================================================================================================================================================================							
 
 -----------------------------------------------
 Response fields specific to the payment product
