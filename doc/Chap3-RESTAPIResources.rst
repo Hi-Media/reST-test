@@ -355,8 +355,7 @@ Order                         information about the customer and his order.
 Response fields specific to the payment product
 -----------------------------------------------
 Credit Card payments
-
-The following table lists and describes the response fields returned for transactions by credit/debit card.
+  The following table lists and describes the response fields returned for transactions by credit/debit card.
 
 =========================  =====================================================================================================================================================================
 Field Name                 Description
@@ -385,8 +384,7 @@ country                    Bank country code where card was issued.
 =========================  =====================================================================================================================================================================
 
 QIWI payments
-
-The following table lists and describes the response fields returned for transactions by VISA QIWI Wallet.
+  The following table lists and describes the response fields returned for transactions by VISA QIWI Wallet.
 
 =========================  =====================================================================================================================================================================
 Field Name                 Description
@@ -441,25 +439,27 @@ The payment gateway supports the following types of maintenance transactions.
 URL Parameters
 --------------
 
-=========================  =======  =======  ====  ===============================
-Parameter        	       Format   Length   Req   Description
-=========================  =======  =======  ====  ===============================
-{transaction_reference}    N                 M     The unique identifier of the transaction.
-=========================  =======  =======  ====  ===============================
+  =========================  =======  =======  ====  ===============================
+  Parameter        	         Format   Length   Req   Description
+  =========================  =======  =======  ====  ===============================
+  {transaction_reference}    N                 M     The unique identifier of the transaction.
+  =========================  =======  =======  ====  ===============================
 
 Request Parameters
 ------------------
 
-=========================  =======  =======  ====  ===============================
-Parameter        	       Format   Length   Req   Description
-=========================  =======  =======  ====  ===============================
-operation
-{transaction_reference}    N                 M     The unique identifier of the transaction.
-=========================  =======  =======  ====  ===============================
+  =========================  =======  =======  ====  ===============================
+  Parameter        	         Format   Length   Req   Description
+  =========================  =======  =======  ====  ===============================
+  operation
+  {transaction_reference}    N                 M     The unique identifier of the transaction.
+  =========================  =======  =======  ====  ===============================
+
+
 
 
 .. rubric:: Footnotes
 
 .. [1] The format of the element. Refer to "Table:Available formats of data elements” for the list of available formats.
 .. [2] Specifies whether an element is required or not.
-.. [#table1] Table:Issuers’ bank Id list
+.. [ref1] Table:Issuers’ bank Id list

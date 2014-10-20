@@ -57,16 +57,16 @@ Description
 Verification
   To check this point, you must to concatenate the parameters, the values of each and the passphrase under the following conditions:
 
-	a) The parameter must be predefined.
-	b) The value can't be empty.
-	c) The parameter must be sorted in alphabetical order.
+  a) The parameter must be predefined.
+  b) The value can't be empty.
+  c) The parameter must be sorted in alphabetical order.
 
   Algorithm verification
    *Algorithm*
 
-    a) paramC = val3
-    b) paramA = val1
-    c) paramB = val2
+  a) paramC = val3
+  b) paramA = val1
+  c) paramB = val2
 
 	*SHA Signature = SHA1SHA1(paramAval1<passphrase>paramBval2<passphrase>paramCval3<passphrase>)*
 
