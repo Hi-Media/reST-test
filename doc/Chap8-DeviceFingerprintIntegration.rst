@@ -7,17 +7,14 @@ Chapter 8 - Device Fingerprint Integration
 Overview
 --------
 Introduction
-
   The device fingerprint identifies devices through information collected by a client run on an end user"s computer. 
   This client generates a blackbox that contains all device information available.
 
 Description
-
   Web applications obtain device information by sourcing dynamically generated JavaScript from HiPay TPP. 
   The JavaScript determines what information is available and generates a blackbox from all available sources.
 
 Blackbox content
-
   A black box will typically:
   - Range up to 4,000 bytes (the average length being just under 1,000 bytes)
   - Contain alphanumeric values and the special characters: + / ; =
@@ -27,7 +24,6 @@ Blackbox content
 Generate blackbox content
 -------------------------
 Description
-
   To integrate the client you must specify a hidden field that the JavaScript will populate. 
   This adds the black box as another field to be submitted along the other details in the form.		
 		

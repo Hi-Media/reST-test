@@ -7,11 +7,9 @@ Chapter 4 - 3-D Secure Integration
 Introduction
 -------------
 Overview
-
   This chapter describes how you should implement 3-D Secure Authentication using the Remote REST API model.
 
 Description
-
   This process involves redirecting the shopper to an authentication page. 
   This page is provided and hosted by the shopper's Card Issuer.
   As this page is hosted by the shopper's card issuing bank, we have no control over its appearance or functionality.
@@ -20,12 +18,10 @@ Description
 About 3-D Secure
 ----------------
 3-D Secure History
-
   In early 2001, VISA introduced a security protocol called 3-D Secure to improve online transaction performance and 
   to accelerate the growth of electronic commerce through increased consumer confidence. 
 
 Objective of 3-D secure
-
   The objective of 3-D Secure was to provide Issuers with the ability to actually authenticate cardholders during 
   an online purchase, to reduce the likelihood of fraudulent usage of payment cards and to improve transaction performance to benefit merchants, consumers and acquirers.
   VISA's branded 3-D Secure Program is commonly known as Verified By VISA (VbV). 
@@ -35,13 +31,11 @@ Objective of 3-D secure
 Merchant Benefits
 ------------------
 3-D-Secure Benefits
-
   The benefits of the 3-D Secure Process are the enhanced security available when performing an authenticated transaction 
   as well as the shift of liability in the event of fraudulent transactions. Authentication should strengthen your existing anti-fraud strategy and 
   help protect your business, but bear in mind that coverage of authentication programs is currently limited to Internet transactions. 
   
 Restriction
-
   This means that authentication programs do not cover fax, mail, or phone orders (MO/TO), nor do they cover all card types.
   The additional security benefits and liability shifts of authenticated transactions are currently only supported by Visa and MasterCard.
 

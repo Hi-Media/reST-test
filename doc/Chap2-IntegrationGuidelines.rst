@@ -35,18 +35,15 @@ Authentication
 =============== 
 
 Overview
-
   All requests to HiPay TPP REST API require the Merchant to authenticate himself using
   the HTTP Basic Authentication.
 
 Authentication
-
   Your API credentials can be found in the Merchant Interface in the Integration section.
   Most HTTP clients (including web-browsers) have built-in support for HTTP Basic Authentication. 
   If not, the following header must be included in all HTTP requests.
 
 Authorization
-
   Basic base64("<API login>:<API password>")
  
 .. note:: If the login and/or password is wrong, the 401 Unauthorized HTTP Status Code is returned.  
@@ -101,12 +98,10 @@ These are the HTTP status codes you may receive and their meaning; they are list
 Response Formats
 -----------------
 Overview
-
   The HiPay TPP API can respond to your requests in various formats.
   To specify your preferred response format, use the HTTP Accept request header.
 
 Authentication
-
   Here are examples of possible headers.
   
     - Accept: application/json
@@ -115,7 +110,6 @@ Authentication
   Refer to the RFC 2616 HTTP Accept Header for details.
 
 Responses in XML Format
-
   By default, HiPay TPP REST API returns XML with a root element of <response>.
   i.e. here is the default XML representation of a token lookup result.
 		
@@ -135,7 +129,6 @@ Responses in XML Format
    	</response>
 
 Responses in JSON Format
-
   The API also supports returning resource representation as JSON.
   Simply add the *Accept: application/json* header to any request.
 
@@ -167,14 +160,12 @@ Here is the response to above request, represented as JSON.
 Error Handling
 -----------------
 Overview
-
   HiPay TPP Gateway API returns two levels of error information:
   
     - an HTTP Status Code in the header
     - a response body with additional details that can help you determine how to handle the exception.
 
 Exception properties
-
   An exception has up to three properties.
   
   
@@ -219,11 +210,9 @@ Catching exceptions in your integration
 ----------------------------------------
 
 Overview
-
   When you implement the API, you will need to catch the exception and extract the message.
   
 Sample code illustration
-
   The following sample code illustrates how to handle an error using PHP.
   
 .. code-block:: php

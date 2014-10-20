@@ -19,7 +19,6 @@ Resource        		                                            Description
 Request a New Order
 -------------------
 Overview
-
   To request a new order, make an HTTP POST request to the following resource URL.
   POST /rest/v1/order 
 
@@ -81,7 +80,6 @@ Order Parameters
 Customer Parameters
 -------------------
 Overview
-
   The merchant can/must send the following customer information along with the transaction details. 
 
 The following table lists the customer related parameters
@@ -135,7 +133,6 @@ The following table lists the Parameters specific to shipping information
 Parameters specific to the payment product
 ------------------------------------------
 Overview
-
   Depending on the payment product, the Merchant is supposed to send additional request parameters. 
 
 The following table lists the Parameters specific to credit or debit card payments.
@@ -210,7 +207,6 @@ FVLBNL22     Van Lanschot
 Response Fields
 ----------------
 Overview
-
   Depending on the payment product, the Merchant is supposed to send additional request parameters.
 
 The following table lists and describes the response fields.
@@ -413,11 +409,9 @@ user                       The Qiwi user's ID, to whom the invoice is issued.
 Transaction Workflow
 --------------------
 Overview
-
   The HiPay TPP payment gateway can process transactions through many different acquirers using different payment methods and involving some anti-fraud checks. All these aspects change the transaction processing flow significantly for you.
   	
 Description
-
   When you send a transaction request to the gateway, you receive a response describing the transaction state. 
 
 Depending on the transaction state there are five options to action:  	
@@ -439,7 +433,6 @@ Depending on the transaction state there are five options to action:
 3.2	Maintenance Operations
 --------------------------
 Description
-
   To perform maintenance on an existing transaction, make an HTTP POST request to the following resource.
   POST /rest/v1/maintenance/transaction/{transaction_reference}
  

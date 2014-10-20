@@ -6,13 +6,11 @@ Chapter 5 - Redirect Pages
 Redirect your customer to a page of your choice
 -----------------------------------------------
 Description
-
   The redirect pages are pages to which HiPay TPP redirects your customer's brower after
   the transaction is processed if it was made out of your website (hosted payment page, 
   local payments, 3-D Secure authentication, etc.).
 
 Objective
-
   Typically, this is a secure page on your site. The main purpose is to redirect 
   your customers back to your website once they have completed a payment.
 
@@ -20,7 +18,6 @@ Objective
 Redirect pages setup
 --------------------
 Description
-
   You can find redirect pages configuration over *Integration -> Redirect Pages* on your HiPay TPP back-office.
   You can overwrite the default redirect pages by sending custom URLs along with the order details in 
   your requests to the payment gateway *(please refer to 3.1 section)*.
@@ -34,23 +31,20 @@ Field Name        		Description
 ===================== 	===============================================================================================================================================================================================================================
 Accept page				Page to redirect your customer if transaction was successful.
 Decline page			Page to redirect your customer if transaction was refused.
-Pending page			Page to redirect your customer if transaction is pending[1].
+Pending page			Page to redirect your customer if transaction is pending[#1]_.
 Cancel page				Page to redirect your customer if transaction was cancelled.
 Exception page			Page to which the customer's browser is redirected after a system failure or when the payment gateway is temporarily unavailable. If page is not defined, the default page for exceptions is displayed by the payment gateway.
 =====================  	===============================================================================================================================================================================================================================
 
-..[1] Please refer to Appendix B Payment status definitions
 -------------------
 Feedback Parameters
 -------------------
 
 Description
-
   Select this option if you want that HiPay TPP send back the transaction parameters to your redirect pages
   for further processing within your own website.
 
 Procedure
-
   To activate this option you MUST specify at least an *Accept Page* URL.
   Sent parameters are included in your redirect pages on HTTP GET.
 
@@ -134,3 +128,7 @@ cardpan						card number (up to 19 characters).Note that, due to the PCI DSS sec
 cardexpiry					card expiry year and month (YYYYMM).
 cardcountry					bank country code where card was issued. This two-letter country code complies with ISO 3166-1 (alpha 2).
 ========================== 	=======================================================================================================================================================================
+
+.. rubric:: Footnotes
+
+.. [#1] Please refer to Appendix B Payment status definitions

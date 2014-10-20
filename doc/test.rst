@@ -145,4 +145,14 @@ table
    True   False
    =====  =====
 
+-----------
+Footnotes
+-----------
 
+This is a test [#f1]
+This is another test [#f2]
+
+.. rubric:: Footnotes
+
+.. [#f1] Text of the first footnote.
+.. [#f2] Text of the second footnote.
