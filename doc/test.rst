@@ -1,5 +1,6 @@
 .. _test:
 
+====
 Test
 ====
 
@@ -30,6 +31,7 @@ Test
    `GNU tar manual, Basic Tar Format <http://link>`_
       Documentation for tar archive files, including GNU tar extensions.
 
+------
 Images
 ------
 
@@ -111,7 +113,7 @@ how
   term. Blank lines are not allowed
   between term and definition.
   
-  
+------------------------  
 Configuration Parameters
 ------------------------
 ===================== 	===========================================================================
@@ -127,6 +129,7 @@ Request method			The method you wish to receive the requests:
 Desired notifications	Payment Card Industry Data Security Standards
 =====================  	===========================================================================
 
+-----
 table
 -----
 

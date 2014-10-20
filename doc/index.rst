@@ -9,7 +9,7 @@ Contents
   readguide
   Chap1-APIOverview
   Chap2-IntegrationGuidelines
-  Chap3-Test
+  Chap3-RESTAPIResources
   Chap4-3DSecureIntegration
   Chap5-RedirectPages
   Chap6-ServerToServer
@@ -26,3 +26,4 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+* :ref:`gentable`
