@@ -354,7 +354,6 @@ Order                         information about the customer and his order.
 Response fields specific to the payment product
 -----------------------------------------------
 Credit Card payments
-
   The following table lists and describes the response fields returned for transactions by credit/debit card.
   
 =========================  =====================================================================================================================================================================
@@ -384,7 +383,6 @@ country                    Bank country code where card was issued.
 =========================  =====================================================================================================================================================================
     
 QIWI payments
-
   The following table lists and describes the response fields returned for transactions by VISA QIWI Wallet.
   
 =========================  =====================================================================================================================================================================
