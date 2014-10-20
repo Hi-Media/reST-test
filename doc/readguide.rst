@@ -15,13 +15,13 @@ The following table clarifies the conventions used across this guide.
 .. table:: Table:Typographic conventions that apply across this guide
 
    ==============  =======================================================================================================================================================================================================================
-   Convention      Meaning
+   Convention      Meaning                                                                                                                                                                                                                                            
    ==============  =======================================================================================================================================================================================================================
-   ``Mono-space``  Source code, code examples, input to the command line, application output, code lines embedded in text, and variables and code elements.
+   ``Mono-space``  Source code, code examples, input to the command line, application output, code lines embedded in text, and variables and code elements.                                                                               
    --------------  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-   *Italic*        A term that is being defined or will be defined shortly.
+   *Italic*        A term that is being defined or will be defined shortly.                                                                                                                                                               
    --------------  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-   ...             Horizontal ellipsis points in sample code indicate the omission of part of the code (i.e. when you would normally expect additional code to appear, but such code would not be related to the example.)
+   ...             Horizontal ellipsis points in sample code indicate the omission of part of the code (i.e. when you would normally expect additional code to appear, but such code would not be related to the example.)                
    --------------  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
    $               At the beginning of a command, indicates an operating system shell prompt.
    --------------  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

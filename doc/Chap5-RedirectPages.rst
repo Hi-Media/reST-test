@@ -1,10 +1,10 @@
 .. _Chap5-RedirectPages:
-
+==========================
 Chapter 5 - Redirect Pages
 ==========================
-
+-----------------------------------------------
 Redirect your customer to a page of your choice
-------------------------------------------------
+-----------------------------------------------
 Description
 
   The redirect pages are pages to which HiPay TPP redirects your customer's brower after
@@ -16,7 +16,7 @@ Objective
   Typically, this is a secure page on your site. The main purpose is to redirect 
   your customers back to your website once they have completed a payment.
 
-	
+--------------------	
 Redirect pages setup
 --------------------
 Description
@@ -25,9 +25,9 @@ Description
   You can overwrite the default redirect pages by sending custom URLs along with the order details in 
   your requests to the payment gateway *(please refer to 3.1 section)*.
 
-	
+----------------------	
 Default redirect pages
------------------------
+----------------------
 
 ===================== 	===============================================================================================================================================================================================================================
 Field Name        		Description
@@ -40,7 +40,7 @@ Exception page			Page to which the customer's browser is redirected after a syst
 =====================  	===============================================================================================================================================================================================================================
 
 ..[1] Please refer to Appendix B Payment status definitions
-
+-------------------
 Feedback Parameters
 -------------------
 
@@ -54,6 +54,7 @@ Procedure
   To activate this option you MUST specify at least an *Accept Page* URL.
   Sent parameters are included in your redirect pages on HTTP GET.
 
+-----------
 Fields sent
 -----------
 

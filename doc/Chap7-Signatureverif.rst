@@ -68,9 +68,9 @@ Verification
   Algorithm verification
    *Algorithm*
   
-   a) paramC = val3
-   b) paramA = val1
-   c) paramB = val2
+    a) paramC = val3
+    b) paramA = val1
+    c) paramB = val2
 	
 	*SHA Signature = SHA1SHA1(paramAval1<passphrase>paramBval2<passphrase>paramCval3<passphrase>)*
 

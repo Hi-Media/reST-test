@@ -1,8 +1,9 @@
 .. _Chap6-ServerToServer:
 
+============================
 Chapter 6 - Server-to-Server
 ============================
-
+----------------------------------------
 What is a Server-to-Server Notification?
 ----------------------------------------
 Description
@@ -10,7 +11,7 @@ Description
   In order to notify events related to your payment system, such as a new transaction 
   or a 3-D Secure transaction, our platform can send to your application
   a Server-to-Server notification.
-
+-----
 Setup
 -----
 Procedure
@@ -22,7 +23,7 @@ Procedure
 
 .. image:: images/ServerToServer_LoginScreen.png
  
-   
+------------------------   
 Configuration Parameters
 ------------------------
 
@@ -39,7 +40,7 @@ Request method			The method you wish to receive the requests:
 Desired notifications	Payment Card Industry Data Security Standards
 =====================  	===========================================================================
 
-
+---------------
 Response Fields
 ---------------
 The following table lists and describes the response fields received on the notification call.
@@ -130,11 +131,12 @@ Order                       information about the customer and his order.
  f) tax                       f) the order tax fee.
  g) decimals                  g) decimal precision of the order amount.
  h) currency                  h) base currency for this order.This three-character currency code complies with ISO 4217
- i) customer_id               i) unique identifier of the customer as provided by Merchant.              
- j) language                  j) language code of the customer.
+ I) customer_id               I) unique identifier of the customer as provided by Merchant.              
+ J) language                  J) language code of the customer.
  k) email                     k) email address of the customer.
 ==========================  ===================================================================================================================================================================							
 
+-----------------------------------------------
 Response fields specific to the payment product
 -----------------------------------------------
 
@@ -165,6 +167,7 @@ Field Name        			Description
 user						The Qiwi user's ID, to whom the invoice is issued. It is the user's phone number, in international format. Example: +79263745223
 ========================== 	===================================================================================================================================================================
 
+--------------------
 Transaction Workflow
 --------------------
 
@@ -184,6 +187,7 @@ declined  					Transaction was processed and was declined by gateway.
 error 						Transaction was not processed due to some reasons.
 ========================== 	===================================================================================================================================================================
 
+--------
 Examples
 --------
 

@@ -1,8 +1,9 @@
 .. _Chap8-DeviceFingerprintIntegration:
 
+==========================================
 Chapter 8 - Device Fingerprint Integration
 ==========================================
-
+--------
 Overview
 --------
 Introduction
@@ -22,6 +23,7 @@ Blackbox content
   - Contain alphanumeric values and the special characters: + / ; =
   - Begin with 0200, 0400, 0500 or 0600
 
+-------------------------
 Generate blackbox content
 -------------------------
 Description
@@ -32,7 +34,7 @@ Description
 **Recommendation**
 
 =======================================================================================  =======================================================================================================================================================
-YOU MUST        																		  YOU MUST NOT
+YOU MUST        																	     YOU MUST NOT
 =======================================================================================  =======================================================================================================================================================
 1. Include a hidden form field with an ID "ioBB" that will be populated with the value.  1. DO NOT call HiPay TPP fingerprint JavaScript BEFORE including the hidden "ioBB" form field. 
 2. Call the HiPay TPP fingerprint JavaScript function to obtain the blackbox content:    2. DO NOT cache or use local copies of the JavaScript
@@ -40,9 +42,9 @@ YOU MUST        																		  YOU MUST NOT
                                                                                          The script also uses domain cookies to identify devices across subscribers.
 =======================================================================================  =======================================================================================================================================================
 
-
+-------
 Example
---------
+-------
 
 Blackbox generation
 		
