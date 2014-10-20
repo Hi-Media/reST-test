@@ -1,8 +1,8 @@
 .. _readguide:
-
+======================
 How to read this guide
 ======================
-
+-------------------------
 Documentation Conventions
 -------------------------
 
@@ -29,7 +29,7 @@ The following table clarifies the conventions used across this guide.
    ==============  =======================================================================================================================================================================================================================
 
 
-
+----------------------------
 Abbreviations used in tables
 ----------------------------
 
@@ -69,7 +69,7 @@ attributes (columns) that define a data element.
    ===================  =========================================================  ===================
 
 
-
+--------------------------
 Acronyms and Abbreviations
 --------------------------
 The following acronyms and abbreviations are used in this guide.

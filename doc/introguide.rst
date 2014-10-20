@@ -1,8 +1,8 @@
 .. _introguide:
-
+================
 About This Guide
 ================
-
+-------
 Purpose
 -------
 
@@ -11,6 +11,7 @@ the HiPay TPP payment gateway. This document provides step-by-step instructions 
 to simply and quickly get up and running with our services as well as detailed reference material.
 Where applicable, this document refers to the related documentation with further details.
 
+-----------------
 Intended Audience
 -----------------
 
@@ -20,6 +21,7 @@ through predefined :term:`XML` or :term:`JSON` messages over the Internet using 
 you will need basic XML/JSON programming skills and knowledge of HTTP(S).
 Furthermore, it is recommended that you are familiar with the basics of tokenization concepts.
 
+---------
 Copyright
 ---------
 
@@ -27,6 +29,7 @@ The information contained in this guide is proprietary and confidential to HiPay
 This material may not be duplicated, published, or disclosed, in whole or in part, without
 the prior written permission of HiPay.
 
+------------
 Legal Notice
 ------------
 
