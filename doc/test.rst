@@ -58,7 +58,11 @@ To create a `symbolic link` to use at the command line.
 
     ln -s  "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 
-Bloc XML v1:
+----
+Code
+----
+
+Bloc XML: ``.. code-block:: xml``
 
 .. code-block:: xml
     :linenos:
@@ -75,6 +79,67 @@ Bloc XML v1:
         ...
     </response>
 
+Bloc HTML: ``.. code-block:: html``
+
+.. code-block:: html
+    :linenos:
+
+    <form name="test">
+    <!-- hidden field to store blackbox -->
+      <input type="text" name="device_fingerprint" id="ioBB">
+    </form>
+    <!-- Include JavaScript fingerprint library -->
+    <script language="javascript" src="https://secure-gateway.allopass.com/gateway/toolbox/fingerprint">
+    </script>
+
+Bloc PHP: ``.. code-block:: php``
+
+.. code-block:: php
+    :linenos:
+
+    <?php
+    define('API_ENDPOINT', 'https://secure-gateway.allopass.com/rest/v1');
+    define('API_USERNAME', '<API login>');
+    define('API_PASSWORD', '<API password>');
+
+    $credentials = API_USERNAME . ':' . API_PASSWORD;
+    $resource    = API_ENDPOINT . '/order';
+
+    // create a new cURL resource
+    $curl = curl_init();
+
+Bloc JSON: ``.. code-block:: json``
+
+.. code-block:: json
+    :linenos:
+
+    {
+      "state":"completed",
+      "reason":"",
+      "forwardUrl":"",
+      "test":"false",
+      "mid":"00035167042",
+      "attemptId":"1",
+      "authorizationCode":"59351",
+      "..."
+    }
+
+Bloc INI: ``.. code-block:: ini``
+
+.. code-block:: ini
+    :linenos:
+
+    state = completed
+    reason =
+    test = false
+    mid = 00001326581
+    attempt_id = 1
+    authorization_code = test123
+
+-----
+Lists
+-----
+
 Definition lists:
 
 what
@@ -85,26 +150,12 @@ how
   The term is a one-line phrase, and the
   definition is one or more paragraphs or
   body elements, indented relative to the
-  term. 
+  term.
   Blank lines are not allowed
   between term and definition.
 
   test ligne
-  
-what
- 
-  Definition lists associate a term with
-  a definition.
 
-how
-
-  The term is a one-line phrase, and the
-  definition is one or more paragraphs or
-  body elements, indented relative to the
-  term. Blank lines are not allowed
-  between term and definition.
-  
-  
 :what:
   Definition lists associate a term with
   a definition.
@@ -115,10 +166,11 @@ how
   body elements, indented relative to the
   term. Blank lines are not allowed
   between term and definition.
-  
-------------------------  
-Configuration Parameters
-------------------------
+
+------
+Tables
+------
+
 ===================== 	===========================================================================
 Field Name        		Description
 ===================== 	===========================================================================
@@ -132,9 +184,6 @@ Request method			The method you wish to receive the requests:
 Desired notifications	Payment Card Industry Data Security Standards
 =====================  	===========================================================================
 
------
-table
------
 
 .. table:: Truth table for "not"
 
@@ -145,11 +194,12 @@ table
    True   False
    =====  =====
 
------------
+---------
 Footnotes
------------
+---------
 
 This is a test [1]_
+
 This is another test [2]_
 
 .. rubric:: Footnotes

@@ -1,5 +1,13 @@
 .rst-content dl dd, p {text-align: justify;}
+.rst-content dl dt {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
 .rst-content table.docutils td {vertical-align: top;}
+.rst-content .footnote-reference, .rst-content .citation-reference {
+    vertical-align: super;
+    font-size: 80%;
+}
 .wy-table caption, .rst-content table.docutils caption, .rst-content table.field-list caption {
     text-align: left;
 }
@@ -7,7 +15,19 @@
 .wy-nav-content {
     max-width: 1050px
 }
+.wy-plain-list-disc, .rst-content .section ul, .rst-content .toctree-wrapper ul, article ul {
+    list-style: disc;
+    line-height: 24px;
+    margin-bottom: 24px;
+    padding-left: 24px;
+}
 div.linenodiv pre {
     background-color: #f1f1f1;
     color: #666;
 }
+
+p + ul.simple {margin-top: -16px}
+.rst-content dl p + ul.simple {
+    margin-top: -4px !important;
+}
+.rst-content table.docutils td ul.last.simple {margin-bottom: 0 !important;}

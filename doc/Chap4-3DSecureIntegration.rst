@@ -3,45 +3,49 @@
 ==================================
 Chapter 4 - 3-D Secure Integration
 ==================================
--------------
+
+------------
 Introduction
--------------
+------------
+
 Overview
   This chapter describes how you should implement 3-D Secure Authentication using the Remote REST API model.
 
 Description
-  This process involves redirecting the shopper to an authentication page. 
+  This process involves redirecting the shopper to an authentication page.
   This page is provided and hosted by the shopper's Card Issuer.
   As this page is hosted by the shopper's card issuing bank, we have no control over its appearance or functionality.
 
----------------- 
+----------------
 About 3-D Secure
 ----------------
+
 3-D Secure History
-  In early 2001, VISA introduced a security protocol called 3-D Secure to improve online transaction performance and 
-  to accelerate the growth of electronic commerce through increased consumer confidence. 
+  In early 2001, VISA introduced a security protocol called 3-D Secure to improve online transaction performance and
+  to accelerate the growth of electronic commerce through increased consumer confidence.
 
 Objective of 3-D secure
-  The objective of 3-D Secure was to provide Issuers with the ability to actually authenticate cardholders during 
+  The objective of 3-D Secure was to provide Issuers with the ability to actually authenticate cardholders during
   an online purchase, to reduce the likelihood of fraudulent usage of payment cards and to improve transaction performance to benefit merchants, consumers and acquirers.
-  VISA's branded 3-D Secure Program is commonly known as Verified By VISA (VbV). 
+  VISA's branded 3-D Secure Program is commonly known as Verified By VISA (VbV).
   Services based on the protocol have been also been adopted by MasterCard, under the name MasterCard SecureCode TM(MSC).
 
-------------------
+-----------------
 Merchant Benefits
-------------------
+-----------------
+
 3-D-Secure Benefits
-  The benefits of the 3-D Secure Process are the enhanced security available when performing an authenticated transaction 
-  as well as the shift of liability in the event of fraudulent transactions. Authentication should strengthen your existing anti-fraud strategy and 
-  help protect your business, but bear in mind that coverage of authentication programs is currently limited to Internet transactions. 
-  
+  The benefits of the 3-D Secure Process are the enhanced security available when performing an authenticated transaction
+  as well as the shift of liability in the event of fraudulent transactions. Authentication should strengthen your existing anti-fraud strategy and
+  help protect your business, but bear in mind that coverage of authentication programs is currently limited to Internet transactions.
+
 Restriction
   This means that authentication programs do not cover fax, mail, or phone orders (MO/TO), nor do they cover all card types.
   The additional security benefits and liability shifts of authenticated transactions are currently only supported by Visa and MasterCard.
 
-------------------
+----------------
 Transaction Flow
-------------------
+----------------
 
 Workflow overview
 -----------------
@@ -49,16 +53,17 @@ Workflow overview
 :Login Screen:
 
 .. image:: images/transactionFlow.png
- 
-   
+
+
 Procedure
-----------
+---------
+
 Proceed as follow to carry out a transaction:
 
 ====== 	======================================================================================================================================================================================================================================================================================================================
 Step    Action
 ====== 	======================================================================================================================================================================================================================================================================================================================
-**1**	To complete the purchase; the cardholder press the **Buy** or **Submit** button 
+**1**	To complete the purchase; the cardholder press the **Buy** or **Submit** button
 
           - This activates the Merchant Plug-In (MPI) and initiates a transaction.
 ------  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -80,17 +85,18 @@ Step    Action
 **12**  The Merchant formats and sends to its Acquirer an Authorization Request message, which includes information from the Issuer's Authentication Response - including the CAVV and the ECI. The Acquirer passes the Authorization Request to the Card Network and the transaction completes through standard processing.
 ====== 	======================================================================================================================================================================================================================================================================================================================
 
------------------------
+----------------------
 Authentication Results
------------------------
+----------------------
+
 The following table lists the Enrolment message and status:
 
-.. table:: Table:Enrollment Message and Status
+.. table:: Table: Enrollment Message and Status
 
   =======  =========================  ====================  ====  ===================================================================================================================================================================================================
   Status   Enrollment Message         3DSecure Available?   ECI   Description
-  =======  =========================  ====================  ====  =================================================================================================================================================================================================== 
-  Y        Authentication Available   Yes                         Card is enrolled in the 3-D Secure program and the payer is eligible for authentication processing.                         
+  =======  =========================  ====================  ====  ===================================================================================================================================================================================================
+  Y        Authentication Available   Yes                         Card is enrolled in the 3-D Secure program and the payer is eligible for authentication processing.
   N        Cardholder Not Enrolled    No                    6     Card is not enrolled in 3-D Secure program.
                                                                   Card is eligible for authentication processing (it is within the card associations range of accepted cards) but the card-issuing bank does not participate in the 3-D Secure program.
                                                                   **Chargeback Liability Shift** If the cardholder later disputes the purchase, the issuer may not submit a chargeback to the merchant.
@@ -99,5 +105,5 @@ The following table lists the Enrolment message and status:
                                                                   **Chargeback Liability Shift** The Acquirer/Merchant retains liability if the cardholder later disputes making the purchase.
   E        *Any error message here*   No                    7     An error occurred during the enrollment verification process.
                                                                   Chargeback Liability Shift: The card can be accepted for authorization processing, yet the merchant may not claim a liability shift on this transaction in case of a dispute with the cardholder.
-  =======  =========================  ====================  ====  =================================================================================================================================================================================================== 
+  =======  =========================  ====================  ====  ===================================================================================================================================================================================================
 

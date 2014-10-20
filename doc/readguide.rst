@@ -12,16 +12,16 @@ specific pieces of information.
 The following table clarifies the conventions used across this guide.
 
 
-.. table:: Table:Typographic conventions that apply across this guide
+.. table:: Table: Typographic conventions that apply across this guide
 
    ==============  =======================================================================================================================================================================================================================
-   Convention      Meaning                                                                                                                                                                                                                                            
+   Convention      Meaning
    ==============  =======================================================================================================================================================================================================================
-   ``Mono-space``  Source code, code examples, input to the command line, application output, code lines embedded in text, and variables and code elements.                                                                               
+   ``Mono-space``  Source code, code examples, input to the command line, application output, code lines embedded in text, and variables and code elements.
    --------------  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-   *Italic*        A term that is being defined or will be defined shortly.                                                                                                                                                               
+   *Italic*        A term that is being defined or will be defined shortly.
    --------------  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-   ...             Horizontal ellipsis points in sample code indicate the omission of part of the code (i.e. when you would normally expect additional code to appear, but such code would not be related to the example.)                
+   ...             Horizontal ellipsis points in sample code indicate the omission of part of the code (i.e. when you would normally expect additional code to appear, but such code would not be related to the example.)
    --------------  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
    $               At the beginning of a command, indicates an operating system shell prompt.
    --------------  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -38,7 +38,7 @@ in a query or to fields of a response message. The following table helps underst
 attributes (columns) that define a data element.
 
 
-.. table:: Table:Description of data elements
+.. table:: Table: Description of data elements
 
    =============  ============================================================================================================
    Convention     Meaning
@@ -54,15 +54,15 @@ attributes (columns) that define a data element.
 
 
 
-.. table:: Table:Available formats of data elements
+.. table:: Table: Available formats of data elements
 
    ===================  =========================================================  ===================
    Format Abbreviation  Description                                                Example
    ===================  =========================================================  ===================
-   AN                   Alphanumeric characters (a-z, A-Z, 0-9)                    
+   AN                   Alphanumeric characters (a-z, A-Z, 0-9)
    -------------------  ---------------------------------------------------------  -------------------
-   A                    Alphabetic characters only (a-z, A-Z)                      
-   N                    Numerical only                                             
+   A                    Alphabetic characters only (a-z, A-Z)
+   N                    Numerical only
    R                    Decimal number with explicit decimal point, signed         12.34
    DT                   Date in the format YYYY-MM-DD                              2012-12-31
    TM                   Time in the format HH:MM with optional seconds (HH:MM:SS)  15:30
@@ -74,7 +74,7 @@ Acronyms and Abbreviations
 --------------------------
 The following acronyms and abbreviations are used in this guide.
 
-.. table:: Table:Acronyms and Abbreviations
+.. table:: Table: Acronyms and Abbreviations
 
    =============  =========================================================
    Acronym        Full Name
@@ -87,9 +87,3 @@ The following acronyms and abbreviations are used in this guide.
    -------------  ---------------------------------------------------------
    REST           Representational State Transfer
    =============  =========================================================
-
-
-
-
-
-
