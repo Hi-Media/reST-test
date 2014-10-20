@@ -89,6 +89,8 @@ how
   Blank lines are not allowed
   between term and definition.
 
+  test ligne
+  
 what
  
   Definition lists associate a term with
