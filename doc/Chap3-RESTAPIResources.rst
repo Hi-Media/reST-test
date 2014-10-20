@@ -28,54 +28,52 @@ Order Parameters
 
 .. table:: Table:Order-related parameters
 
-  ====================  =========   =======  ======  =====================================================================================================================================================================================================================================================================
-  Field Name        	Format[1]   Length   Req[2]  Description
-  ====================  =========   =======  ======  =====================================================================================================================================================================================================================================================================
-  orderid               AN          32       M       Unique order id     
-  operation             AN                           Transaction type.
-                                                     Indicates how you want to process the payment. The default transaction type is set in the Merchant Interface (Default payment procedure in the Integration section). A transaction type sent along with the transaction will overwrite the default payment procedure.
-                                                     - **Sale** indicates transaction is sent for authorization, and if approved, is automatically submitted for capture.
-                                                     - **Authorization** indicates this transaction is sent for authorization only. The transaction will not be sent for settlement until the transaction is submitted for capture manually by the Merchant
-  payment_product       AN                   M       The payment product (e.g., visa, mastercard, ideal).
-                                                     Depending on the payment product, elements specific to the payment method are required (see following tables).
-                                                     Refer to the appendices —*"Appendix A. Payment Products”*— for the full list of available payment products. 
-  description           AN          255      M       The order short description.     
-  long_description      AN                           Additional order description. 
-  currency              A           3        M       Base currency for this order (Default to EUR).
-                                                     This three-character currency code complies with ISO 4217.
-  amount                R                    M       The total order amount. It should be calculated as a sum of the items purchased, plus the shipping fee (if present), plus the tax fee (if present).      
-  shipping              R                            The order shipping fee (Default to zero).
-                                                     It can be omitted if the shipping fee value is zero.
-  tax                   R                            The order tax fee (Default to zero).
-                                                     It can be omitted if the order tax value is zero.
-  cid                   AN                   M       Unique customer id.
-                                                     *For fraud detection reasons.*
-  ipaddr                AN                   M       The IP address of your customer making a purchase.      
-  accept_url            AN                           The URL to return your customer to once the payment process is completed successfully.      
-  decline_url           AN                           The URL to return your customer to after the acquirer declines the payment.      
-  pending_url           AN                           The URL to return your customer to when the payment request was submitted to the acquirer but response is not yet available.       
-  exception_url         AN                           The URL to return your customer to after a system failure.     
-  cancel_url            AN                           The URL to return your customer to when he or her decides to abort the payment.       
-  http_accept           AN                           This element should contain the exact content of the HTTP "Accept" header as sent to the merchant from the customer's browser (Default to "*/*").    
-  http_user_agent       AN                           This element should contain the exact content of the HTTP "User-Agent" header as sent to the merchant from the customer's browser (Default to "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)").      
-  device_fingerprint    AN                           This element should contain the value of the “ioBB” hidden field. (Please refer to *“Chapter 8: Device fingerprint integration”*)   
-  language              AN                           Locale code of your customer (Default to **en_GB** – English – Great Britain).
-                                                     It may be used for sending confirmation emails to your customer or for displaying payment pages.
-                                                     
-                                                     Examples:
-                                                     - en_GB 
-                                                     - fr_FR 
-                                                     - es_ES 
-                                                     - it_IT 
-                                                     - …
-  cdata1                AN                           Custom data. You may use these parameters to submit values you wish to receive back in the API response messages or in the notifications, e.g. you can use these parameters to get back session data, order content or user info.       
-  cdata2                                             
-  cdata3                                             
-  cdata4                                             
-  ====================  =========   =======  ======  =====================================================================================================================================================================================================================================================================
+  ====================  ===========  =======  =======   =====================================================================================================================================================================================================================================================================
+  Field Name        	Format[1]_   Length   Req[2]_   Description
+  ====================  ===========  =======  =======   =====================================================================================================================================================================================================================================================================
+  orderid               AN           32       M         Unique order id     
+  operation             AN                              Transaction type.
+                                                        Indicates how you want to process the payment. The default transaction type is set in the Merchant Interface (Default payment procedure in the Integration section). A transaction type sent along with the transaction will overwrite the default payment procedure.
+                                                        - **Sale** indicates transaction is sent for authorization, and if approved, is automatically submitted for capture.
+                                                        - **Authorization** indicates this transaction is sent for authorization only. The transaction will not be sent for settlement until the transaction is submitted for capture manually by the Merchant
+  payment_product       AN                    M         The payment product (e.g., visa, mastercard, ideal).
+                                                        Depending on the payment product, elements specific to the payment method are required (see following tables).
+                                                        Refer to the appendices —*"Appendix A. Payment Products”*— for the full list of available payment products. 
+  description           AN           255      M         The order short description.     
+  long_description      AN                              Additional order description. 
+  currency              A            3        M         Base currency for this order (Default to EUR).
+                                                        This three-character currency code complies with ISO 4217.
+  amount                R                     M         The total order amount. It should be calculated as a sum of the items purchased, plus the shipping fee (if present), plus the tax fee (if present).      
+  shipping              R                               The order shipping fee (Default to zero).
+                                                        It can be omitted if the shipping fee value is zero.
+  tax                   R                               The order tax fee (Default to zero).
+                                                        It can be omitted if the order tax value is zero.
+  cid                   AN                    M         Unique customer id.
+                                                        *For fraud detection reasons.*
+  ipaddr                AN                    M         The IP address of your customer making a purchase.      
+  accept_url            AN                              The URL to return your customer to once the payment process is completed successfully.      
+  decline_url           AN                              The URL to return your customer to after the acquirer declines the payment.      
+  pending_url           AN                              The URL to return your customer to when the payment request was submitted to the acquirer but response is not yet available.       
+  exception_url         AN                              The URL to return your customer to after a system failure.     
+  cancel_url            AN                              The URL to return your customer to when he or her decides to abort the payment.       
+  http_accept           AN                              This element should contain the exact content of the HTTP "Accept" header as sent to the merchant from the customer's browser (Default to "*/*").    
+  http_user_agent       AN                              This element should contain the exact content of the HTTP "User-Agent" header as sent to the merchant from the customer's browser (Default to "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)").      
+  device_fingerprint    AN                              This element should contain the value of the “ioBB” hidden field. (Please refer to *“Chapter 8: Device fingerprint integration”*)   
+  language              AN                              Locale code of your customer (Default to **en_GB** – English – Great Britain).
+                                                        It may be used for sending confirmation emails to your customer or for displaying payment pages.
+                                                        
+                                                        Examples:
+                                                        - en_GB 
+                                                        - fr_FR 
+                                                        - es_ES 
+                                                        - it_IT 
+                                                        - …
+  cdata1                AN                              Custom data. You may use these parameters to submit values you wish to receive back in the API response messages or in the notifications, e.g. you can use these parameters to get back session data, order content or user info.       
+  cdata2                                                
+  cdata3                                                
+  cdata4                                                
+  ====================  ===========  =======  =======   =====================================================================================================================================================================================================================================================================
 
-..[1] The format of the element. Refer to "Table:Available formats of data elements” for the list of available formats.
-..[2] Specifies whether an element is required or not.
 
 Customer Parameters
 -------------------
@@ -86,30 +84,26 @@ The following table lists the customer related parameters
 
 .. table:: Table:Customer-related parameter
 
-  ====================  =========   =======  ======  =====================================================================================================================================================================
-  Field Name        	Format[1]   Length   Req[2]  Description
-  ====================  =========   =======  ======  =====================================================================================================================================================================
-  email                 AN                   M       The customer's e-mail address.     
-  phone                 AN                           The customer's phone number.
-  birthdate             N           8                Birth date of the customer (YYYYMMDD).
-                                                     **For fraud detection reasons.**
-  birthdate             A           1                Gender of the customer (M=male, F=female, U=unknown).    
-  firstname	            AN                   M       The customer's first name. 
-  lastname              AN                   M       The customer's last name.
-  recipientinfo         AN                           Additional information about the customer (e.g., quality or function, company name, department, etc.).      
-  streetaddress         AN                           Street address of the customer.
-                                                     It can be omitted if the shipping fee value is zero.
-  streetaddress2        AN                           Additional address information of the customer (e.g., building, floor, flat, etc.).
-  city                  AN                           The customer's city.
-  state                 AN                           The USA state or the Canada state of the customer making the purchase. Send this information only if the address country of the customer is US (USA) or CA (Canada). 
-  zipcode               AN                           The zip or postal code of the customer.     
-  country               A           2        M       The country code of the customer.
-                                                     This two-letter country code complies with ISO 3166-1 (alpha 2).                                  
-  ====================  =========   =======  ======  =====================================================================================================================================================================
-
-..[1] The format of the element. Refer to "Table:Available formats of data elements” for the list of available formats.
-..[2] Specifies whether an element is required or not.
-
+  ====================  ==========  =======  =======  =====================================================================================================================================================================
+  Field Name            Format[1]_  Length   Req[2]_  Description
+  ====================  ==========  =======  =======  =====================================================================================================================================================================
+  email                 AN                   M        The customer's e-mail address.     
+  phone                 AN                            The customer's phone number.
+  birthdate             N           8                 Birth date of the customer (YYYYMMDD).
+                                                      **For fraud detection reasons.**
+  birthdate             A           1                 Gender of the customer (M=male, F=female, U=unknown).    
+  firstname	            AN                   M        The customer's first name. 
+  lastname              AN                   M        The customer's last name.
+  recipientinfo         AN                            Additional information about the customer (e.g., quality or function, company name, department, etc.).      
+  streetaddress         AN                            Street address of the customer.
+                                                      It can be omitted if the shipping fee value is zero.
+  streetaddress2        AN                            Additional address information of the customer (e.g., building, floor, flat, etc.).
+  city                  AN                            The customer's city.
+  state                 AN                            The USA state or the Canada state of the customer making the purchase. Send this information only if the address country of the customer is US (USA) or CA (Canada). 
+  zipcode               AN                            The zip or postal code of the customer.     
+  country               A           2        M        The country code of the customer.
+                                                      This two-letter country code complies with ISO 3166-1 (alpha 2).                                  
+  ====================  ==========  =======  =======  =====================================================================================================================================================================
 
 The following table lists the Parameters specific to shipping information
 
@@ -139,53 +133,47 @@ The following table lists the Parameters specific to credit or debit card paymen
 
 .. table:: Table:Parameters specific to credit or debit card payments
 
-  =========================  =========  =======  ======  =====================================================================================================================================================================
-  Field Name        	     Format[1]  Length   Req[2]  Description
-  =========================  =========  =======  ======  =====================================================================================================================================================================
-  cardtoken                  AN         40       M       Card token.
-                                                         For further details about the card token and its integration, refer to the Secure Vault API documentation.
-  eci                        N          1                Electronic Commerce Indicator (ECI).
-                                                         The ECI indicates the security level at which the payment information is processed between the cardholder and merchant. 
-                                                         Possible values:
-                                                         1 = MO/TO (Card Not Present)
-                                                         2 = MO/TO – Recurring
-                                                         3 = Instalment Payment
-                                                         4 = Manually Keyed (Card Present)
-                                                         7 = E-commerce with SSL/TLS Encryption
-                                                         9 = Recurring E-commerce
-                                                         A default ECI value can be set in the preferences page. An ECI value sent along in the transaction will overwrite the default ECI value. Refer to the appendices (Appendix C) to get further information.
-
-  authentication_indicator   N          1                Indicates if the 3DS authentication should be performed. Can be used to overrule the merchant level configuration.
-                                                         0 = Bypass authentication
-                                                         1 = Continue if possible (Default)                                                              
-  =========================  =========  =======  ======  =====================================================================================================================================================================
-
-..[1] The format of the element. Refer to "Table:Available formats of data elements” for the list of available formats.
-..[2] Specifies whether an element is required or not.
+  =========================  ==========  =======  =======  =====================================================================================================================================================================
+  Field Name        	     Format[1]_  Length   Req[2]_  Description
+  =========================  ==========  =======  =======  =====================================================================================================================================================================
+  cardtoken                  AN          40       M        Card token.
+                                                           For further details about the card token and its integration, refer to the Secure Vault API documentation.
+  eci                        N           1                 Electronic Commerce Indicator (ECI).
+                                                           The ECI indicates the security level at which the payment information is processed between the cardholder and merchant. 
+                                                           Possible values:
+                                                           1 = MO/TO (Card Not Present)
+                                                           2 = MO/TO – Recurring
+                                                           3 = Instalment Payment
+                                                           4 = Manually Keyed (Card Present)
+                                                           7 = E-commerce with SSL/TLS Encryption
+                                                           9 = Recurring E-commerce
+                                                           A default ECI value can be set in the preferences page. An ECI value sent along in the transaction will overwrite the default ECI value. Refer to the appendices (Appendix C) to get further information.
+                                                           
+  authentication_indicator   N           1                 Indicates if the 3DS authentication should be performed. Can be used to overrule the merchant level configuration.
+                                                           0 = Bypass authentication
+                                                           1 = Continue if possible (Default)                                                              
+  =========================  ==========  =======  =======  =====================================================================================================================================================================
 
 The following table lists the Parameters specific to Qiwi Wallet
 
 .. table:: Table:Parameters specific to Qiwi Wallet
 
-  =========================  =========  =======  ======  ===============================================================================
-  Field Name        	     Format[1]  Length   Req[2]  Description
-  =========================  =========  =======  ======  ===============================================================================
-  qiwiuser                   AN         12       M       The Qiwi user's ID, to whom the invoice is issued.
-                                                         It is the user's phone number, in international format. Example: +79263745223	
-  =========================  =========  =======  ======  ===============================================================================
-
-..[1] The format of the element. Refer to "Table:Available formats of data elements” for the list of available formats.
-..[2] Specifies whether an element is required or not.
+  =========================  ==========  =======  =======  ===============================================================================
+  Field Name        	     Format[1]_  Length   Req[2]_  Description
+  =========================  ==========  =======  =======  ===============================================================================
+  qiwiuser                   AN          12       M        The Qiwi user's ID, to whom the invoice is issued.
+                                                           It is the user's phone number, in international format. Example: +79263745223	
+  =========================  ==========  =======  =======  ===============================================================================
 
 The following table lists the Parameters specific to iDeal
 
 .. table:: Table:Parameters specific to iDeal
 
-  =========================  =======  =======  ====  ===============================
+  =========================  =======  =======  ====  =================================
   Field Name        	     Format   Length   Req   Description
-  =========================  =======  =======  ====  ===============================
-  issuer_bank_id             AN        4       M     Issuers' bank Id list [#table1]
-  =========================  =======  =======  ====  ===============================
+  =========================  =======  =======  ====  =================================
+  issuer_bank_id             AN        4       M     Issuers' bank Id list [#table1]_
+  =========================  =======  =======  ====  =================================
 
 ..[#table1] Table:Issuers’ bank Id list 
   
@@ -429,9 +417,9 @@ Depending on the transaction state there are five options to action:
   error               Transaction was not processed due to some reasons.                      
   ==================  =====================================================================================================================================================================
  	
---------------------------
-3.2	Maintenance Operations
---------------------------
+-----------------------
+Maintenance Operations
+-----------------------
 Description
   To perform maintenance on an existing transaction, make an HTTP POST request to the following resource.
   POST /rest/v1/maintenance/transaction/{transaction_reference}
@@ -451,18 +439,25 @@ The payment gateway supports the following types of maintenance transactions.
 URL Parameters
 --------------
  
-  =========================  =======  =======  ====  ===============================
-  Parameter        	         Format   Length   Req   Description
-  =========================  =======  =======  ====  ===============================
-  {transaction_reference}    N                 M     The unique identifier of the transaction.
-  =========================  =======  =======  ====  ===============================
+=========================  =======  =======  ====  ===============================
+Parameter        	         Format   Length   Req   Description
+=========================  =======  =======  ====  ===============================
+{transaction_reference}    N                 M     The unique identifier of the transaction.
+=========================  =======  =======  ====  ===============================
 
 Request Parameters
 ------------------
  
-  =========================  =======  =======  ====  ===============================
-  Parameter        	         Format   Length   Req   Description
-  =========================  =======  =======  ====  ===============================
-  operation
-  {transaction_reference}    N                 M     The unique identifier of the transaction.
-  =========================  =======  =======  ====  ===============================
+=========================  =======  =======  ====  ===============================
+Parameter        	         Format   Length   Req   Description
+=========================  =======  =======  ====  ===============================
+operation
+{transaction_reference}    N                 M     The unique identifier of the transaction.
+=========================  =======  =======  ====  ===============================
+
+  
+.. rubric:: Footnotes
+
+.. [1] The format of the element. Refer to "Table:Available formats of data elements” for the list of available formats.
+.. [2] Specifies whether an element is required or not.
+.. [#table1] Table:Issuers’ bank Id list 
