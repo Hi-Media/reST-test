@@ -5,14 +5,15 @@ Chapter 3 - REST API Resources
 ==============================
 
 The following table lists the REST API resources used.
-=========  ========================================================  =======================================================
-Resource        		                                             Description
-=========  ========================================================  =======================================================
-**POST**   /rest/v1/order	                                         Request a new order.
-**POST**   /rest/v1/maintenance/transaction/{transaction_reference}  Perform a maintenance on an existing transaction
-**POST**   /rest/v1/hpayment		                                 Request an order and initialize a hosted payment page
-**GET**    /rest/v1/transaction						                 Request information about an existant transaction.
-=========  ========================================================  =======================================================
+
+==================================================================  =======================================================
+Resource        		                                            Description
+==================================================================  =======================================================
+**POST**  /rest/v1/order	                                        Request a new order.
+**POST**  /rest/v1/maintenance/transaction/{transaction_reference}  Perform a maintenance on an existing transaction
+**POST**  /rest/v1/hpayment		                                    Request an order and initialize a hosted payment page
+**GET**   /rest/v1/transaction						                Request information about an existant transaction.
+==================================================================  =======================================================
 
 -------------------
 Request a New Order
@@ -72,6 +73,7 @@ cdata2
 cdata3                                             
 cdata4                                             
 ====================  =========   =======  ======  =====================================================================================================================================================================================================================================================================
+
 ..[1] The format of the element. Refer to "Table:Available formats of data elements” for the list of available formats.
 ..[#] Specifies whether an element is required or not.
 
@@ -105,6 +107,7 @@ zipcode               AN                           The zip or postal code of the
 country               A           2        M       The country code of the customer.
                                                    This two-letter country code complies with ISO 3166-1 (alpha 2).                                  
 ====================  =========   =======  ======  =====================================================================================================================================================================
+
 ..[1] The format of the element. Refer to "Table:Available formats of data elements” for the list of available formats.
 ..[#] Specifies whether an element is required or not.
 
@@ -128,6 +131,7 @@ shipto_zipcode          AN                  Street address of the customer.
                                             It can be omitted if the shipping fee value is zero.                                                                                                                 
 shipto_country          A           2       Additional address information of the customer (e.g., building, floor, flat, etc.).                                                                                  
 ======================  =========  =======  =====================================================================================================================================================================
+
 ..[1] The format of the element. Refer to "Table:Available formats of data elements” for the list of available formats.
 ..[#] Specifies whether an element is required or not.
 
