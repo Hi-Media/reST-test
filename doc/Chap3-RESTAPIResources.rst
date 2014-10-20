@@ -182,7 +182,7 @@ The following table lists the Parameters specific to Qiwi Wallet
 
 The following table lists the Parameters specific to iDeal
 
-.. table:: Table:Parameters specific to Qiwi Wallet
+.. table:: Table:Parameters specific to iDeal
 
   =========================  =======  =======  ====  ===============================
   Field Name        	     Format   Length   Req   Description
@@ -206,6 +206,144 @@ RBRBNL21     SNS Regio Bank
 TRIONL2U     Triodos bank
 FVLBNL22     Van Lanschot
 ===========  ===================
+
+Response Fields
+----------------
+Overview
+
+  Depending on the payment product, the Merchant is supposed to send additional request parameters.
+
+The following table lists and describes the response fields.
+
+============================  =====================================================================================================================================================================
+Field Name                    Description
+============================  =====================================================================================================================================================================
+state                         transaction state
+                              Value must be a member of the following list.
+                              - completed
+                              - forwarding
+                              - pending
+                              - declined
+                              - error
+                              
+                              Please report to the following section below — Transaction Workflow — for further details.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+reason                        optional element. Reason why transaction was declined.
+code                          reason code as described in the appendices.
+message                       reason description.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+forwardUrl (json)
+forward_url (xml)             optional element. Merchant must redirect the customer's browser to this URL.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+test                          true if the transaction is a testing transaction, otherwise false.
+mid                           your merchant account number (issued to you by HiPay TPP).
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+attemptId (json)
+attempt_id (xml)              attempt id of the payment.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+authorizationCode (json)
+authorization_code (xml)      an authorization code (up to 35 characters) generated for each approved or pending transaction by the acquiring provider.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+transactionReference (json)
+transaction_reference (xml)   the unique identifier of the transaction.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+referenceToPay (json)
+reference_to_pay (xml)        In some payment methods the customer can receive a reference to pay, at this point, the customer has the option to physically paying with cash at any bank branch, or at authorized processors such as drugstores, supermarkets or post offices, or paying electronically at an electronic banking point.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+dateCreated (json)
+date_created (xml)            time when transaction was created.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+dateUpdated (json)
+date_updated (xml)            time when transaction was last updated.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+dateAuthorized (json)
+date_authorized (xml)         time when transaction was authorized.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+status                        transaction status.  
+                              A list of available statuses can be found in the appendices — **Table:Transaction statuses**
+message                       transaction message.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+authorizedAmount (json)
+authorized_amount (xml)       the transaction amount.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+capturedAmount (json)
+captured_amount (xml)         captured amount.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+refundedAmount (json)
+refunded_amount (xml)         refunded amount.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+decimals                      decimal precision of transaction amount.
+currency                      base currency for this transaction.
+                              This three-character currency code complies with ISO 4217.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ipAddress (json)
+ip_address (xml)              the IP address of the customer making the purchase.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ipCountry (json)
+ip_country (xml)              country code associated to the customer's IP address.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+deviceId (json)
+device_id (xml)               unique identifier assigned to device (the customer's brower) by HiPay TPP.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+cdata1                        Custom data.
+cdata2                        Custom data.
+cdata3                        Custom data.
+cdata4                        Custom data.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+avsResult (json)
+avs_result (xml)              result of the Address Verification Service (AVS).Possible result codes can be found in the appendices
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+cvcResult (json)
+cvc_result (xml)              result of the CVC (Card Verification Code) check. Possible result codes can be found in the appendices
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+eci                           Electronic Commerce Indicator (ECI).
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+paymentProduct (json)
+payment_product (xml)         payment product used to complete the transaction.Informs about the payment_method section type.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+paymentMethod (json)
+payment_method (xml)          See tables below for further details.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+threeDSecure (json)
+three_d_secure (xml)          optional element. Result of the 3-D Secure Authentication
+
+- enrollmentStatus (json)
+- enrollment_status (xml)     the enrollment status.
+- enrollmentMessage (json)
+- enrollment_message (xml)    the enrollment status.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+fraudScreening (json)
+fraud_screening (xml)         Result of the fraud screening.
+- scoring                     total score assigned to the transaction (main risk indicator).
+- result                      The overall result of risk assessment returned by the Payment Gateway.
+                              Value must be a member of the following list.:
+                              - pending: rules were not checked.
+                              - accepted: transaction accepted.
+                              - blocked: transaction rejected due to system rules.
+                              - challenged:	transaction has been marked for review.
+- review                      The decision made when the overall risk result returns challenged.
+                              An empty value means no review is required.
+                              Value must be a member of the following list.
+                              - pending: a decision to release or cancel the transaction is pending.
+                              - allowed: the transaction has been released for processing.
+                              - denied: the transaction has been cancelled.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Order                         information about the customer and his order.
+- Id                          - unique identifier of the order as provided by Merchant.
+- dateCreated (json)          
+- date_created (xml)          - time when order was created.
+- attempts                    - indicates how many payment attempts have been made for this order.
+- amount                      - the total order amount (e.g., 150.00). It should be calculated as a sum of the items purchased, plus the shipping fee (if present), plus the tax fee (if present).
+- shipping                    - the order shipping fee.
+- tax                         - the order tax fee
+- decimals                    - decimal precision of the order amount base currency for this order
+- currency                    - This three-character currency code complies with ISO 4217.
+- customerId (json)
+- customer_id (xml)           - unique identifier of the customer as provided by Merchant.
+- language                    - language code of the customer.
+- email                       - email address of the customer.                         
+============================  =====================================================================================================================================================================
   
 	
 	
