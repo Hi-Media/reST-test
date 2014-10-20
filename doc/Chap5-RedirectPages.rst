@@ -31,7 +31,7 @@ Field Name        		Description
 ===================== 	===============================================================================================================================================================================================================================
 Accept page				Page to redirect your customer if transaction was successful.
 Decline page			Page to redirect your customer if transaction was refused.
-Pending page			Page to redirect your customer if transaction is pending[#1]_.
+Pending page			Page to redirect your customer if transaction is pending[#1].
 Cancel page				Page to redirect your customer if transaction was cancelled.
 Exception page			Page to which the customer's browser is redirected after a system failure or when the payment gateway is temporarily unavailable. If page is not defined, the default page for exceptions is displayed by the payment gateway.
 =====================  	===============================================================================================================================================================================================================================
