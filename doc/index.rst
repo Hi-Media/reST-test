@@ -1,9 +1,11 @@
 =====================================
 HiPay - TPP Gateway API documentation
 =====================================
+
 --------
 Contents
 --------
+
 .. toctree::
   introguide
   readguide

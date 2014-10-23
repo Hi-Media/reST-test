@@ -1,28 +1,32 @@
 .. _Chap5-RedirectPages:
-==========================
+========================
+
 Chapter 5 - Redirect Pages
 ==========================
+
 -----------------------------------------------
 Redirect your customer to a page of your choice
 -----------------------------------------------
+
 Description
   The redirect pages are pages to which HiPay TPP redirects your customer's brower after
-  the transaction is processed if it was made out of your website (hosted payment page, 
+  the transaction is processed if it was made out of your website (hosted payment page,
   local payments, 3-D Secure authentication, etc.).
 
 Objective
-  Typically, this is a secure page on your site. The main purpose is to redirect 
+  Typically, this is a secure page on your site. The main purpose is to redirect
   your customers back to your website once they have completed a payment.
 
---------------------	
+--------------------
 Redirect pages setup
 --------------------
+
 Description
   You can find redirect pages configuration over *Integration -> Redirect Pages* on your HiPay TPP back-office.
-  You can overwrite the default redirect pages by sending custom URLs along with the order details in 
+  You can overwrite the default redirect pages by sending custom URLs along with the order details in
   your requests to the payment gateway *(please refer to 3.1 section)*.
 
-----------------------	
+----------------------
 Default redirect pages
 ----------------------
 
@@ -65,7 +69,7 @@ state						transaction state. Value must be a member of the following list.
 							- pending
 							- declined
 							- error
-								
+
 							Please report to the following section below - Transaction Workflow - for further details.
 --------------------------	----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 status						transaction status. A list of available statuses can be found in the appendices.
@@ -96,18 +100,18 @@ cdata4						custom data.
 score						total score assigned to the transaction (main risk indicator).
 --------------------------	----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 fraud						The overall result of risk assessment returned by the Payment Gateway.
-							
+
 							Value must be a member of the following list:
-							
+
 							- pending 	    :rules were not checked.
 							- accepted	    :transaction accepted.
 							- blocked		:transaction rejected due to system rules.
 							- challenged	:transaction has been marked for review.
---------------------------	----------------------------------------------------------------------------------------------------------------------------------------------------------------------					
+--------------------------	----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 review						The decision made when the overall risk result returns challenged. An empty value means no review is required.
-							
+
 							Value must be a member of the following list:
-							
+
 							- pending 	:a decision to release or cancel the transaction is pending.
 							- allowed	 	:the transaction has been released for processing.
 							- denied		:the transaction has been cancelled.
