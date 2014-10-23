@@ -19,8 +19,8 @@ HiPay TPP REST API service is protected :
 - to ensure that only authorized Merchants use it,
 - to prevent payment information from being compromised.
 
-PCI DSS Requirements
-====================
+:term:`PCI DSS` Requirements
+============================
 Description
   HiPay TPP REST API allows to send payment data ; that means that the system will be transmitting,
   and possibly storing card data. 
@@ -44,13 +44,13 @@ Contact
 Encrypted Communication
 =======================
 Description
-  HiPay TPP provides all REST API methods over SSL (Secure Sockets Layer).
+  HiPay TPP provides all REST API methods over :term:`SSL` (Secure Sockets Layer).
 
 Guarantees
   All data transmitted between HiPay TPP and the Merchant system is encrypted (256-bit encryption using a DigiCert certificate).
   
-IP Restriction
-==============
+:term:`IP Restriction`
+======================
 Description
   When a request is sent to the API, the IP address or IP address range from where the connection was made is verified. 
   - If it matches with the IP address supplied by the Merchant at a previous stage (in the Merchant Interface: Technical Integration Section), the request will be processed. 

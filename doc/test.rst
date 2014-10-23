@@ -156,3 +156,8 @@ This is another test [2]_
 
 .. [1] Text of the first footnote.
 .. [2] Text of the second footnote.
+
+------
+Index
+------
+The :term:`API` is based on REST principles.
