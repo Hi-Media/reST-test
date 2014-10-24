@@ -16,12 +16,12 @@ Description
   This page is provided and hosted by the shopper's Card Issuer.
   As this page is hosted by the shopper's card issuing bank, we have no control over its appearance or functionality.
 
--------------------------
-About :term:`3-D Secure` 
--------------------------
+-----------------
+About 3-D Secure
+-----------------
 
-3-D Secure History
-  In early 2001, VISA introduced a security protocol called :term:`3-D Secure` to improve online transaction performance and
+:term:`3-D Secure` History
+  In early 2001, VISA introduced a security protocol called 3-D Secure to improve online transaction performance and
   to accelerate the growth of electronic commerce through increased consumer confidence.
 
 Objective of 3-D secure
@@ -34,7 +34,7 @@ Objective of 3-D secure
 Merchant Benefits
 -----------------
 
-3-D-Secure Benefits
+:term:`3-D Secure` Benefits
   The benefits of the 3-D Secure Process are the enhanced security available when performing an authenticated transaction
   as well as the shift of liability in the event of fraudulent transactions. Authentication should strengthen your existing anti-fraud strategy and
   help protect your business, but bear in mind that coverage of authentication programs is currently limited to Internet transactions.
@@ -64,14 +64,12 @@ Proceed as follow to carry out a transaction:
 Step    Action
 ====== 	======================================================================================================================================================================================================================================================================================================================
 **1**	To complete the purchase; the cardholder press the **Buy** or **Submit** button
-
-          - This activates the Merchant Plug-In (MPI) and initiates a transaction.
+        - This activates the Merchant Plug-In (MPI) and initiates a transaction.
 ------  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 **2**	The MPI identifies the card number and sends it to the Directory Server to determine whether the card is in a participating card range.
 ------  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 **3**	If the Issuer is participating for the card range, the Directory sends a Verify Enrollment Request message to the Issuer ACS to determine whether authentication is available for the account number.
-**4**   The ACS returns a Verify Enrolment Response to the Directory Server
-
+**4**   The ACS returns a Verify Enrolment Response to the Directory Serve
 		- **IF** Authentication is available for this card number **THEN** the response provides the URL of the ACS where the cardholder can be authenticated.
         - **IF** Authentication is not available **THEN** the Merchant server receives a Cardholder Not Enrolled or Authentication Not Available message and returns the transaction to the Merchant's commerce server to proceed with a standard transaction processing.
 ------  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -94,13 +92,13 @@ The following table lists the Enrollment message and status:
 .. table:: Table: Enrollment Message and Status
 
   =======  =========================  ==============================  ============  ===================================================================================================================================================================================================
-  Status   Enrollment Message         :term:`3-D Secure` Available?   :term:`ECI`   Description
+  Status   Enrollment Message         3-D Secure Available?           :term:`ECI`   Description
   =======  =========================  ==============================  ============  ===================================================================================================================================================================================================
-  Y        Authentication Available   Yes                                           Card is enrolled in the 3-D Secure program and the payer is eligible for authentication processing.
+  Y        Authentication Available   Yes                                           Card is enrolled in the :term:`3-D Secure` program and the payer is eligible for authentication processing.
   N        Cardholder Not Enrolled    No                              6             Card is not enrolled in 3-D Secure program.
                                                                                     Card is eligible for authentication processing (it is within the card associations range of accepted cards) but the card-issuing bank does not participate in the 3-D Secure program.
                                                                                     **Chargeback Liability Shift** If the cardholder later disputes the purchase, the issuer may not submit a chargeback to the merchant.
-  U        Unable to Authenticate     No                              7             The card associations were unable to verify if the cardholder is enrolled in the 3-D Secure program.
+  U        Unable to Authenticate     No                              7             The card associations were unable to verify if the cardholder is enrolled in the :term:`3-D Secure` program.
                                                                                     Merchants can choose to accept the card nonetheless and proceed the purchase as non-authenticated when submitting the authorization.
                                                                                     **Chargeback Liability Shift** The Acquirer/Merchant retains liability if the cardholder later disputes making the purchase.
   E        *Any error message here*   No                              7             An error occurred during the enrollment verification process.
@@ -111,9 +109,9 @@ The following table lists the Enrollment message and status:
 
 .. table:: Table: Authentication Message and Status
 
-  =======  ======================================  ============  ===================================================================================================================================================================================================
+  =======  ======================================  ============  ============================================================================================================================================
   Status   Authentication Message                  :term:`ECI`   Description
-  =======  ======================================  ============  ===================================================================================================================================================================================================
+  =======  ======================================  ============  ============================================================================================================================================
   Y        Authentication Successful               5             Cardholder was successfully authenticated. The Issuer has authenticated the cardholder by verifying the identity information or password.
   A        Authentication Attempted                6             Authentication could not be performed but a proof of authentication attempt was provided.
   U        Authentication Could Not Be Performed   7             The Issuer is not able to complete the authentication request due to a technical error or other problem.
@@ -125,10 +123,10 @@ The following table lists the Enrollment message and status:
                                                                  - Cardholder fails to correctly enter the authentication information
                                                                  - Cardholder cancels the authentication process.
                                                                  An authentication failure may be a possible indication of a fraudulent user.
-                                                                 **Authorization request should not be submitted.**								              										             
+                                                                 **:term:`Authorization` request should not be submitted.**								              										 
   E        *Any error message here*                              An error occurred during the authentication process.
                                                                  **Authorization request should not be submitted.**
-  =======  ======================================  ============  ===================================================================================================================================================================================================
+  =======  ======================================  ============  ============================================================================================================================================
 
   
   

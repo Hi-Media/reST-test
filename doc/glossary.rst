@@ -24,10 +24,25 @@ From Wikipedia, the free encyclopedia
 
     .. seealso:: <http://www.wikipedia.org/wiki>	
 
+   CHALLENGED
+    TO BE COMPLETED
+
+    .. seealso:: <http://en.wikipedia.org/wiki>		
+	
+   CANCEL
+    TO BE COMPLETED
+
+    .. seealso:: <http://en.wikipedia.org/wiki>	
+	
   ECI
     Electronic Commerce Indicator (ECI) is a value that is returned from the Directory Server (Visa, MasterCard, and JCB) to indicate the authentication results of your customer's credit card payment on 3D Secure.
 
     .. seealso:: <https://www.paydollar.com/b2c2/eng/merchant/help/f_onlinehelp_eci.htm>		
+
+  HOSTED PAYMENT PAGE
+     TO BE COMPLETED
+
+    .. seealso:: <http://www.wikipedia.org/wiki> 
 	
   JSON
     JavaScript Object Notation, is an open standard format that uses human-readable textA set of functions and  procedures that allow the creation of applications which access the features or data of an operating system, application, or other service to transmit data objects consisting of attribute–value pairs.
