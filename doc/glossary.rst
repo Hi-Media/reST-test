@@ -39,10 +39,20 @@ From Wikipedia, the free encyclopedia
 
     .. seealso:: <https://www.paydollar.com/b2c2/eng/merchant/help/f_onlinehelp_eci.htm>		
 
+  Fraud screening
+   TO BE COMPLETED
+
+    .. seealso:: <http://en.wikipedia.org/wiki>		
+	
   HOSTED PAYMENT PAGE
    TO BE COMPLETED
 
     .. seealso:: <http://www.wikipedia.org/wiki> 
+
+  IP Restriction 
+    Administrator can define IP restriction for a particular user in the organization.
+
+    .. seealso:: <http://en.wikipedia.org/wiki/Wikipedia:Restrictions_on_Anonymous_Editing_from_Shared_IPs>
 	
   JSON
     JavaScript Object Notation, is an open standard format that uses human-readable textA set of functions and  procedures that allow the creation of applications which access the features or data of an operating system, application, or other service to transmit data objects consisting of attribute–value pairs.
@@ -50,11 +60,17 @@ From Wikipedia, the free encyclopedia
 
     .. seealso:: <http://www.wikipedia.org/wiki/JSON>
 
-  IP Restriction 
-    Administrator can define IP restriction for a particular user in the organization.
+  Notification
+    Notifications is a web service designed to inform users related to the payment system. It provides notifications to users of a number of events, including a new transaction or a 3-D Secure transaction.
 
-    .. seealso:: <http://en.wikipedia.org/wiki/Wikipedia:Restrictions_on_Anonymous_Editing_from_Shared_IPs>
-  
+    .. seealso:: <http://en.wikipedia.org/wiki/Wikipedia:Notifications>
+
+  Payment product
+    TO BE COMPLETED
+
+    .. seealso:: <http://en.wikipedia.org/wiki>
+
+	
   PCI DSS 
     Payment Card Industry Data Security Standard (PCI DSS) is a proprietary information security standard for organizations that handle branded credit cards from the major card brands including Visa, MasterCard, American Express, Discover, and JCB.
 
@@ -64,8 +80,8 @@ From Wikipedia, the free encyclopedia
     Token, an object which represents the right to perform some operation.
 
     .. seealso:: <http://en.wikipedia.org/wiki/Token>
-
-  SSL
+	
+	SSL
     Transport Layer Security (TLS) and its predecessor, Secure Sockets Layer (SSL), are cryptographic protocols designed to provide communication security over the Internet.[
 
     .. seealso:: <http://en.wikipedia.org/wiki/Transport_Layer_Security>

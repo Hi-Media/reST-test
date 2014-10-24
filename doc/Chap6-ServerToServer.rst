@@ -9,8 +9,8 @@ What is a Server-to-Server Notification?
 ----------------------------------------
 Description
   In order to notify events related to your payment system, such as a new transaction
-  or a 3-D Secure transaction, our platform can send to your application
-  a Server-to-Server notification.
+  or a :term:`3-D Secure` transaction, our platform can send to your application
+  a Server-to-Server notification :term:`notification`.
 
 -----
 Setup
@@ -37,19 +37,19 @@ Request method			The method you wish to receive the requests:
 						  - XML
 						  - HTTP POST
 --------------------- 	---------------------------------------------------------------------------
-Desired notifications	Payment Card Industry Data Security Standards
+Desired notifications	Payment Card Industry Data Security Standards.Refer to the appendices - *Appendix B. Payment definitions* - for the full list of available transaction statuses.
 =====================  	===========================================================================
 
 ---------------
 Response Fields
 ---------------
 
-The following table lists and describes the response fields received on the notification call.
+The following table lists and describes the response fields received on the :term:`notification` call.
 
 ==========================  ===================================================================================================================================================================
 Field Name                  Description
 ==========================  ===================================================================================================================================================================
-state                       transaction state. Value must be a member of the following list.
+state                       Transaction state. Value must be a member of the following list.
 
 							  -	completed
 							  -	pending
@@ -57,65 +57,65 @@ state                       transaction state. Value must be a member of the fol
 							  -	error
 
                             Please report to the following section below *Transaction Workflow* for further details.
-reason                      optional element. Reason why transaction was declined.
-test                        Payment Card Industry Data Security Standards
-mid                         your merchant account number (issued to you by HiPay TPP).
-Attempt_id                  attempt id of the payment.
-authorization_code          an authorization code (up to 35 characters) generated for each approved or pending transaction by the acquiring provider.
-transaction_rerefence       the unique identifier of the transaction.
-date_created                time when transaction was created.
-Date_updated                time when transaction was last updated.
-date_authorized             time when transaction was authorized.
+reason                      Optional element. Reason why transaction was declined.
+test                        True if the transaction is a testing transaction, otherwise false.
+mid                         Your merchant account number (issued to you by HiPay TPP).
+Attempt_id                  Attempt id of the payment.
+authorization_code          An :term:`authorization ` code (up to 35 characters) generated for each approved or pending transaction by the acquiring provider.
+transaction_rerefence       The unique identifier of the transaction.
+date_created                Time when transaction was created.
+Date_updated                Time when transaction was last updated.
+date_authorized             Time when transaction was authorized.
 --------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-status                      transaction status.
+status                      Transaction status.
                             A list of available statuses can be found in the appendices.
 							See appendices: Appendix B *Payment Status Definitions*.
 --------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-message                     transaction message.
-authorized_amount           the transaction amount.
-captured_amount             captured amount.
-refunded_amount             refunded amount.
-decimals                    decimal precision of transaction amount.
+message                     Transaction message.
+authorized_amount           The transaction amount.
+captured_amount             Captured amount.
+refunded_amount             Refunded amount.
+decimals                    Decimal precision of transaction amount.
 --------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-currency                    base currency for this transaction.
+currency                    Base currency for this transaction.
                             This three-character currency code complies with ISO 4217.
 --------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-ip_address                  the IP address of the customer making the purchase.
-ip_country                  country code associated to the customer's IP address.
-device_id                   unique identifier assigned to device (the customer's brower) by HiPay TPP.
-cdata1                      custom data.
-cdata2                      custom data.
-cdata3                      custom data.
-cdata4                      custom data.
+ip_address                  The IP address of the customer making the purchase.
+ip_country                  Country code associated to the customer's IP address.
+device_id                   Unique identifier assigned to device (the customer's brower) by HiPay TPP.
+cdata1                      Custom data.
+cdata2                      Custom data.
+cdata3                      Custom data.
+cdata4                      Custom data.
 --------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-avs_result                  result of the Address Verification Service (AVS).
+avs_result                  Result of the Address Verification Service (AVS).
                             Possible result codes can be found in the appendices
 --------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-cvc_result                  result of the CVC (Card Verification Code) check.
+cvc_result                  Result of the CVC (Card Verification Code) check.
                             Possible result codes can be found in the appendices
-eci                         Electronic Commerce Indicator (ECI).
+eci                         Electronic Commerce Indicator (:term:`ECI`).
 --------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-payment_product             payment product used to complete the transaction.
+payment_product             Payment product used to complete the transaction.
                             Informs about the payment_method section type
 payment_method              See tables below for further details.
 --------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Three_d_secure              optional element. Result of the 3-D Secure Authentication.
- a) eci                      a) the 3-D Secure (3DS) electronic commerce indicator time
- b) enrollment_status        b) the enrollment status.
- c) enrollment_status        c) the enrollment message
- d) authentication_status    d) the authentication status. This field is only included if payment authentication was attempted and a value was received.
- e) authentication_message   e) the authentication message. This field is only included if payment authentication was attempted and a value was received.
- f) authentication_token     f) this is a value generated by the card issuer as a token to prove that the cardholder was successfully authenticated.
- g) xid                      g) a unique transaction identifier that is generated by the payment server on behalf of the merchant to identify the 3DS transaction.
+Three_d_secure              Optional element. Result of the :term:`3-D Secure` Authentication.
+ - eci                      The 3-D Secure (3DS) electronic commerce indicator time
+ - enrollment_status        The  enrollment status.
+ - enrollment_status        The  enrollment message
+ - authentication_status    The  authentication status. This field is only included if payment authentication was attempted and a value was received.
+ - authentication_message   The  authentication message. This field is only included if payment authentication was attempted and a value was received.
+ - authentication_token     This is a value generated by the card issuer as a token to prove that the cardholder was successfully authenticated.
+ - xid                      A unique transaction identifier that is generated by the payment server on behalf of the merchant to identify the 3-D Secure transaction.
 --------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Fraud_screening             Result of the fraud screening.
- a) scoring                  a) total score assigned to the transaction (main risk indicator).
- b) result                   b) The overall result of risk assessment returned by the Payment Gateway.Value must be a member of the following list.
+Fraud_screening             Result of the :term:`Fraud screening`.
+- scoring                   Total score assigned to the transaction (main risk indicator).
+- result                    The overall result of risk assessment returned by the Payment Gateway.Value must be a member of the following list.
                               - pending    :rules were not checked
                               - accepted   :transaction accepted.
                               - blocked    :transaction rejected due to system rules.
-                              - challenged :transaction has been marked for review.
- c) review                   c) The decision made when the overall risk result returns challenged.
+                              - :term:`challenged`  :transaction has been marked for review.
+- review                    The decision made when the overall risk result returns challenged.
 
 							An empty value means no review is required.
 							Value must be a member of the following list.
@@ -123,18 +123,18 @@ Fraud_screening             Result of the fraud screening.
                                - allowed   :the transaction has been released for processing.
                                - denied    :the transaction has been cancelled.
 --------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Order                       information about the customer and his order.
- a) Id                        a) unique identifier of the order as provided by Merchant.
- b) dateCreated               b) time when order was created.
- c) attempts                  c) indicates how many payment attempts have been made for this order.
- d) amount                    d) the total order amount (e.g., 150.00). It should be calculated as a sum of the items purchased, plus the shipping fee (if present), plus the tax fee (if present).
- e) shipping                  e) the order shipping fee.
- f) tax                       f) the order tax fee.
- g) decimals                  g) decimal precision of the order amount.
- h) currency                  h) base currency for this order.This three-character currency code complies with ISO 4217
- I) customer_id               I) unique identifier of the customer as provided by Merchant.
- J) language                  J) language code of the customer.
- k) email                     k) email address of the customer.
+Order                       Information about the customer and his order.
+ - Id                        Unique identifier of the order as provided by Merchant.
+ - dateCreated               Time when order was created.
+ - attempts                  Indicates how many payment attempts have been made for this order.
+ - amount                    The total order amount (e.g., 150.00). It should be calculated as a sum of the items purchased, plus the shipping fee (if present), plus the tax fee (if present).
+ - shipping                  The order shipping fee.
+ - tax                       The order tax fee.
+ - decimals                  Decimal precision of the order amount.
+ - currency                  Base currency for this order. This three-character currency code complies with ISO 4217
+ - customer_id               Unique identifier of the customer as provided by Merchant.
+ - language                  Language code of the customer.
+ - email                     Email address of the customer.
 ==========================  ===================================================================================================================================================================
 
 -----------------------------------------------
@@ -142,12 +142,12 @@ Response fields specific to the payment product
 -----------------------------------------------
 
 Credit Card payments
-  The following table lists and describes the response fields returned for transactions by credit/debit card.
+  The following table lists and describes the response fields returned for transactions by credit/debit card. (see :term:`Payment product`) 
 
 ========================== 	===================================================================================================================================================================
 Field Name        			Description
 ========================== 	===================================================================================================================================================================
-token 						Card token.
+token 						Card :term:`token`.
 brand 						Card brand. (e.g., VISA, MASTERCARD, AMERICANEXPRESS, MAESTRO).
 pan 						Card number (up to 19 characters). Note that, due to the PCI DSS security standards, our system has to mask credit card numbers in any output (e.g., 549619******4769).
 card_holder 				Cardholder name.
@@ -174,16 +174,19 @@ Description
   The HiPay TPP payment gateway can process transactions through many different acquirers using different payment methods and involving some anti-fraud checks.
   All these aspects change the transaction processing flow significantly for you.
   When you activate a server-to-server notification on Hipay TPP, you receive a response describing the transaction state.
-  Depending on the transaction state there are five options to action:
+  
+Depending on the transaction state there are five options to action:
 
-========================== 	===================================================================================================================================================================
-Transaction state   		Description
-========================== 	===================================================================================================================================================================
-completed 					if the transaction state is completed you are done. This is the most common case for credit card transaction processing. Almost all credit card acquirers works in that way. Then you have to look into the status fied of the response to know the exact transaction status.
-pending 					Transaction request was submitted to the acquirer but response is not yet available.
-declined  					Transaction was processed and was declined by gateway.
-error 						Transaction was not processed due to some reasons.
-========================== 	===================================================================================================================================================================
+.. table:: Truth table for "not"
+  
+  ==========================  ===================================================================================================================================================================
+  Transaction state   		  Description
+  ==========================  ===================================================================================================================================================================
+  completed 				  If the transaction state is completed you are done. This is the most common case for credit card transaction processing. Almost all credit card acquirers works in that way. Then you have to look into the status fied of the response to know the exact transaction status.
+  pending 					  Transaction request was submitted to the acquirer but response is not yet available.
+  declined  				  Transaction was processed and was declined by gateway.
+  error 					  Transaction was not processed due to some reasons.
+  ==========================  ===================================================================================================================================================================
 
 --------
 Examples

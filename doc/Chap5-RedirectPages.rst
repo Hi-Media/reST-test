@@ -70,6 +70,7 @@ state						Transaction state. Value must be a member of the following list.
 							- declined
 							- error
 
+							
 							Please report to the following section below - Transaction Workflow - for further details.
 --------------------------	---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 status						Transaction status. A list of available statuses can be found in the appendices.
