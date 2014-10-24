@@ -21,7 +21,7 @@ About :term:`3-D Secure`
 ------------------------
 
 3-D Secure History
-  In early 2001, VISA introduced a security protocol called 3-D Secure to improve online transaction performance and
+  In early 2001, VISA introduced a security protocol called :term:`3-D Secure`to improve online transaction performance and
   to accelerate the growth of electronic commerce through increased consumer confidence.
 
 Objective of 3-D secure
@@ -94,7 +94,7 @@ The following table lists the Enrollment message and status:
 .. table:: Table: Enrollment Message and Status
 
   =======  =========================  ==============================  ============  ===================================================================================================================================================================================================
-  Status   Enrollment Message         :term:`3-D Secure` Available?   :term:`ECI`   Description
+  Status   Enrollment Message         :term:`3-D Secure`Available?   :term:`ECI`   Description
   =======  =========================  ==============================  ============  ===================================================================================================================================================================================================
   Y        Authentication Available   Yes                                           Card is enrolled in the 3-D Secure program and the payer is eligible for authentication processing.
   N        Cardholder Not Enrolled    No                              6             Card is not enrolled in 3-D Secure program.
