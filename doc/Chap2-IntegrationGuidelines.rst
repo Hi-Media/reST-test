@@ -26,9 +26,9 @@ All URLs referenced in this guide must have one of the following bases:
   ==============  =====================================================
   Environment      Endpoint
   ==============  =====================================================
-  Stage            https://stage-secure-gateway.allopass.com/rest/v1/
+  Stage            https://stage-secure-gateway.hipay-tpp.com/rest/v1/
   --------------  -----------------------------------------------------
-  Production       https://secure-gateway.allopass.com/rest/v1/
+  Production       https://secure-gateway.hipay-tpp.com/rest/v1/
   ==============  =====================================================
 
 Authentication
@@ -43,14 +43,15 @@ Authentication
   Most HTTP clients (including web-browsers) have built-in support for HTTP Basic Authentication.
   If not, the following header must be included in all HTTP requests.
 
-Authorization
+:term:`Authorization`
   Basic base64("<API login>:<API password>")
 
 .. note:: If the login and/or password is wrong, the 401 Unauthorized HTTP Status Code is returned.
 
 Character Encoding
 ==================
-All parameters accept UTF-8 encoded text via the API.
+
+All parameters accept UTF-8 encoded text via the API. 
 All other encodings must be converted to UTF-8 before sending them to the HiPay TPP API in order to guarantee that the data is not corrupted.
 
 -----------------
@@ -58,7 +59,7 @@ Response Handling
 -----------------
 
 The HTTP status code indicates whether a request succeeded or not.
-i.e. a 2xx status code indicates a success, whereas a 4xx or a 5xx status code indicates a failure.
+e.g. a 2xx status code indicates a success, whereas a 4xx or a 5xx status code indicates a failure.
 
 Response Status Codes
 =====================
@@ -81,15 +82,15 @@ These are the HTTP status codes you may receive and their meaning; they are list
   -----------------------  -----------------------------------------------------------------------------
   403 Forbidden            You are making a call to a resource you don't have permission to.
 
-                           * i.g. you are trying to retrieve information about a token you don't own.
+                           * e.g. you are trying to retrieve information about a token you don't own.
 
                            An error message is displayed with an explanation of the error situation.
   -----------------------  -----------------------------------------------------------------------------
-  404 Not Found            The resource requested, such as a token, does not exist.
+  404 Not Found            The resource requested, such as a :term:`token`, does not exist.
   -----------------------  -----------------------------------------------------------------------------
   405 Method Not Allowed   The HTTP method you used is not allowed for the requested URL.
 
-                           * i.g. you are trying to retrieve information about a token you don't own.
+                           * e.g. you are trying to retrieve information about a token you don't own.
   -----------------------  -----------------------------------------------------------------------------
   500 Server Error         HiPay TPP server error. Report this to the HiPay TPP Technical Support
   503 Service Unavailable  HiPay TPP API is temporarily unable to process the request. Try again later.
@@ -113,7 +114,7 @@ Authentication
 
 Responses in XML Format
   By default, HiPay TPP REST API returns XML with a root element of <response>.
-  i.e. here is the default XML representation of a token lookup result.
+  e.g. here is the default XML representation of a token lookup result.
 
 .. code-block:: xml
     :linenos:
@@ -165,8 +166,8 @@ Error Handling
 Overview
   HiPay TPP Gateway API returns two levels of error information:
 
-  - an HTTP Status Code in the header
-  - a response body with additional details that can help you determine how to handle the exception.
+  - An HTTP Status Code in the header
+  - Response bodies with additional details that can help you determine how to handle the exception.
 
 Exception properties
   An exception has up to three properties.
@@ -182,7 +183,7 @@ Exception properties
    description     A further descriptive message regarding the exception.
    ==============  ======================================================
 
-i.e. if you receive an exception with status code 400 (Bad Request),
+e.g. if you receive an exception with status code 400 (Bad Request),
 the code and message properties are useful for debugging what went wrong.
 
 XML Error Example
