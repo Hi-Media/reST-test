@@ -20,13 +20,13 @@ Description
 About 3-D Secure
 -----------------
 
-:term:`3-D Secure` History
-  In early 2001, VISA introduced a security protocol called 3-D Secure to improve online transaction performance and
+3-D Secure History
+  In early 2001, VISA introduced a security protocol called :term:`3-D Secure` to improve online transaction performance and
   to accelerate the growth of electronic commerce through increased consumer confidence.
 
 Objective of 3-D secure
   The objective of 3-D Secure was to provide Issuers with the ability to actually authenticate cardholders during
-  an online purchase, to reduce the likelihood of fraudulent usage of payment cards and to improve transaction performance to benefit merchants, consumers and acquirers.
+  an online purchase, 3-D Secure to reduce the likelihood of fraudulent usage of payment cards and to improve transaction performance to benefit merchants, consumers and acquirers.
   VISA's branded 3-D Secure Program is commonly known as Verified By VISA (VbV).
   Services based on the protocol have been also been adopted by MasterCard, under the name MasterCard SecureCode TM(MSC).
 
@@ -34,8 +34,8 @@ Objective of 3-D secure
 Merchant Benefits
 -----------------
 
-:term:`3-D Secure` Benefits
-  The benefits of the 3-D Secure Process are the enhanced security available when performing an authenticated transaction
+3-D Secure Benefits
+  The benefits of the :term:`3-D Secure` Process are the enhanced security available when performing an authenticated transaction
   as well as the shift of liability in the event of fraudulent transactions. Authentication should strengthen your existing anti-fraud strategy and
   help protect your business, but bear in mind that coverage of authentication programs is currently limited to Internet transactions.
 
@@ -70,6 +70,7 @@ Step    Action
 ------  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 **3**	If the Issuer is participating for the card range, the Directory sends a Verify Enrollment Request message to the Issuer ACS to determine whether authentication is available for the account number.
 **4**   The ACS returns a Verify Enrolment Response to the Directory Serve
+		
 		- **IF** Authentication is available for this card number **THEN** the response provides the URL of the ACS where the cardholder can be authenticated.
         - **IF** Authentication is not available **THEN** the Merchant server receives a Cardholder Not Enrolled or Authentication Not Available message and returns the transaction to the Merchant's commerce server to proceed with a standard transaction processing.
 ------  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -123,7 +124,7 @@ The following table lists the Enrollment message and status:
                                                                  - Cardholder fails to correctly enter the authentication information
                                                                  - Cardholder cancels the authentication process.
                                                                  An authentication failure may be a possible indication of a fraudulent user.
-                                                                 **:term:`Authorization` request should not be submitted.**								              										 
+                                                                 ** :term:`Authorization` request should not be submitted.**								              										 
   E        *Any error message here*                              An error occurred during the authentication process.
                                                                  **Authorization request should not be submitted.**
   =======  ======================================  ============  ============================================================================================================================================

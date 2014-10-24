@@ -27,20 +27,20 @@ From Wikipedia, the free encyclopedia
   CHALLENGED
    TO BE COMPLETED
 
-   .. seealso:: <http://en.wikipedia.org/wiki>		
+    .. seealso:: <http://en.wikipedia.org/wiki>		
 	
   CANCEL
    TO BE COMPLETED
 
-   .. seealso:: <http://en.wikipedia.org/wiki>	
+    .. seealso:: <http://en.wikipedia.org/wiki>	
 	
   ECI
-    Electronic Commerce Indicator (ECI) is a value that is returned from the Directory Server (Visa, MasterCard, and JCB) to indicate the authentication results of your customer's credit card payment on 3D Secure.
+   Electronic Commerce Indicator (ECI) is a value that is returned from the Directory Server (Visa, MasterCard, and JCB) to indicate the authentication results of your customer's credit card payment on 3D Secure.
 
     .. seealso:: <https://www.paydollar.com/b2c2/eng/merchant/help/f_onlinehelp_eci.htm>		
 
   HOSTED PAYMENT PAGE
-     TO BE COMPLETED
+   TO BE COMPLETED
 
     .. seealso:: <http://www.wikipedia.org/wiki> 
 	
