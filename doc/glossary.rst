@@ -81,7 +81,7 @@ From Wikipedia, the free encyclopedia
 
     .. seealso:: <http://en.wikipedia.org/wiki/Token>
 	
-	SSL
+  SSL
     Transport Layer Security (TLS) and its predecessor, Secure Sockets Layer (SSL), are cryptographic protocols designed to provide communication security over the Internet.[
 
     .. seealso:: <http://en.wikipedia.org/wiki/Transport_Layer_Security>

@@ -10,7 +10,7 @@ What is a Server-to-Server Notification?
 Description
   In order to notify events related to your payment system, such as a new transaction
   or a :term:`3-D Secure` transaction, our platform can send to your application
-  a Server-to-Server notification :term:`notification`.
+  a Server-to-Server :term:`notification`.
 
 -----
 Setup
@@ -61,14 +61,13 @@ reason                      Optional element. Reason why transaction was decline
 test                        True if the transaction is a testing transaction, otherwise false.
 mid                         Your merchant account number (issued to you by HiPay TPP).
 Attempt_id                  Attempt id of the payment.
-authorization_code          An :term:`authorization ` code (up to 35 characters) generated for each approved or pending transaction by the acquiring provider.
+authorization_code          An :term:`authorization` code (up to 35 characters) generated for each approved or pending transaction by the acquiring provider.
 transaction_rerefence       The unique identifier of the transaction.
 date_created                Time when transaction was created.
 Date_updated                Time when transaction was last updated.
 date_authorized             Time when transaction was authorized.
 --------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-status                      Transaction status.
-                            A list of available statuses can be found in the appendices.
+status                      Transaction status. A list of available statuses can be found in the appendices.
 							See appendices: Appendix B *Payment Status Definitions*.
 --------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 message                     Transaction message.
