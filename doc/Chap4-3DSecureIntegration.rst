@@ -9,16 +9,16 @@ Introduction
 ------------
 
 Overview
-  This chapter describes how you should implement 3-D Secure Authentication using the Remote REST API model.
+  This chapter describes how you should implement :term:`3-D Secure` Authentication using the Remote REST API model.
 
 Description
   This process involves redirecting the shopper to an authentication page.
   This page is provided and hosted by the shopper's Card Issuer.
   As this page is hosted by the shopper's card issuing bank, we have no control over its appearance or functionality.
 
-----------------
-About 3-D Secure
-----------------
+------------------------
+About :term:`3-D Secure` 
+------------------------
 
 3-D Secure History
   In early 2001, VISA introduced a security protocol called 3-D Secure to improve online transaction performance and
@@ -89,21 +89,46 @@ Step    Action
 Authentication Results
 ----------------------
 
-The following table lists the Enrolment message and status:
+The following table lists the Enrollment message and status:
 
 .. table:: Table: Enrollment Message and Status
 
-  =======  =========================  ====================  ====  ===================================================================================================================================================================================================
-  Status   Enrollment Message         3DSecure Available?   ECI   Description
-  =======  =========================  ====================  ====  ===================================================================================================================================================================================================
-  Y        Authentication Available   Yes                         Card is enrolled in the 3-D Secure program and the payer is eligible for authentication processing.
-  N        Cardholder Not Enrolled    No                    6     Card is not enrolled in 3-D Secure program.
-                                                                  Card is eligible for authentication processing (it is within the card associations range of accepted cards) but the card-issuing bank does not participate in the 3-D Secure program.
-                                                                  **Chargeback Liability Shift** If the cardholder later disputes the purchase, the issuer may not submit a chargeback to the merchant.
-  U        Unable to Authenticate     No                    7     The card associations were unable to verify if the cardholder is enrolled in the 3-D Secure program.
-                                                                  Merchants can choose to accept the card nonetheless and proceed the purchase as non-authenticated when submitting the authorization.
-                                                                  **Chargeback Liability Shift** The Acquirer/Merchant retains liability if the cardholder later disputes making the purchase.
-  E        *Any error message here*   No                    7     An error occurred during the enrollment verification process.
-                                                                  Chargeback Liability Shift: The card can be accepted for authorization processing, yet the merchant may not claim a liability shift on this transaction in case of a dispute with the cardholder.
-  =======  =========================  ====================  ====  ===================================================================================================================================================================================================
+  =======  =========================  ==============================  ============  ===================================================================================================================================================================================================
+  Status   Enrollment Message         :term:`3-D Secure` Available?   :term:`ECI`   Description
+  =======  =========================  ==============================  ============  ===================================================================================================================================================================================================
+  Y        Authentication Available   Yes                                           Card is enrolled in the 3-D Secure program and the payer is eligible for authentication processing.
+  N        Cardholder Not Enrolled    No                              6             Card is not enrolled in 3-D Secure program.
+                                                                                    Card is eligible for authentication processing (it is within the card associations range of accepted cards) but the card-issuing bank does not participate in the 3-D Secure program.
+                                                                                    **Chargeback Liability Shift** If the cardholder later disputes the purchase, the issuer may not submit a chargeback to the merchant.
+  U        Unable to Authenticate     No                              7             The card associations were unable to verify if the cardholder is enrolled in the 3-D Secure program.
+                                                                                    Merchants can choose to accept the card nonetheless and proceed the purchase as non-authenticated when submitting the authorization.
+                                                                                    **Chargeback Liability Shift** The Acquirer/Merchant retains liability if the cardholder later disputes making the purchase.
+  E        *Any error message here*   No                              7             An error occurred during the enrollment verification process.
+                                                                                    Chargeback Liability Shift: The card can be accepted for authorization processing, yet the merchant may not claim a liability shift on this transaction in case of a dispute with the cardholder.
+  =======  =========================  ==============================  ============  ===================================================================================================================================================================================================
 
+The following table lists the Enrollment message and status:
+
+.. table:: Table: Authentication Message and Status
+
+  =======  ======================================  ============  ===================================================================================================================================================================================================
+  Status   Authentication Message                  :term:`ECI`   Description
+  =======  ======================================  ============  ===================================================================================================================================================================================================
+  Y        Authentication Successful               5             Cardholder was successfully authenticated. The Issuer has authenticated the cardholder by verifying the identity information or password.
+  A        Authentication Attempted                6             Authentication could not be performed but a proof of authentication attempt was provided.
+  U        Authentication Could Not Be Performed   7             The Issuer is not able to complete the authentication request due to a technical error or other problem.
+                                                                 Possible reasons include:
+                                                                 - Invalid type of card such as a Commercial Card or any anonymous Prepaid Card.
+                                                                 - Unable to establish an :term:`SSL` session with cardholder browser.
+  N		   Authentication Failed	                             The cardholder did not complete authentication and the card should not be accepted for payment.
+                                                                 The following are reasons to fail an authentication:
+                                                                 - Cardholder fails to correctly enter the authentication information
+                                                                 - Cardholder cancels the authentication process.
+                                                                 An authentication failure may be a possible indication of a fraudulent user.
+                                                                 **Authorization request should not be submitted.**								              										             
+  E        *Any error message here*                              An error occurred during the authentication process.
+                                                                 **Authorization request should not be submitted.**
+  =======  ======================================  ============  ===================================================================================================================================================================================================
+
+  
+  

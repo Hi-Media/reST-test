@@ -7,6 +7,11 @@ From Wikipedia, the free encyclopedia
 
 .. glossary::
 
+  3-D-SECURE
+    3-D Secure is an XML-based protocol designed to be an additional security layer for online credit and debit card transactions.
+
+    .. seealso:: <http://en.wikipedia.org/wiki/3-D_Secure>
+
   API
     Application Programming Interface is a set of functions and procedures that allow the creation of applications which access the features or data of an operating system, application, or other service.
 
@@ -15,8 +20,13 @@ From Wikipedia, the free encyclopedia
   AUTHORIZATION
     TO BE COMPLETED
 
-    .. seealso:: <http://www.wikipedia.org/wiki/XML>	
+    .. seealso:: <http://www.wikipedia.org/wiki>	
 
+  ECI
+    Electronic Commerce Indicator (ECI) is a value that is returned from the Directory Server (Visa, MasterCard, and JCB) to indicate the authentication results of your customer's credit card payment on 3D Secure.
+
+    .. seealso:: <https://www.paydollar.com/b2c2/eng/merchant/help/f_onlinehelp_eci.htm>		
+	
   JSON
     JavaScript Object Notation, is an open standard format that uses human-readable textA set of functions and  procedures that allow the creation of applications which access the features or data of an operating system, application, or other service to transmit data objects consisting of attribute–value pairs.
     It is used primarily to transmit data between a server and web application, as an alternative to :term:`XML`.
@@ -37,7 +47,12 @@ From Wikipedia, the free encyclopedia
     Token, an object which represents the right to perform some operation.
 
     .. seealso:: <http://en.wikipedia.org/wiki/Token>
-  
+
+  SSL
+    Transport Layer Security (TLS) and its predecessor, Secure Sockets Layer (SSL), are cryptographic protocols designed to provide communication security over the Internet.[
+
+    .. seealso:: <http://en.wikipedia.org/wiki/Transport_Layer_Security>
+	
   XML
     Extensible Markup Language is a W3C-recommended general- purpose markup language for creating special-purpose markup languages, capable of describing many different kinds of data.
 
