@@ -15,9 +15,10 @@ Resource        		                                            Description
 **GET**   /rest/v1/transaction						                Request information about an existant transaction.
 ==================================================================  =======================================================
 
--------------------transaction
+-------------------
 Request a New Order
 -------------------
+
 Overview
   To request a new order, make an HTTP POST request to the following resource URL.
   POST /rest/v1/order
@@ -141,17 +142,18 @@ The following table lists the Parameters specific to credit or debit card paymen
   :term:`eci`                N            1                  Electronic Commerce Indicator (ECI).
                                                              The ECI indicates the security level at which the payment information is processed between the cardholder and merchant.
                                                              Possible values:
-                                                             1 = MO/TO (Card Not Present)
-                                                             2 = MO/TO – Recurring
-                                                             3 = Instalment Payment
-                                                             4 = Manually Keyed (Card Present)
-                                                             7 = E-commerce with :term:`SSL`/TLS Encryption
-                                                             9 = Recurring E-commerce
-                                                             A default ECI value can be set in the preferences page. An ECI value sent along in the transaction will overwrite the default ECI value. Refer to the appendices (Appendix C) to get further information.
+                                                             - 1 = MO/TO (Card Not Present)
+                                                             - 2 = MO/TO – Recurring
+                                                             - 3 = Instalment Payment
+                                                             - 4 = Manually Keyed (Card Present)
+                                                             - 7 = E-commerce with :term:`SSL`/TLS Encryption
+                                                             - 9 = Recurring E-commerce
+                                                             
+															 A default ECI value can be set in the preferences page. An ECI value sent along in the transaction will overwrite the default ECI value. Refer to the appendices (Appendix C) to get further information.
 
   authentication_indicator   N            1                  Indicates if the :term:`3-D Secure` authentication should be performed. Can be used to overrule the merchant level configuration.
-                                                             0 = Bypass authentication
-                                                             1 = Continue if possible (Default)
+                                                             - 0 = Bypass authentication
+                                                             - 1 = Continue if possible (Default)
   =========================  ===========  =======  ========  =====================================================================================================================================================================
 
 The following table lists the Parameters specific to Qiwi Wallet
@@ -438,6 +440,8 @@ The payment gateway supports the following types of maintenance transactions.
 URL Parameters
 --------------
 
+test
+
 =========================  =======  =======  ====  ==========================================
 Parameter        	       Format   Length   Req   Description
 =========================  =======  =======  ====  ==========================================
@@ -446,6 +450,8 @@ Parameter        	       Format   Length   Req   Description
 
 Request Parameters
 ------------------
+
+test
 
 =========================  =======  =======  ====  ==========================================================================================================================================
 Parameter        	       Format   Length   Req   Description
