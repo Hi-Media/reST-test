@@ -26,7 +26,7 @@ Procedure
    :name: Data Verification login screen
 
 Secret passphrase
-  The secret passphrase is used to generate a unique character string (signature) hashed with SHA algorithm.
+  The secret :term:`Secret Passphrase` is used to generate a unique character string (signature) hashed with SHA algorithm.
   The security level of the password idepends on the length of the password.
   A long password is more secured.
 
@@ -38,10 +38,10 @@ URL Notification
 ----------------
 
 Description
-  For the URL :term:`notification`, the :term:`Signature` is sent on the HTTP header under the *HTTP_X_ALLOPASS_SIGNATURE parameter*
+  For the URL :term:`notification`, the :term:`signature` is sent on the HTTP header under the *HTTP_X_ALLOPASS_SIGNATURE parameter*
 
 Verification
-  To check this point, you just need to concatenate the passphrase with the POST content of the query.
+  To check this point, you just need to concatenate the :term:`passphrase`with the POST content of the query.
 
   Algorithm verification
 

@@ -66,17 +66,15 @@ From Wikipedia, the free encyclopedia
     .. seealso:: <http://en.wikipedia.org/wiki/Wikipedia:Notifications>
 
   Passphrase
-    TO BE COMPLETED
+    A passphrase is a sequence of words or other text used to control access to a computer system, program or data. A passphrase is similar to a password in usage, but is generally longer for added security. 
 
-    .. seealso:: <http://en.wikipedia.org/wiki>	
-	
+    .. seealso:: <http://en.wikipedia.org/wiki/Passphrase>	
 	
   Payment product
     TO BE COMPLETED
 
     .. seealso:: <http://en.wikipedia.org/wiki>
 
-	
   PCI DSS 
     Payment Card Industry Data Security Standard (PCI DSS) is a proprietary information security standard for organizations that handle branded credit cards from the major card brands including Visa, MasterCard, American Express, Discover, and JCB.
 
