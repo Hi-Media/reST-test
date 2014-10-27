@@ -16,9 +16,9 @@ Description
   This page is provided and hosted by the shopper's Card Issuer.
   As this page is hosted by the shopper's card issuing bank, we have no control over its appearance or functionality.
 
------------------
+----------------
 About 3-D Secure
------------------
+----------------
 
 3-D Secure History
   In early 2001, VISA introduced a security protocol called :term:`3-D Secure` to improve online transaction performance and
@@ -123,10 +123,7 @@ The following table lists the Enrollment message and status:
                                                                  - Cardholder fails to correctly enter the authentication information
                                                                  - Cardholder cancels the authentication process.
                                                                  An authentication failure may be a possible indication of a fraudulent user.
-                                                                 ** :term:`Authorization` request should not be submitted.**								              										 
+                                                                 ** :term:`Authorization` request should not be submitted.**
   E        *Any error message here*                              An error occurred during the authentication process.
                                                                  **Authorization request should not be submitted.**
   =======  ======================================  ============  ============================================================================================================================================
-
-  
-  

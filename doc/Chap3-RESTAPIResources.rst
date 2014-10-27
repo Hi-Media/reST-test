@@ -11,13 +11,14 @@ Resource        		                                            Description
 ==================================================================  =======================================================
 **POST**  /rest/v1/order	                                        Request a new order.
 **POST**  /rest/v1/maintenance/transaction/{transaction_reference}  Perform a maintenance on an existing :term:`transaction`
-**POST**  /rest/v1/hpayment		                                    Request an order and initialize a :term:`hosted payment` page
-**GET**   /rest/v1/transaction						                Request information about an existant transaction.
+**POST**  /rest/v1/hpayment		                                    Request an order and initialize a :term:`hosted payment page`
+**GET**   /rest/v1/transaction						                Request information about an existing transaction.
 ==================================================================  =======================================================
 
--------------------transaction
+-------------------
 Request a New Order
 -------------------
+
 Overview
   To request a new order, make an HTTP POST request to the following resource URL.
   POST /rest/v1/order
@@ -440,7 +441,7 @@ URL Parameters
 --------------
 
   =========================  =======  =======  ====  ===============================
-  Parameter        	         Format   Length   Req   Description
+  Parameter                  Format   Length   Req   Description
   =========================  =======  =======  ====  ===============================
   {transaction_reference}    N                 M     The unique identifier of the transaction.
   =========================  =======  =======  ====  ===============================
@@ -449,7 +450,7 @@ Request Parameters
 ------------------
 
   =========================  =======  =======  ====  ===============================
-  Parameter        	         Format   Length   Req   Description
+  Parameter                  Format   Length   Req   Description
   =========================  =======  =======  ====  ===============================
   :term:`operation`
   {transaction_reference}    A                 M     The type of operation to process. For further information, report to the previous table - Table 15: Types of maintenance transactions
@@ -567,7 +568,7 @@ JSON Response Example
    	  "capturedAmount":"50.00",
    	  "refundedAmount":"0.00",
    	  "decimals":"2",
-   	  "currency":"EUR"17   	
+   	  "currency":"EUR"17
 	}
 
 

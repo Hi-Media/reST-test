@@ -110,17 +110,17 @@ Three_d_secure              Optional element. Result of the :term:`3-D Secure` A
 Fraud_screening             Result of the :term:`Fraud screening`.
 - scoring                   Total score assigned to the transaction (main risk indicator).
 - result                    The overall result of risk assessment returned by the Payment Gateway.Value must be a member of the following list.
-                              - pending    :rules were not checked
-                              - accepted   :transaction accepted.
-                              - blocked    :transaction rejected due to system rules.
+                              - pending: rules were not checked
+                              - accepted: transaction accepted.
+                              - blocked: transaction rejected due to system rules.
                               - :term:`challenged`  :transaction has been marked for review.
 - review                    The decision made when the overall risk result returns challenged.
 
 							An empty value means no review is required.
 							Value must be a member of the following list.
-                               - pending   :a decision to release or cancel the transaction is pending.
-                               - allowed   :the transaction has been released for processing.
-                               - denied    :the transaction has been cancelled.
+                              - pending: a decision to release or cancel the transaction is pending.
+                              - allowed: the transaction has been released for processing.
+                              - denied: the transaction has been cancelled.
 --------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Order                       Information about the customer and his order.
  - Id                        Unique identifier of the order as provided by Merchant.
@@ -141,7 +141,7 @@ Response fields specific to the payment product
 -----------------------------------------------
 
 Credit Card payments
-  The following table lists and describes the response fields returned for transactions by credit/debit card. (see :term:`Payment product`) 
+  The following table lists and describes the response fields returned for transactions by credit/debit card. (see :term:`Payment product`)
 
 ========================== 	===================================================================================================================================================================
 Field Name        			Description
@@ -173,11 +173,11 @@ Description
   The HiPay TPP payment gateway can process transactions through many different acquirers using different payment methods and involving some anti-fraud checks.
   All these aspects change the transaction processing flow significantly for you.
   When you activate a server-to-server notification on Hipay TPP, you receive a response describing the transaction state.
-  
+
 Depending on the transaction state there are five options to action:
 
 .. table:: Truth table for "not"
-  
+
   ==========================  ===================================================================================================================================================================
   Transaction state   		  Description
   ==========================  ===================================================================================================================================================================

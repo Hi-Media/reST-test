@@ -1,7 +1,9 @@
 .. _readguide:
+
 ======================
 How to read this guide
 ======================
+
 -------------------------
 Documentation Conventions
 -------------------------

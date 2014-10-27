@@ -70,7 +70,7 @@ state						Transaction state. Value must be a member of the following list.
 							- declined
 							- error
 
-							
+
 							Please report to the following section below - Transaction Workflow - for further details.
 --------------------------	---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 status						Transaction status. A list of available statuses can be found in the appendices.
@@ -129,7 +129,7 @@ veres						The 3-D Secure (3DS) enrollment status.
 pares						The 3-D Secure (3DS) authentication status. This field is only included if payment authentication was attempted and a value was received.
 cardtoken					Card token.
 cardbrand					Card brand. (e.g., VISA, MASTERCARD, AMERICANEXPRESS, MAESTRO).
-cardpan						Card number (up to 19 characters).Note that, due to the :term:`PCI DSS` security standards, our system has to mask credit card numbers in any output (e.g., ************4769).
+cardpan						Card number (up to 19 characters).Note that, due to the :term:`PCI DSS` security standards, our system has to mask credit card numbers in any output (e.g., ``************4769``).
 cardexpiry					Card expiry year and month (YYYYMM).
 cardcountry					Bank country code where card was issued. This two-letter country code complies with ISO 3166-1 (alpha 2).
 ========================== 	=================================================================================================================================================================================
