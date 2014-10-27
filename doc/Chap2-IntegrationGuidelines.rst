@@ -1,8 +1,8 @@
 .. _Chap2-IntegrationGuidelines:
 
-==================================
-Chapter 2 - Integration Guidelines
-==================================
+======================
+Integration Guidelines
+======================
 
 This chapter outlines the basic integration requirements that you app must meet.
 
@@ -51,7 +51,7 @@ Authentication
 Character Encoding
 ==================
 
-All parameters accept UTF-8 encoded text via the API. 
+All parameters accept UTF-8 encoded text via the API.
 All other encodings must be converted to UTF-8 before sending them to the HiPay TPP API in order to guarantee that the data is not corrupted.
 
 -----------------

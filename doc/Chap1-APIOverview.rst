@@ -1,8 +1,8 @@
 .. _Chap1-APIOverview:
 
-========================
-Chapter 1 - API Overview
-========================
+============
+API Overview
+============
 
 The :term:`API` is based on REST principles; thus it is very easy to write and test applications.
 
@@ -51,7 +51,7 @@ Description
 
 Guarantees
   All data transmitted between HiPay TPP and the Merchant system is encrypted (256-bit encryption using a DigiCert certificate).
-  
+
 :term:`IP Restriction`
 ======================
 

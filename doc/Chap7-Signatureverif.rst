@@ -1,8 +1,8 @@
 .. _Chap7-Signatureverif:
 
-==================================
-Chapter 7 - Signature verification
-==================================
+======================
+Signature verification
+======================
 
 ------------
 Introduction
@@ -34,7 +34,7 @@ Secret passphrase
 Verification
 ------------
 
-URL Notification 
+URL Notification
 ----------------
 
 Description

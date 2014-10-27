@@ -1,8 +1,8 @@
 .. _Chap6-ServerToServer:
 
-============================
-Chapter 6 - Server-to-Server
-============================
+================
+Server-to-Server
+================
 
 ----------------------------------------
 What is a Server-to-Server Notification?

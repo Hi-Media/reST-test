@@ -1,8 +1,8 @@
 .. _Chap3-RESTAPIResources:
 
-==============================
-Chapter 3 - REST API Resources
-==============================
+==================
+REST API Resources
+==================
 
 The following table lists the REST API resources used.
 
