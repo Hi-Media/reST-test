@@ -17,7 +17,7 @@ Setup
 -----
 
 Procedure
-  First of all you need to set a :term:`Secret Passphrase` in your HiPay TPP back office
+  First of all you need to set a Secret :term:`Passphrase` in your HiPay TPP back office
   under *Integration -> Security Settings -> Secret Passphrase*.
 
 :Login Screen:
@@ -26,7 +26,7 @@ Procedure
    :name: Data Verification login screen
 
 Secret passphrase
-  The secret :term:`Secret Passphrase` is used to generate a unique character string (signature) hashed with SHA algorithm.
+  The secret :term:`Passphrase` is used to generate a unique character string (signature) hashed with SHA algorithm.
   The security level of the password idepends on the length of the password.
   A long password is more secured.
 
@@ -41,7 +41,7 @@ Description
   For the URL :term:`notification`, the :term:`signature` is sent on the HTTP header under the *HTTP_X_ALLOPASS_SIGNATURE parameter*
 
 Verification
-  To check this point, you just need to concatenate the :term:`passphrase`with the POST content of the query.
+  To check this point, you just need to concatenate the :term:`passphrase` with the POST content of the query.
 
   Algorithm verification
 
