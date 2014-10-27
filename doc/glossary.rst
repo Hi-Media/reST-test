@@ -70,6 +70,11 @@ From Wikipedia, the free encyclopedia
 
     .. seealso:: <http://en.wikipedia.org/wiki/Wikipedia:Notifications>
 
+  Operation
+    Transaction type. TO BE COMPLETED 
+
+    .. seealso:: <http://en.wikipedia.org/wiki/Passphrase>	
+
   Passphrase
     A passphrase is a sequence of words or other text used to control access to a computer system, program or data. A passphrase is similar to a password in usage, but is generally longer for added security. 
 

@@ -10,12 +10,12 @@ The following table lists the REST API resources used.
 Resource        		                                            Description
 ==================================================================  =======================================================
 **POST**  /rest/v1/order	                                        Request a new order.
-**POST**  /rest/v1/maintenance/transaction/{transaction_reference}  Perform a maintenance on an existing transaction
-**POST**  /rest/v1/hpayment		                                    Request an order and initialize a hosted payment page
+**POST**  /rest/v1/maintenance/transaction/{transaction_reference}  Perform a maintenance on an existing :term:`transaction`
+**POST**  /rest/v1/hpayment		                                    Request an order and initialize a :term:`hosted payment` page
 **GET**   /rest/v1/transaction						                Request information about an existant transaction.
 ==================================================================  =======================================================
 
--------------------
+-------------------transaction
 Request a New Order
 -------------------
 Overview
@@ -32,12 +32,12 @@ Order Parameters
   Field Name        	Format [1]_  Length   Req [2]_  Description
   ====================  ===========  =======  ========  =====================================================================================================================================================================================================================================================================
   orderid               AN           32       M         Unique order id
-  operation             AN                              Transaction type.
+  :term:`operation`     AN                              Transaction type.
                                                         Indicates how you want to process the payment. The default transaction type is set in the Merchant Interface (Default payment procedure in the Integration section). A transaction type sent along with the transaction will overwrite the default payment procedure.
-                                                        - **Sale** indicates transaction is sent for authorization, and if approved, is automatically submitted for capture.
+                                                        - **Sale** indicates transaction is sent for :term:`authorization`, and if approved, is automatically submitted for capture.
                                                         - **Authorization** indicates this transaction is sent for authorization only. The transaction will not be sent for settlement until the transaction is submitted for capture manually by the Merchant
   payment_product       AN                    M         The payment product (e.g., visa, mastercard, ideal).
-                                                        Depending on the payment product, elements specific to the payment method are required (see following tables).
+                                                        Depending on the :term:`payment product`, elements specific to the payment method are required (see following tables).
                                                         Refer to the appendices —*"Appendix A. Payment Products”*— for the full list of available payment products.
   description           AN           255      M         The order short description.
   long_description      AN                              Additional order description.
@@ -137,19 +137,19 @@ The following table lists the Parameters specific to credit or debit card paymen
   Field Name        	     Format [1]_  Length   Req [2]_  Description
   =========================  ===========  =======  ========  =====================================================================================================================================================================
   cardtoken                  AN           40       M         Card token.
-                                                             For further details about the card token and its integration, refer to the Secure Vault API documentation.
-  eci                        N            1                  Electronic Commerce Indicator (ECI).
+                                                             For further details about the card token and its integration, refer to the Secure Vault :term:`API` documentation.
+  :term:`eci`                N            1                  Electronic Commerce Indicator (ECI).
                                                              The ECI indicates the security level at which the payment information is processed between the cardholder and merchant.
                                                              Possible values:
                                                              1 = MO/TO (Card Not Present)
                                                              2 = MO/TO – Recurring
                                                              3 = Instalment Payment
                                                              4 = Manually Keyed (Card Present)
-                                                             7 = E-commerce with SSL/TLS Encryption
+                                                             7 = E-commerce with :term:`SSL`/TLS Encryption
                                                              9 = Recurring E-commerce
                                                              A default ECI value can be set in the preferences page. An ECI value sent along in the transaction will overwrite the default ECI value. Refer to the appendices (Appendix C) to get further information.
 
-  authentication_indicator   N            1                  Indicates if the 3DS authentication should be performed. Can be used to overrule the merchant level configuration.
+  authentication_indicator   N            1                  Indicates if the :term:`3-D Secure` authentication should be performed. Can be used to overrule the merchant level configuration.
                                                              0 = Bypass authentication
                                                              1 = Continue if possible (Default)
   =========================  ===========  =======  ========  =====================================================================================================================================================================
@@ -196,7 +196,7 @@ Response Fields
 ---------------
 
 Overview
-  Depending on the payment product, the Merchant is supposed to send additional request parameters.
+  Depending on the :term:`payment product`, the Merchant is supposed to send additional request parameters.
 
 The following table lists and describes the response fields.
 
@@ -232,7 +232,7 @@ attempt_id (xml)              attempt id of the payment.
 ----------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 authorizationCode (json)
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-authorization_code (xml)      an authorization code (up to 35 characters) generated for each approved or pending transaction by the acquiring provider.
+authorization_code (xml)      an :term:`authorization` code (up to 35 characters) generated for each approved or pending transaction by the acquiring provider.
 ----------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 transactionReference (json)
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -295,7 +295,7 @@ cvcResult (json)
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 cvc_result (xml)              result of the CVC (Card Verification Code) check. Possible result codes can be found in the appendices
 ----------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-eci                           Electronic Commerce Indicator (ECI).
+:term:`eci`                   Electronic Commerce Indicator (ECI).
 ----------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 paymentProduct (json)
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -307,7 +307,7 @@ payment_method (xml)          See tables below for further details.
 ----------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 threeDSecure (json)
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-three_d_secure (xml)          optional element. Result of the 3-D Secure Authentication
+three_d_secure (xml)          optional element. Result of the :term:`3-D Secure` Authentication
 
 - enrollmentStatus (json)
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -318,7 +318,7 @@ three_d_secure (xml)          optional element. Result of the 3-D Secure Authent
 ----------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 fraudScreening (json)
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-fraud_screening (xml)         Result of the fraud screening.
+fraud_screening (xml)         Result of the :term:`fraud screening` .
 - scoring                     - total score assigned to the transaction (main risk indicator).
 ----------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 - result                      The overall result of risk assessment returned by the Payment Gateway.
@@ -326,7 +326,7 @@ fraud_screening (xml)         Result of the fraud screening.
                               - pending: rules were not checked.
                               - accepted: transaction accepted.
                               - blocked: transaction rejected due to system rules.
-                              - challenged:	transaction has been marked for review.
+                              - term:`challenged`:	transaction has been marked for review.
 ----------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 - review                      The decision made when the overall risk result returns challenged.
                               An empty value means no review is required.
@@ -352,18 +352,18 @@ Order                         information about the customer and his order.
 - email                       - email address of the customer.
 ============================  =====================================================================================================================================================================
 
-Response fields specific to the payment product
------------------------------------------------
+Response fields specific to the :term:`payment product`
+-------------------------------------------------------
 Credit Card payments
   The following table lists and describes the response fields returned for transactions by credit/debit card.
 
 =========================  =====================================================================================================================================================================
 Field Name                 Description
 =========================  =====================================================================================================================================================================
-token                      Card token
+:term:`token`              Card token
 -------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 brand                      Card brand. (e.g., VISA, MASTERCARD, AMERICANEXPRESS, MAESTRO).
-pan                        Card number (up to 19 characters). Note that, due to the PCI DSS security standards, our system has to mask credit card numbers in any output (e.g., 549619******4769).
+pan                        Card number (up to 19 characters). Note that, due to the :term:`PCI DSS` security standards, our system has to mask credit card numbers in any output (e.g., 549619******4769).
 -------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 cardHolder (json)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -416,9 +416,9 @@ Depending on the transaction state there are five options to action:
   error               Transaction was not processed due to some reasons.
   ==================  =====================================================================================================================================================================
 
-----------------------
-Maintenance Operations
-----------------------
+------------------------------
+Maintenance :term:`Operations`
+------------------------------
 
 Description
   To perform maintenance on an existing transaction, make an HTTP POST request to the following resource.
@@ -431,9 +431,9 @@ The payment gateway supports the following types of maintenance transactions.
   ==================  =====================================================================================================================================================================
   Operation Type      Description
   ==================  =====================================================================================================================================================================
-  capture             A request instructing the payment gateway to capture a previously-authorized transaction, i.e. transfer the funds from the customer's bank account to the merchant's bank account. This transaction is always preceded by an authorization.
-  refund              A request instructing the payment gateway to refund a previously captured transaction. A captured transaction can be partly or fully refunded.
-  cancel              A request instructing the payment gateway to cancel a previously-authorized transaction. Only authorized transactions can be canceled, captured transactions must be refunded.
+  :term:`capture`     A request instructing the payment gateway to capture a previously-authorized transaction, i.e. transfer the funds from the customer's bank account to the merchant's bank account. This transaction is always preceded by an authorization.
+  :term:`refund`      A request instructing the payment gateway to refund a previously captured transaction. A captured transaction can be partly or fully refunded.
+  :term:`cancel`      A request instructing the payment gateway to cancel a previously-authorized transaction. Only authorized transactions can be canceled, captured transactions must be refunded.
   ==================  =====================================================================================================================================================================
 
 URL Parameters
@@ -451,9 +451,124 @@ Request Parameters
   =========================  =======  =======  ====  ===============================
   Parameter        	         Format   Length   Req   Description
   =========================  =======  =======  ====  ===============================
-  operation
-  {transaction_reference}    N                 M     The unique identifier of the transaction.
+  :term:`operation`
+  {transaction_reference}    A                 M     The type of operation to process. For further information, report to the previous table - Table 15: Types of maintenance transactions
+  amount                     R                 C     Operation amount (e.g., 10.00). Amount is required for partial maintenances. Do not specify amount for full captures or refunds.
   =========================  =======  =======  ====  ===============================
+
+
+Response Fields
+---------------
+
+The following table lists and describes the response fields.
+
+============================  =====================================================================================================================================================================
+Field Name                    Description
+============================  =====================================================================================================================================================================
+operation                     Value is fixed to :term:`capture`, :term:`refund` or :term:`cancel`
+----------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+test                          True if the transaction is a testing transaction, otherwise false.
+mid                           Your merchant account number (issued to you by HiPay TPP).
+----------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+authorizationCode (json)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+authorization_code (xml)      An :term:`authorization` code (up to 35 characters) generated for each approved or pending transaction by the acquiring provider.
+----------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+transactionReference (json)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+transaction_reference (xml)   The unique identifier of the transaction.
+----------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+dateCreated (json)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+date_created (xml)            Time when transaction was created.
+----------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+dateUpdated (json)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+date_updated (xml)            Time when transaction was last updated (maintenance date).
+----------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+dateAuthorized (json)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+date_authorized (xml)         Time when transaction was authorized.
+----------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+status                        Transaction status. A list of available statuses can be found in the appendices.
+message                       Transaction message.
+----------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+authorizedAmount (json)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+authorized_amount (xml)       The transaction amount.
+----------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+capturedAmount (json)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+captured_amount (xml)         The captured amount.
+----------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+refunded_amount (xml)         The refunded amount.
+----------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+decimals                      Decimal precision of transaction amount.
+currency                      Base currency for this transaction. This three-character currency code complies with ISO 4217.
+============================  =====================================================================================================================================================================
+
+Examples
+---------------
+
+The following are examples JSON and XML responses.
+
+Example Request
+
+.. code-block:: xml
+    :linenos:
+
+  	$ curl https://secure-gateway.allopass.com/rest/v1/maintenance/transaction/432241108734 \
+  	    -u "<your API username>:<your API password>" \
+   	    -X POST \
+   	    -d "operation=capture" \
+   	    -d "amount=10.00"
+
+
+XML Response Example
+
+.. code-block:: xml
+    :linenos:
+
+   	<response>
+   	  <operation>capture</operation>
+   	  <test>false</test>
+   	  <mid>00001234567</mid>
+   	  <authorization_code>549554</authorization_code>
+   	  <transaction_reference>432241108734</transaction_reference>
+   	  <date_created>2013-03-07T12:31:09+0000</date_created>
+   	  <date_updated>2013-03-07T15:44:08+0000</date_updated>
+   	  <date_authorized>2013-03-07T12:31:12+0000</date_authorized>
+   	  <status>117</status>
+   	  <message>Capture Requested</message>
+   	  <authorized_amount>460.50</authorized_amount>
+   	  <captured_amount>40.00</captured_amount>
+   	  <refunded_amount>0.00</refunded_amount>
+   	  <decimals>2</decimals>
+   	  <currency>EUR</currency>
+   	</response>
+
+JSON Response Example
+
+.. code-block:: json
+    :linenos:
+
+   	{
+   	  "operation":"capture",
+   	  "test":"false",
+   	  "mid":"00001234567",
+   	  "authorizationCode":"549554",
+   	  "transactionReference":"432241108734",
+   	  "dateCreated":"2013-03-07T12:31:09+0000",
+   	  "dateUpdated":"2013-03-07T15:48:28+0000",
+   	  "dateAuthorized":"2013-03-07T12:31:12+0000",
+   	  "status":"117",
+   	  "message":"Capture Requested",
+   	  "authorizedAmount":"460.50",
+   	  "capturedAmount":"50.00",
+   	  "refundedAmount":"0.00",
+   	  "decimals":"2",
+   	  "currency":"EUR"17   	
+	}
 
 
 
