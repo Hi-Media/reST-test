@@ -136,6 +136,14 @@ Bloc INI: ``.. code-block:: ini``
     attempt_id = 1
     authorization_code = test123
 
+Bloc Bash (Shell): ``.. code-block:: ini``
+
+.. code-block:: bash
+    :linenos:
+
+    $ curl https://secure-gateway.allopass.com/rest/v1/transaction/432241108734 \
+        -u "<your API username>:<your API password>"
+
 -----
 Lists
 -----

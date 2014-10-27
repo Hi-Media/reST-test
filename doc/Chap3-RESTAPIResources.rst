@@ -417,9 +417,9 @@ Depending on the transaction state there are five options to action:
   error               Transaction was not processed due to some reasons.
   ==================  =====================================================================================================================================================================
 
------------------------
+----------------------
 Maintenance Operations
------------------------
+----------------------
 
 Description
   To perform maintenance on an existing transaction, make an HTTP POST request to the following resource (see :term:`Operation`)
@@ -441,7 +441,7 @@ URL Parameters
 --------------
 
 =========================  =======  =======  ====  =================================
-Parameter        	       Format   Length   Req   Description
+Parameter                  Format   Length   Req   Description
 =========================  =======  =======  ====  =================================
 {transaction_reference}    N                 M     The unique identifier of the transaction.
 =========================  =======  =======  ====  =================================
@@ -450,7 +450,7 @@ Request Parameters
 ------------------
 
 =========================  =======  =======  ====  =================================
-Parameter        	       Format   Length   Req   Description
+Parameter                  Format   Length   Req   Description
 =========================  =======  =======  ====  =================================
 :term:`operation`
 {transaction_reference}    A                 M     The type of operation to process. For further information, report to the previous table - **Table 15: Types of maintenance transactions**
@@ -581,7 +581,7 @@ Introduction
   POST /rest/v1/hpayment
 
 Payment page Workflow
-----------------------
+---------------------
 
 Description
   This resource creates an order and returns a forward URL. This forward URL is dedicated to display a payment page with customers’ CSS and validated payment products. After payment form validation, the checkout is processed.
@@ -592,10 +592,10 @@ Order on a Hosted Payment Page
 ------------------------------
 
 ==============================  ===========  =======  ========  ===============================================================================
-Field Name        	            Format [1]_  Length   Req [2]_  Description
+Field Name                      Format [1]_  Length   Req [2]_  Description
 ==============================  ===========  =======  ========  ===============================================================================
 orderid                         AN           32       M         Unique order id
-:term:`operation`                      AN           32       M         Transaction type. Indicates how you want to process the payment. The default transaction type is set in the Merchant Interface (Default payment procedure in the Integration section). A transaction type sent along with the transaction will overwrite the default payment procedure.
+:term:`operation`               AN           32       M         Transaction type. Indicates how you want to process the payment. The default transaction type is set in the Merchant Interface (Default payment procedure in the Integration section). A transaction type sent along with the transaction will overwrite the default payment procedure.
                                                                 - **Sale** indicates transaction is sent for authorization, and if approved, is automatically submitted for :term:`capture`.
                                                                 - **:term:`Authorization`** indicates this transaction is sent for authorization only. The transaction will not be sent for settlement until the transaction is submitted for :term:`capture` manually by the Merchant.
 ------------------------------  -----------  -------  --------  -------------------------------------------------------------------------------
@@ -665,7 +665,7 @@ Overview
 .. table:: Table: Customer-related parameters
 
   ==============================  ===========  =======  ========  ===============================================================================
-  Field Name        	          Format [1]_  Length   Req [2]_  Description
+  Field Name                      Format [1]_  Length   Req [2]_  Description
   ==============================  ===========  =======  ========  ===============================================================================
   email                           AN                    M         The customer's e-mail address.
   phone                           AN                              The customer's phone number.
@@ -686,7 +686,7 @@ Overview
 .. table:: Table: Parameters specific to shipping information
 
   ========================  =======  =======  ========================================================================================================================================
-  Parameter        	        Format   Length   Description
+  Parameter                 Format   Length   Description
   ========================  =======  =======  ========================================================================================================================================
   shipto_firstname           AN               The first name of the order recipient.
   shipto_lastname            AN               The last name of the order recipient.
@@ -782,104 +782,101 @@ URL Parameters
   ==========================  ===========  =======  ========  ===============================================================================
 
 Response Fields
-----------------
+---------------
 
 Please refer to section	on *Request a New Order* sub-chapter.
 
 Examples
----------
+--------
 
 The following are examples JSON and XML responses.
 
 Transaction reference example Request
 
-.. code-block:: ini
+.. code-block:: bash
     :linenos:
 
-   	$ curl https://secure-gateway.allopass.com/rest/v1/transaction/432241108734 \
-   	    -u "<your API username>:<your API password>" \
+    $ curl https://secure-gateway.allopass.com/rest/v1/transaction/432241108734 \
+        -u "<your API username>:<your API password>"
 
 Order ID example Request
 
-.. code-block:: ini
+.. code-block:: bash
     :linenos:
 
-  	$ curl https://secure-gateway.allopass.com/rest/v1/transaction?orderid=52035cec9bb77 \
-    	-u "<your API username>:<your API password>" \
-
+    $ curl https://secure-gateway.allopass.com/rest/v1/transaction?orderid=52035cec9bb77 \
+        -u "<your API username>:<your API password>"
 
 XML Response Example
-Bloc XML: ``.. code-block:: xml``
 
 .. code-block:: xml
     :linenos:
 
-   	<response>
-   	 <transaction>
-   	   <state>completed</state>
-   	   <reason/>
-   	   <forward_url/>
-   	   <test>true</test>
-   	   <mid>00000000316</mid>
-   	   <attempt_id>1</attempt_id>
-   	   <authorization_code>no code</authorization_code>
-   	   <transaction_reference>112822568975</transaction_reference>
-   	   <date_created>2013-08-08T08:55:09+0000</date_created>
-   	   <date_updated>2013-08-08 10:55:13+02</date_updated>
-   	   <date_authorized>2013-08-08T08:55:13+0000</date_authorized>
-   	   <status>116</status>
-   	   <message>Authorized</message>
-   	   <authorized_amount>2.00</authorized_amount>
-   	   <captured_amount>0.00</captured_amount>
-   	   <refunded_amount>0.00</refunded_amount>
-   	   <decimals>2</decimals>
-   	   <currency>EUR</currency>
-   	   <ip_address>0.0.0.0</ip_address>
-   	   <ip_country/>
-   	   <device_id/>
-   	   <cdata1><![CDATA[my data 1]]></cdata1>
-   	   <cdata2><![CDATA[my data 2]]></cdata2>
-   	   <cdata3><![CDATA[my data 3]]></cdata3>
-   	   <cdata4><![CDATA[my data 4]]></cdata4>
-   	   <avs_result/>
-   	   <cvc_result/>
-   	   <eci>7</eci>
-   	   <payment_product>cb</payment_product>
-   	   <payment_method>
-   	     <token>6ce4138d2dc6377738cxxxxxxxxx424a2608ad</token>
-   	     <brand>VISA</brand>
-   	     <pan>411278******0544</pan>
-   	     <card_holder>Jhon Doe</card_holder>
-   	     <card_expiry_month>01</card_expiry_month>
-   	     <card_expiry_year>2015</card_expiry_year>
-   	     <issuer/>
-   	     <country>FR</country>
-   	   </payment_method>
-   	   <three_d_secure/>
-   	   <fraud_screening>
-   	     <scoring>20</scoring>
-   	     <result>accepted</result>
-   	     <review/>
-   	   </fraud_screening>
-   	   <order>
-   	     <id>52035cec9bb77</id>
-   	     <date_created>2013-08-08T08:54:25+0000</date_created>
-   	     <attempts>1</attempts>
-   	     <amount>2.00</amount>
-   	     <shipping>0.00</shipping>
-   	     <tax>0.00</tax>
-   	     <decimals>2</decimals>
-   	     <currency>EUR</currency>
-   	     <customer_id>52035cec9be4b</customer_id>
-   	     <language>fr_FR</language>
-   	     <email>customer@mail.com</email>
-   	   </order>
-   	 </transaction>
-   	</response>
+    <response>
+     <transaction>
+       <state>completed</state>
+       <reason/>
+       <forward_url/>
+       <test>true</test>
+       <mid>00000000316</mid>
+       <attempt_id>1</attempt_id>
+       <authorization_code>no code</authorization_code>
+       <transaction_reference>112822568975</transaction_reference>
+       <date_created>2013-08-08T08:55:09+0000</date_created>
+       <date_updated>2013-08-08 10:55:13+02</date_updated>
+       <date_authorized>2013-08-08T08:55:13+0000</date_authorized>
+       <status>116</status>
+       <message>Authorized</message>
+       <authorized_amount>2.00</authorized_amount>
+       <captured_amount>0.00</captured_amount>
+       <refunded_amount>0.00</refunded_amount>
+       <decimals>2</decimals>
+       <currency>EUR</currency>
+       <ip_address>0.0.0.0</ip_address>
+       <ip_country/>
+       <device_id/>
+       <cdata1><![CDATA[my data 1]]></cdata1>
+       <cdata2><![CDATA[my data 2]]></cdata2>
+       <cdata3><![CDATA[my data 3]]></cdata3>
+       <cdata4><![CDATA[my data 4]]></cdata4>
+       <avs_result/>
+       <cvc_result/>
+       <eci>7</eci>
+       <payment_product>cb</payment_product>
+       <payment_method>
+         <token>6ce4138d2dc6377738cxxxxxxxxx424a2608ad</token>
+         <brand>VISA</brand>
+         <pan>411278******0544</pan>
+         <card_holder>Jhon Doe</card_holder>
+         <card_expiry_month>01</card_expiry_month>
+         <card_expiry_year>2015</card_expiry_year>
+         <issuer/>
+         <country>FR</country>
+       </payment_method>
+       <three_d_secure/>
+       <fraud_screening>
+         <scoring>20</scoring>
+         <result>accepted</result>
+         <review/>
+       </fraud_screening>
+       <order>
+         <id>52035cec9bb77</id>
+         <date_created>2013-08-08T08:54:25+0000</date_created>
+         <attempts>1</attempts>
+         <amount>2.00</amount>
+         <shipping>0.00</shipping>
+         <tax>0.00</tax>
+         <decimals>2</decimals>
+         <currency>EUR</currency>
+         <customer_id>52035cec9be4b</customer_id>
+         <language>fr_FR</language>
+         <email>customer@mail.com</email>
+       </order>
+     </transaction>
+    </response>
 
-  .. rubric:: Footnotes
+.. rubric:: Footnotes
 
-  .. [1] The format of the element. Refer to "Table:Available formats of data elements” for the list of available formats.
-  .. [2] Specifies whether an element is required or not.
-  .. [ref1] Table:Issuers’ bank Id list
-
+.. [1] The format of the element. Refer to "Table:Available formats of data elements” for the list of available formats.
+.. [2] Specifies whether an element is required or not.
+.. [ref1] Table:Issuers’ bank Id list
