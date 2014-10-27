@@ -177,7 +177,7 @@ The following table lists the Parameters specific to iDeal
   issuer_bank_id             AN        4       M     Issuers' bank Id list [ref1]_
   =========================  =======  =======  ====  =================================
 
-.. [ref1] Table:Issuers’ bank Id list
+.. [ref1]_ Table:Issuers’ bank Id list
 
 ===========  ===================
 Field Name   Bank description
@@ -611,19 +611,18 @@ authentication_indicator        N            1                  Indicates if the
                                                                 1 = Continue if possible
 ------------------------------  -----------  -------  --------  -------------------------------------------------------------------------------
 payment_product_list            AN           255                The payment product list separated by a “,” (e.g., visa,mastercard,american-express). *Refer to the appendices — " Appendix A— on “GatewayAPI” documentation for the full list of available payment products.*
-payment_product_category_list   AN	         255	            The payment product category list separated by “,”. (e.g., credit-card,ewallet). \Refer to the appendices — "Appendix A. Payment Products” — on “GatewayAPI” documentation for the full list of available payment categories.*
+payment_product_category_list   AN           255                The payment product category list separated by “,”. (e.g., credit-card,ewallet). \Refer to the appendices — "Appendix A. Payment Products” — on “GatewayAPI” documentation for the full list of available payment categories.*
 css                             AN           255                URL to merchant style sheet. Important: H**TTPS** protocol is required.
-template                        AN	         32	                The template name.
+template                        AN           32                 The template name.
                                                                 Possible values:
                                                                 - basic-js = For a full page redirection.
                                                                 - iframe-js = For an iframe integration.
-merchant_display_
-name                            AN	         32	                The merchant name displayed on payment page, otherwise the name is retrieved from order.
-display_selector                N	         1	                Enable/disable the payment products selector.
+merchant_display_name           AN           32                 The merchant name displayed on payment page, otherwise the name is retrieved from order.
+display_selector                N            1                  Enable/disable the payment products selector.
                                                                 Possible values:
                                                                 0 = The selector is not displayed
                                                                 1 = The selector is displayed
-multi_use                       N	         1	                Indicates the tokenization module if the credit card token should be generated either for a single-use or a multi-use.
+multi_use                       N            1                  Indicates the tokenization module if the credit card token should be generated either for a single-use or a multi-use.
                                                                 Possible values:
                                                                 1 = Generate a multi-use token
                                                                 0 = Generates a single-use token.
@@ -749,24 +748,24 @@ PHP Signature Validation
 .. code-block:: css
     :linenos:
 
-   client-logo {                         // Add merchant logo
-   	   display: block;
-   	   width: 261px;
-   	  	 height: 100px;
-   	  	 background: url(“https://mysite.com/img/mylogo.png”);
-   	}
-   	body.script-body {               // Add merchant background
-   	    background-image: url("https://mysite.com/img/background.jpg");
-   	    background-position: center top;
-   	    background-repeat: no-repeat;
-   	}
-   	.prefilled {                         // Hide prefilled fields (like card holder)
-   	    display: none;14
-	}
+    client-logo {                         // Add merchant logo
+       display: block;
+       width: 261px;
+         height: 100px;
+         background: url(“https://mysite.com/img/mylogo.png”);
+    }
+    body.script-body {               // Add merchant background
+        background-image: url("https://mysite.com/img/background.jpg");
+        background-position: center top;
+        background-repeat: no-repeat;
+    }
+    .prefilled {                         // Hide prefilled fields (like card holder)
+        display: none;14
+    }
 
--------------------------------------------
+------------------------------------------
 Request details of an existing transaction
--------------------------------------------
+------------------------------------------
 Description
   To consult the details of an existing transaction, make an HTTP GET request to the following resource.
   GET /rest/v1/transaction
