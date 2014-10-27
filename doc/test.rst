@@ -136,7 +136,7 @@ Bloc INI: ``.. code-block:: ini``
     attempt_id = 1
     authorization_code = test123
 
-Bloc Bash (Shell): ``.. code-block:: ini``
+Bloc Bash (Shell): ``.. code-block:: bash``
 
 .. code-block:: bash
     :linenos:
@@ -148,7 +148,8 @@ Bloc Bash (Shell): ``.. code-block:: ini``
 Lists
 -----
 
-Definition lists:
+Definition list
+---------------
 
 what
   Definition lists associate a term with
@@ -164,6 +165,9 @@ how
 
   test ligne
 
+Other approach
+--------------
+
 :what:
   Definition lists associate a term with
   a definition.
@@ -175,32 +179,61 @@ how
   term. Blank lines are not allowed
   between term and definition.
 
+.. _hlist:
+
+Horizontal list
+---------------
+
+.. hlist::
+    :columns: 3
+
+    * A list of
+    * short items
+    * that should be
+    * displayed
+    * horizontally
+
 ------
 Tables
 ------
 
-===================== 	===========================================================================
-Field Name        		Description
-===================== 	===========================================================================
-Notification URL		The URL or IP on which you want to receive server-to-server notifications.
----------------------  	---------------------------------------------------------------------------
-Request method			The method you wish to receive the requests:
+.. _my-table-wo-title:
 
-					      - XML
-					      - HTTP POST
---------------------- 	---------------------------------------------------------------------------
-Desired notifications	Payment Card Industry Data Security Standards
-=====================  	===========================================================================
+================  ===========
+Field Name        Description
+================  ===========
+Notification URL  The URL or IP on which you want to receive server-to-server notifications.
+Request method    The method you wish to receive the requests:
 
+				  - XML
+				  - HTTP POST
+\                 column 1 empty
+5                 - bla
+                  - bla
+================  ===========
+
+.. _my-table-with-title:
 
 .. table:: Truth table for "not"
 
-   =====  =====
-     A    not A
-   =====  =====
-   False  True
-   True   False
-   =====  =====
+    =====  =====
+    A      not A
+    =====  =====
+    False  True
+    True   False
+    =====  =====
+
+-----------------
+Cross-referencing
+-----------------
+
+To arbitrary locations in any document…
+
+* Link to tables: :ref:`explicit title <my-table-wo-title>`, :ref:`my-table-with-title`.
+
+* Link to section: :ref:`hlist`.
+
+.. seealso:: http://sphinx-doc.org/markup/inline.html#cross-referencing-arbitrary-locations
 
 ---------
 Footnotes
@@ -215,7 +248,25 @@ This is another test [2]_
 .. [1] Text of the first footnote.
 .. [2] Text of the second footnote.
 
-------
-Index
-------
+--------
+Glossary
+--------
+
+``The :term:`API` is based on REST principles.``
+
 The :term:`API` is based on REST principles.
+
+-----
+Index
+-----
+
+All glossary terms are in index by default.
+To add one or more entries:
+
+``The :index:`API` is based on REST principles.``
+
+The :index:`API` is based on REST principles.
+
+:ref:`genindex`
+
+.. seealso:: http://sphinx-doc.org/markup/misc.html#index-generating-markup

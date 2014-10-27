@@ -7,18 +7,17 @@ Glossary
 From Wikipedia, the free encyclopedia
 
 .. glossary::
-
-
-
-  API
-    Application Programming Interface is a set of functions and procedures that allow the creation of applications which access the features or data of an operating system, application, or other service.
-
-    .. seealso:: <http://en.wikipedia.org/wiki/Application_programming_interface>
+  :sorted:
 
   3-D SECURE
     3-D Secure is an XML-based protocol designed to be an additional security layer for online credit and debit card transactions.
 
     .. seealso:: <http://en.wikipedia.org/wiki/3-D_Secure>
+
+  API
+    Application Programming Interface is a set of functions and procedures that allow the creation of applications which access the features or data of an operating system, application, or other service.
+
+    .. seealso:: <http://en.wikipedia.org/wiki/Application_programming_interface>
 
   AUTHORIZATION
     TO BE COMPLETED

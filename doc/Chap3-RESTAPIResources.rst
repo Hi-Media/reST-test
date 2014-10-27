@@ -15,9 +15,9 @@ Resource        		                                            Description
 **GET**   /rest/v1/transaction						                Request information about an existant transaction.
 ==================================================================  =======================================================
 
---------------------
+-------------------
 Request a New Order
---------------------
+-------------------
 
 Overview
   To request a new order, make an HTTP POST request to the following resource URL.
@@ -510,7 +510,7 @@ currency                      Base currency for this transaction. This three-cha
 ============================  =====================================================================================================================================
 
 Examples
----------
+--------
 
 The following are examples JSON and XML responses.
 
@@ -595,9 +595,10 @@ Order on a Hosted Payment Page
 Field Name                      Format [1]_  Length   Req [2]_  Description
 ==============================  ===========  =======  ========  ===============================================================================
 orderid                         AN           32       M         Unique order id
+------------------------------  -----------  -------  --------  -------------------------------------------------------------------------------
 :term:`operation`               AN           32       M         Transaction type. Indicates how you want to process the payment. The default transaction type is set in the Merchant Interface (Default payment procedure in the Integration section). A transaction type sent along with the transaction will overwrite the default payment procedure.
-                                                                - **Sale** indicates transaction is sent for authorization, and if approved, is automatically submitted for :term:`capture`.
-                                                                - **:term:`Authorization`** indicates this transaction is sent for authorization only. The transaction will not be sent for settlement until the transaction is submitted for :term:`capture` manually by the Merchant.
+\                                                               - **Sale** indicates transaction is sent for authorization, and if approved, is automatically submitted for :term:`capture`.
+\                                                               - **:term:`Authorization`** indicates this transaction is sent for authorization only. The transaction will not be sent for settlement until the transaction is submitted for :term:`capture` manually by the Merchant.
 ------------------------------  -----------  -------  --------  -------------------------------------------------------------------------------
 :term:`eci`                     N            1                  Electronic Commerce Indicator (ECI).
                                                                 The ECI indicates the security level at which the payment information is processed between the cardholder and merchant.
@@ -656,7 +657,7 @@ cdata4
 ==============================  ===========  =======  ========  ===============================================================================
 
 Customer Parameters
---------------------
+-------------------
 
 Overview
   The merchant can/must send the following customer information along with the transaction details.
