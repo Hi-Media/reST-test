@@ -35,6 +35,11 @@ From Wikipedia, the free encyclopedia
 
     .. seealso:: <http://en.wikipedia.org/wiki>
 
+  CAPTURE
+   TO BE COMPLETED
+
+    .. seealso:: <http://en.wikipedia.org/wiki>
+
   Device Fingerprint
    A device fingerprint or machine fingerprint or browser fingerprint is information collected about a remote computing device for the purpose of identification. Fingerprints can be used to fully or partially identify individual users or devices even when cookies are turned off.
 
@@ -66,12 +71,12 @@ From Wikipedia, the free encyclopedia
 
     .. seealso:: <http://www.wikipedia.org/wiki/JSON>
 
-  Notification
+  NOTIFICATION
     Notifications is a web service designed to inform users related to the payment system. It provides notifications to users of a number of events, including a new transaction or a 3-D Secure transaction.
 
     .. seealso:: <http://en.wikipedia.org/wiki/Wikipedia:Notifications>
 
-  Operation
+  OPERATION
     Transaction type. TO BE COMPLETED
 
     .. seealso:: <http://en.wikipedia.org/wiki/Passphrase>
@@ -96,7 +101,12 @@ From Wikipedia, the free encyclopedia
 
     .. seealso:: <http://en.wikipedia.org/wiki/Token>
 
-  Signature
+  REFUND
+    TO BE COMPLETED
+
+    .. seealso:: <http://en.wikipedia.org/wiki>
+
+  SIGNATURE
     TO BE COMPLETED
 
     .. seealso:: <http://en.wikipedia.org/wiki>
