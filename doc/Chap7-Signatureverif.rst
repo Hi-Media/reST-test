@@ -9,7 +9,7 @@ Introduction
 ------------
 
 Directive
-  It is strongly recommended to use a signature mechanism to verify the contents of a request or redirection made to your servers. This prevents customers from tampering with the data in the data exchanges between your servers and our payment system.
+  It is strongly recommended to use a :term:`Signature` mechanism to verify the contents of a request or redirection made to your servers. This prevents customers from tampering with the data in the data exchanges between your servers and our payment system.
   A unique signature is sent each time that HiPay contact a merchant URL, notification or redirection.
 
 -----
@@ -17,7 +17,7 @@ Setup
 -----
 
 Procedure
-  First of all you need to set a Secret Passphrase in your HiPay TPP back office
+  First of all you need to set a :term:`Secret Passphrase` in your HiPay TPP back office
   under *Integration -> Security Settings -> Secret Passphrase*.
 
 :Login Screen:
@@ -34,11 +34,11 @@ Secret passphrase
 Verification
 ------------
 
-URL Notification
+URL Notification 
 ----------------
 
 Description
-  For the URL notification, the signature is sent on the HTTP header under the *HTTP_X_ALLOPASS_SIGNATURE parameter*
+  For the URL :term:`notification`, the :term:`Signature` is sent on the HTTP header under the *HTTP_X_ALLOPASS_SIGNATURE parameter*
 
 Verification
   To check this point, you just need to concatenate the passphrase with the POST content of the query.
@@ -52,7 +52,7 @@ URL Redirection
 ---------------
 
 Description
-  For each redirection page (accept page, decline page, etc.) the signature is sent under the *hash* parameter,
+  For each redirection page (accept page, decline page, etc.) the :term:`Signature` is sent under the *hash* parameter,
 
 Verification
   To check this point, you must to concatenate the parameters, the values of each and the passphrase under the following conditions:

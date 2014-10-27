@@ -65,6 +65,12 @@ From Wikipedia, the free encyclopedia
 
     .. seealso:: <http://en.wikipedia.org/wiki/Wikipedia:Notifications>
 
+  Passphrase
+    TO BE COMPLETED
+
+    .. seealso:: <http://en.wikipedia.org/wiki>	
+	
+	
   Payment product
     TO BE COMPLETED
 
@@ -80,6 +86,11 @@ From Wikipedia, the free encyclopedia
     Token, an object which represents the right to perform some operation.
 
     .. seealso:: <http://en.wikipedia.org/wiki/Token>
+
+  Signature
+    TTO BE COMPLETED
+	
+    .. seealso:: <http://en.wikipedia.org/wiki>
 	
   SSL
     Transport Layer Security (TLS) and its predecessor, Secure Sockets Layer (SSL), are cryptographic protocols designed to provide communication security over the Internet.[
