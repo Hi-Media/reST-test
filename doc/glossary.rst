@@ -33,6 +33,11 @@ From Wikipedia, the free encyclopedia
    TO BE COMPLETED
 
     .. seealso:: <http://en.wikipedia.org/wiki>	
+
+  Device Fingerprint
+   A device fingerprint or machine fingerprint or browser fingerprint is information collected about a remote computing device for the purpose of identification. Fingerprints can be used to fully or partially identify individual users or devices even when cookies are turned off.
+
+    .. seealso:: <http://en.wikipedia.org/wiki/Device_fingerprint>	
 	
   ECI
    Electronic Commerce Indicator (ECI) is a value that is returned from the Directory Server (Visa, MasterCard, and JCB) to indicate the authentication results of your customer's credit card payment on 3D Secure.
@@ -86,7 +91,7 @@ From Wikipedia, the free encyclopedia
     .. seealso:: <http://en.wikipedia.org/wiki/Token>
 
   Signature
-    TTO BE COMPLETED
+    TO BE COMPLETED
 	
     .. seealso:: <http://en.wikipedia.org/wiki>
 	

@@ -9,7 +9,7 @@ Overview
 --------
 
 Introduction
-  The device fingerprint identifies devices through information collected by a client run on an end user"s computer.
+  The device fingerprint :term:`device fingerprint` identifies devices through information collected by a client run on an end user"s computer.
   This client generates a blackbox that contains all device information available.
 
 Description
