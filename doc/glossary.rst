@@ -34,6 +34,11 @@ From Wikipedia, the free encyclopedia
 
     .. seealso:: <http://en.wikipedia.org/wiki>	
 
+  Capture
+   TO BE COMPLETED
+
+    .. seealso:: <http://en.wikipedia.org/wiki>		
+	
   Device Fingerprint
    A device fingerprint or machine fingerprint or browser fingerprint is information collected about a remote computing device for the purpose of identification. Fingerprints can be used to fully or partially identify individual users or devices even when cookies are turned off.
 
@@ -95,6 +100,11 @@ From Wikipedia, the free encyclopedia
 
     .. seealso:: <http://en.wikipedia.org/wiki/Token>
 
+  Refund
+    TO BE COMPLETED
+	
+    .. seealso:: <http://en.wikipedia.org/wiki>	
+	
   Signature
     TO BE COMPLETED
 	
