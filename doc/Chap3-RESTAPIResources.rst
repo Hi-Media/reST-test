@@ -686,19 +686,19 @@ Overview
 
 .. table:: Table: Parameters specific to shipping information
   
-  =======================  =======  =======  ========================================================================================================================================
-  Parameter        	       Format   Length   Description
-  =======================  =======  =======  ========================================================================================================================================
-  shipto_firstname         AN                The first name of the order recipient.
-  shipto_lastname          AN                The last name of the order recipient.    
-  shipto_recipientinfo     AN                Additional information about the order recipient (e.g., quality or function, company name, department, etc.).
-  shipto_streetaddress     AN                Street address to which the order is to be shipped.
-  shipto_streetaddress2    AN                The additional information about address to which the order is to be shipped (e.g., building, floor, flat, etc.).
-  shipto_city              AN                The city to which the order is to be shipped.
-  shipto_state             AN                The USA state or Canada state to which the order is being shipped. Send this information only if the shipping country is US (USA) or CA (Canada).
-  shipto_zipcode           AN                The zip or postal code to which the order is being shipped.
-  shipto_country           AN       2        Country code to which the order is being shipped. This two-letter country code complies with ISO 3166-1 (alpha 2).  
-  =======================  =======  =======  ========================================================================================================================================
+  ========================  =======  =======  ========================================================================================================================================
+  Parameter        	        Format   Length   Description
+  ========================  =======  =======  ========================================================================================================================================
+  shipto_firstname           AN               The first name of the order recipient.
+  shipto_lastname            AN               The last name of the order recipient.    
+  shipto_recipientinfo       AN               Additional information about the order recipient (e.g., quality or function, company name, department, etc.).
+  shipto_streetaddress       AN               Street address to which the order is to be shipped.
+  shipto_streetaddress2      AN               The additional information about address to which the order is to be shipped (e.g., building, floor, flat, etc.).
+  shipto_city                AN               The city to which the order is to be shipped.
+  shipto_state               AN               The USA state or Canada state to which the order is being shipped. Send this information only if the shipping country is US (USA) or CA (Canada).
+  shipto_zipcode             AN               The zip or postal code to which the order is being shipped.
+  shipto_country             AN       2       Country code to which the order is being shipped. This two-letter country code complies with ISO 3166-1 (alpha 2).  
+  ========================  =======  =======  ========================================================================================================================================
 
 Response Fields
 ---------------
@@ -805,17 +805,16 @@ Order ID example Request
 .. code-block:: ini
     :linenos:
 
-
   	$ curl https://secure-gateway.allopass.com/rest/v1/transaction?orderid=52035cec9bb77 \
     	-u "<your API username>:<your API password>" \
 
 		
 XML Response Example
+Bloc XML: ``.. code-block:: xml``
 
 .. code-block:: xml
     :linenos:
-
-
+	
    	<response>
    	 <transaction>
    	   <state>completed</state>
@@ -877,7 +876,7 @@ XML Response Example
    	     <email>customer@mail.com</email>
    	   </order>
    	 </transaction>
-   	</response>	
+   	</response>
 		
   .. rubric:: Footnotes
   
