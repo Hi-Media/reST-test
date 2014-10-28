@@ -18,70 +18,73 @@ Description
 Order on a Hosted Payment Page
 ------------------------------
 
-==============================  ===========  =======  ========  ===============================================================================
-Field Name                      Format [1]_  Length   Req [2]_  Description
-==============================  ===========  =======  ========  ===============================================================================
-orderid                         AN           32       M         Unique order id
-------------------------------  -----------  -------  --------  -------------------------------------------------------------------------------
-:term:`operation`               AN           32       M         Transaction type. Indicates how you want to process the payment. The default transaction type is set in the Merchant Interface (Default payment procedure in the Integration section). A transaction type sent along with the transaction will overwrite the default payment procedure.
-\                                                               - **Sale** indicates transaction is sent for authorization, and if approved, is automatically submitted for :term:`capture`.
-\                                                               - **:term:`Authorization`** indicates this transaction is sent for authorization only. The transaction will not be sent for settlement until the transaction is submitted for :term:`capture` manually by the Merchant.
-------------------------------  -----------  -------  --------  -------------------------------------------------------------------------------
-:term:`eci`                     N            1                  Electronic Commerce Indicator (ECI).
-                                                                The ECI indicates the security level at which the payment information is processed between the cardholder and merchant.
-                                                                Possible values:
-                                                                1 = MO/TO (Card Not Present)
-                                                                7 = E-commerce with :term:`SSL`/TLS Encryption
-                                                                A default ECI value can be set in the preferences page. An ECI value sent along in the transaction will overwrite the default ECI value. Refer to the appendices — "Electronic Commerce Indicator” — on “GatewayAPI” documentation to get further information.
-------------------------------  -----------  -------  --------  -------------------------------------------------------------------------------
-authentication_indicator        N            1                  Indicates if the :term:`3-D Secure` authentication should be performed for this transaction. Can be used to overrule the merchant level configuration.
-                                                                0 = Bypass authentication
-                                                                1 = Continue if possible
-------------------------------  -----------  -------  --------  -------------------------------------------------------------------------------
-payment_product_list            AN           255                The payment product list separated by a “,” (e.g., visa,mastercard,american-express). *Refer to the appendices — " Appendix A— on “GatewayAPI” documentation for the full list of available payment products.*
-payment_product_category_list   AN           255                The payment product category list separated by “,”. (e.g., credit-card,ewallet). \Refer to the appendices — "Appendix A. Payment Products” — on “GatewayAPI” documentation for the full list of available payment categories.*
-css                             AN           255                URL to merchant style sheet. Important: H**TTPS** protocol is required.
-template                        AN           32                 The template name.
-                                                                Possible values:
-                                                                - basic-js = For a full page redirection.
-                                                                - iframe-js = For an iframe integration.
-merchant_display_name           AN           32                 The merchant name displayed on payment page, otherwise the name is retrieved from order.
-display_selector                N            1                  Enable/disable the payment products selector.
-                                                                Possible values:
-                                                                0 = The selector is not displayed
-                                                                1 = The selector is displayed
-multi_use                       N            1                  Indicates the tokenization module if the credit card token should be generated either for a single-use or a multi-use.
-                                                                Possible values:
-                                                                1 = Generate a multi-use token
-                                                                0 = Generates a single-use token.
-                                                                While a single-use token is typically generated for a short time and for processing a single transaction, multi-use tokens are generally generated for recurrent payments.
-description                     AN           255      M         The order short description.
-long_description                AN                              Additional order description.
-currency                        A            3        M         Base currency for this order (Default to EUR). This three-character currency code complies with ISO 4217.
-amount                          R                     M         The total order amount. It should be calculated as a sum of the items purchased, plus the shipping fee (if present), plus the tax fee (if present). Minimal amount 1.00 EUR.
-shipping                        R                               The order shipping fee (Default to zero). It can be omitted if the shipping fee value is zero.
-tax                             R                               The order tax fee (Default to zero). It can be omitted if the order tax value is zero.
-cid                             AN                    M         Unique customer id. *For fraud detection reasons.*
-ipaddr                          AN                    M         The IP address of your customer making a purchase.
-accept_url                      AN                    M         The URL to return your customer to once the payment process is completed successfully.
-decline_url                     AN                    M         The URL to return your customer to after the acquirer declines the payment.
-pending_url                     AN                    M         The URL to return your customer to when the payment request was submitted to the acquirer but response is not yet available.
-exception_url                   AN                    M         The URL to return your customer to after a system failure.
-cancel_url                      AN                    M         The URL to return your customer to when he or her decides to abort the payment.
-http_accept                     AN                              This element should contain the exact content of the HTTP "Accept" header as sent to the merchant from the customer's browser (Default to "*/*").
-http_user_agent                 AN                              This element should contain the exact content of the HTTP "User-Agent" header as sent to the merchant from the customer's browser (Default to "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)").
-language                        AN                              Locale code of your customer (Default to en_GB – English – Great Britain). This will be used to display payment page in correct language.
-                                                                Examples:
-                                                                - en_GB
-                                                                - fr_FR
-                                                                - es_ES
-                                                                - it_IT
-                                                                - …
-cdata1                          AN                              Custom data. You may use these parameters to submit values you wish to receive back in the API response messages or in the notifications, e.g. you can use these parameters to get back session data, user info, etc.
-cdata2
-cdata3
-cdata4
-==============================  ===========  =======  ========  ===============================================================================
+.. table:: 
+  :class: table-with-wrap
+
+  ==============================  ===========  =======  ========  ===============================================================================
+  Field Name                      Format [1]_  Length   Req [2]_  Description
+  ==============================  ===========  =======  ========  ===============================================================================
+  orderid                         AN           32       M         Unique order id
+  ------------------------------  -----------  -------  --------  -------------------------------------------------------------------------------
+  :term:`operation`               AN           32       M         Transaction type. Indicates how you want to process the payment. The default transaction type is set in the Merchant Interface (Default payment procedure in the Integration section). A transaction type sent along with the transaction will overwrite the default payment procedure.
+  \                                                               - **Sale** indicates transaction is sent for authorization, and if approved, is automatically submitted for :term:`capture`.
+  \                                                               - **:term:`Authorization`** indicates this transaction is sent for authorization only. The transaction will not be sent for settlement until the transaction is submitted for :term:`capture` manually by the Merchant.
+  ------------------------------  -----------  -------  --------  -------------------------------------------------------------------------------
+  :term:`eci`                     N            1                  Electronic Commerce Indicator (ECI).
+                                                                  The ECI indicates the security level at which the payment information is processed between the cardholder and merchant.
+                                                                  Possible values:
+                                                                  1 = MO/TO (Card Not Present)
+                                                                  7 = E-commerce with :term:`SSL`/TLS Encryption
+                                                                  A default ECI value can be set in the preferences page. An ECI value sent along in the transaction will overwrite the default ECI value. Refer to the appendices — "Electronic Commerce Indicator” — on “GatewayAPI” documentation to get further information.
+  ------------------------------  -----------  -------  --------  -------------------------------------------------------------------------------
+  authentication_indicator        N            1                  Indicates if the :term:`3-D Secure` authentication should be performed for this transaction. Can be used to overrule the merchant level configuration.
+                                                                  0 = Bypass authentication
+                                                                  1 = Continue if possible
+  ------------------------------  -----------  -------  --------  -------------------------------------------------------------------------------
+  payment_product_list            AN           255                The payment product list separated by a “,” (e.g., visa,mastercard,american-express). *Refer to the appendices — " Appendix A— on “GatewayAPI” documentation for the full list of available payment products.*
+  payment_product_category_list   AN           255                The payment product category list separated by “,”. (e.g., credit-card,ewallet). \Refer to the appendices — "Appendix A. Payment Products” — on “GatewayAPI” documentation for the full list of available payment categories.*
+  css                             AN           255                URL to merchant style sheet. Important: H**TTPS** protocol is required.
+  template                        AN           32                 The template name.
+                                                                  Possible values:
+                                                                  - basic-js = For a full page redirection.
+                                                                  - iframe-js = For an iframe integration.
+  merchant_display_name           AN           32                 The merchant name displayed on payment page, otherwise the name is retrieved from order.
+  display_selector                N            1                  Enable/disable the payment products selector.
+                                                                  Possible values:
+                                                                  0 = The selector is not displayed
+                                                                  1 = The selector is displayed
+  multi_use                       N            1                  Indicates the tokenization module if the credit card token should be generated either for a single-use or a multi-use.
+                                                                  Possible values:
+                                                                  1 = Generate a multi-use token
+                                                                  0 = Generates a single-use token.
+                                                                  While a single-use token is typically generated for a short time and for processing a single transaction, multi-use tokens are generally generated for recurrent payments.
+  description                     AN           255      M         The order short description.
+  long_description                AN                              Additional order description.
+  currency                        A            3        M         Base currency for this order (Default to EUR). This three-character currency code complies with ISO 4217.
+  amount                          R                     M         The total order amount. It should be calculated as a sum of the items purchased, plus the shipping fee (if present), plus the tax fee (if present). Minimal amount 1.00 EUR.
+  shipping                        R                               The order shipping fee (Default to zero). It can be omitted if the shipping fee value is zero.
+  tax                             R                               The order tax fee (Default to zero). It can be omitted if the order tax value is zero.
+  cid                             AN                    M         Unique customer id. *For fraud detection reasons.*
+  ipaddr                          AN                    M         The IP address of your customer making a purchase.
+  accept_url                      AN                    M         The URL to return your customer to once the payment process is completed successfully.
+  decline_url                     AN                    M         The URL to return your customer to after the acquirer declines the payment.
+  pending_url                     AN                    M         The URL to return your customer to when the payment request was submitted to the acquirer but response is not yet available.
+  exception_url                   AN                    M         The URL to return your customer to after a system failure.
+  cancel_url                      AN                    M         The URL to return your customer to when he or her decides to abort the payment.
+  http_accept                     AN                              This element should contain the exact content of the HTTP "Accept" header as sent to the merchant from the customer's browser (Default to "*/*").
+  http_user_agent                 AN                              This element should contain the exact content of the HTTP "User-Agent" header as sent to the merchant from the customer's browser (Default to "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)").
+  language                        AN                              Locale code of your customer (Default to en_GB – English – Great Britain). This will be used to display payment page in correct language.
+                                                                  Examples:
+                                                                  - en_GB
+                                                                  - fr_FR
+                                                                  - es_ES
+                                                                  - it_IT
+                                                                  - …
+  cdata1                          AN                              Custom data. You may use these parameters to submit values you wish to receive back in the API response messages or in the notifications, e.g. you can use these parameters to get back session data, user info, etc.
+  cdata2
+  cdata3
+  cdata4
+  ==============================  ===========  =======  ========  ===============================================================================
 
 Customer Parameters
 -------------------
@@ -90,6 +93,7 @@ Overview
   The merchant can/must send the following customer information along with the transaction details.
 
 .. table:: Table: Customer-related parameters
+  :class: table-with-wrap
 
   ==============================  ===========  =======  ========  ===============================================================================
   Field Name                      Format [1]_  Length   Req [2]_  Description
@@ -111,6 +115,7 @@ Overview
   ==============================  ===========  =======  ========  ===============================================================================
 
 .. table:: Table: Parameters specific to shipping information
+  :class: table-with-wrap
 
   ========================  =======  =======  ========================================================================================================================================
   Parameter                 Format   Length   Description
@@ -131,33 +136,36 @@ Response Fields
 
 The following table lists and describes the response fields.
 
-============================  =====================================================================================================================================
-Field Name                    Description
-============================  =====================================================================================================================================
-forwardUrl (json)
-forward_url (xml)             The hosted payment page URL
-----------------------------  -------------------------------------------------------------------------------------------------------------------------------------
-test                          True if the transaction is a testing transaction, otherwise false.
-mid                           Your merchant account number (issued to you by HiPay TPP).
-cdata1                        Custom data.
-cdata2                        Custom data.
-cdata3                        Custom data.
-cdata4                        Custom data.
-Order                         Information about the customer and his order.
-Id                            Unique identifier of the order as provided by Merchant.
-dateCreated (json)
-date_created (xml)            Time when order was created.
-attempts                      Indicates how many payment attempts have been made for this order.
-amount                        The total order amount (e.g., 150.00). It should be calculated as a sum of the items purchased, plus the shipping fee (if present), plus the tax fee (if present).
-shipping                      The order shipping fee.
-tax                           The order tax fee.
-decimals                      Decimal precision of the order amount.
-currency                      This three-character currency code complies with ISO 4217
-customerId (json)
-customer_id (xml)             Unique identifier of the customer as provided by Merchant.
-language                      Language code of the customer.
-email                         Email address of the customer.
-============================  =====================================================================================================================================
+.. table:: 
+  :class: table-with-wra
+
+  ============================  =====================================================================================================================================
+  Field Name                    Description
+  ============================  =====================================================================================================================================
+  forwardUrl (json)
+  forward_url (xml)             The hosted payment page URL
+  ----------------------------  -------------------------------------------------------------------------------------------------------------------------------------
+  test                          True if the transaction is a testing transaction, otherwise false.
+  mid                           Your merchant account number (issued to you by HiPay TPP).
+  cdata1                        Custom data.
+  cdata2                        Custom data.
+  cdata3                        Custom data.
+  cdata4                        Custom data.
+  Order                         Information about the customer and his order.
+  Id                            Unique identifier of the order as provided by Merchant.
+  dateCreated (json)
+  date_created (xml)            Time when order was created.
+  attempts                      Indicates how many payment attempts have been made for this order.
+  amount                        The total order amount (e.g., 150.00). It should be calculated as a sum of the items purchased, plus the shipping fee (if present), plus the tax fee (if present).
+  shipping                      The order shipping fee.
+  tax                           The order tax fee.
+  decimals                      Decimal precision of the order amount.
+  currency                      This three-character currency code complies with ISO 4217
+  customerId (json)
+  customer_id (xml)             Unique identifier of the customer as provided by Merchant.
+  language                      Language code of the customer.
+  email                         Email address of the customer.
+  ============================  =====================================================================================================================================
 
 Response Fields
 ---------------
