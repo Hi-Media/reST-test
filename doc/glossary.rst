@@ -39,6 +39,11 @@ From Wikipedia, the free encyclopedia
 
     .. seealso:: <http://en.wikipedia.org/wiki>
 
+  CSS
+   Cascading Style Sheets (CSS) is a style sheet language used for describing the look and formatting of a document written in a markup language. 
+
+    .. seealso:: <http://en.wikipedia.org/wiki/Cascading_Style_Sheets>	
+
   Device Fingerprint
    A device fingerprint or machine fingerprint or browser fingerprint is information collected about a remote computing device for the purpose of identification. Fingerprints can be used to fully or partially identify individual users or devices even when cookies are turned off.
 
