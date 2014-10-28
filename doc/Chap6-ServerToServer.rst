@@ -19,9 +19,13 @@ Procedure
   To set your Notification URL you must login into your Hipay TPP back office
   and go to *Integration -> Notifications*.
 
-:Login Screen:
+**Login screen:**
 
-.. image:: images/ServerToServer_LoginScreen.png
+.. figure:: images/ServerToServer_LoginScreen.png
+    :align: center
+    :alt: Login screen
+
+    Figure: Login screen
 
 ------------------------
 Configuration Parameters

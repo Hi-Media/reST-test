@@ -49,16 +49,47 @@ Vivamus non tortor eleifend, tempor ex in, malesuada nisi. Pellentesque fringill
 Images
 ------
 
-Images are simple pictures:
+Simple images
+-------------
+
+.. code-block:: rest
+
+    .. image:: images/hipay_fullservice.png
+        :alt: logo HiPay Fullservice
+        :width: 1446px
+        :height: 308px
+        :scale: 25 %
 
 .. image:: images/hipay_fullservice.png
-   :name: my picture
+    :alt: logo HiPay Fullservice
+    :width: 1446px
+    :height: 308px
+    :scale: 25 %
 
+|
+|
 
-A figure add to an image an optional caption and an optional legend:
+Figures, with optional caption and legend
+-----------------------------------------
+
+.. code-block:: rest
+
+    .. figure:: images/hipay_fullservice.png
+        :alt: logo HiPay Fullservice
+        :width: 1446px
+        :height: 308px
+        :scale: 25 %
+
+        Figure: This is the caption of the figure (a simple paragraph).
+
+        The legend consists of all elements after the caption. In this
+        case, the legend consists of this paragraph.
 
 .. figure:: images/hipay_fullservice.png
     :alt: logo HiPay Fullservice
+    :width: 1446px
+    :height: 308px
+    :scale: 25 %
 
     Figure: This is the caption of the figure (a simple paragraph).
 
@@ -318,6 +349,12 @@ To arbitrary locations in any document…
 
 .. seealso:: http://sphinx-doc.org/markup/inline.html#cross-referencing-arbitrary-locations
 
+-------
+Aliases
+-------
+
+.. seealso:: http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html#more-about-aliases
+
 ---------
 Footnotes
 ---------
@@ -346,7 +383,9 @@ Index
 All glossary terms are in index by default.
 To add one or more entries:
 
-``The :index:`API` is based on REST principles.``
+.. code-block:: rest
+
+    The :index:`API` is based on REST principles.
 
 The :index:`API` is based on REST principles.
 

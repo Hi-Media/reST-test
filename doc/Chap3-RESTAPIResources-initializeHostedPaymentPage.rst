@@ -18,7 +18,7 @@ Description
 Order on a Hosted Payment Page
 ------------------------------
 
-.. table:: 
+.. table::
   :class: table-with-wrap
 
   ==============================  ===========  =======  ========  ===============================================================================
@@ -136,7 +136,7 @@ Response Fields
 
 The following table lists and describes the response fields.
 
-.. table:: 
+.. table::
   :class: table-with-wrap
 
   ============================  =====================================================================================================================================
@@ -167,19 +167,21 @@ The following table lists and describes the response fields.
   email                         Email address of the customer.
   ============================  =====================================================================================================================================
 
-Response Fields
----------------
-Illustration
+Payment page example
+--------------------
 
-:Login Screen:
+Illustration:
 
-.. image:: images/payment_page.jpeg
+.. figure:: images/payment_page.jpeg
+    :align: center
+    :alt: Login screen
 
-Examples
----------
+    Figure: Login screen
+
+CSS examples
+------------
+
 The following are :term:`CSS` examples to customize your payment page.
-
-PHP Signature Validation
 
 .. code-block:: css
     :linenos:

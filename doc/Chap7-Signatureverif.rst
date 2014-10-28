@@ -20,10 +20,13 @@ Procedure
   First of all you need to set a Secret :term:`Passphrase` in your HiPay TPP back office
   under *Integration -> Security Settings -> Secret Passphrase*.
 
-:Login Screen:
+**Login Screen:**
 
-.. image:: images/SignatureVerification_LoginScreen.jpeg
-   :name: Data Verification login screen
+.. figure:: images/SignatureVerification_LoginScreen.jpeg
+    :align: center
+    :alt: Data verification login screen
+
+    Figure: Data verification login screen
 
 Secret passphrase
   The secret :term:`Passphrase` is used to generate a unique character string (signature) hashed with SHA algorithm.

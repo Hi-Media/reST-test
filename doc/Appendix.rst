@@ -1,9 +1,8 @@
 .. _Appendix:
 
-===========
-Appendix
-===========
-
+==========
+Appendices
+==========
 
 .. toctree::
     :maxdepth: 2

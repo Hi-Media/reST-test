@@ -50,10 +50,11 @@ Transaction Flow
 Workflow overview
 -----------------
 
-:Login Screen:
+.. figure:: images/transactionFlow.png
+    :align: center
+    :alt: Workflow overview
 
-.. image:: images/transactionFlow.png
-
+    Figure: Workflow overview
 
 Procedure
 ---------
@@ -68,14 +69,14 @@ Proceed as follow to carry out a transaction:
   ======  ======================================================================================================================================================================================================================================================================================================================
   **1**	  Merchant call HiPay API with "authentication_indicator=1" value. - Refer to parameters sent to API method used.
   ------  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **2**	  To complete the purchase; the cardholder press the Pay button after filling payment card details in payment page: 
-  
+  **2**	  To complete the purchase; the cardholder press the Pay button after filling payment card details in payment page:
+
           - This activates the Merchant Plug-In (MPI) and initiates a transaction.
   ------  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   **3**	  The MPI identifies the card number and sends it to the Directory Server to determine whether the card is in a participating card range.
   **4**   If the Issuer is participating for the card range, the Directory sends a Verify Enrollment Request message to the Issuer ACS to determine whether authentication is available for the account number.
   **5**   The ACS returns a Verify Enrollment Response to the Directory Server
-  
+
           - **IF** Authentication is available for this card number **THEN** the response provides the URL of the ACS where the cardholder can be authenticated.
           - **IF** Authentication is not available **THEN** the Merchant server receives a Cardholder Not Enrolled or Authentication Not Available message and returns the transaction to the Merchant's commerce server to proceed with a standard transaction processing.
   ------  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

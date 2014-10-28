@@ -8,7 +8,7 @@ This is a list of the various payment status names and a description of what eac
 
 .. table:: Table: Transaction statuses
   :class: table-with-wrap
-  
+
   =======  ===============================  =====================
   Code     Status                           Description
   =======  ===============================  =====================
@@ -52,18 +52,19 @@ This is a list of the various payment status names and a description of what eac
   200      Pending Payment	                The transaction request was submitted to the acquirer but response is not yet available.
   =======  ===============================  =====================
 
------------------------
+----------------------
 Transaction Life Cycle
------------------------
+----------------------
 
 Description
   The life cycle of a transaction processed by the HiPay TPP Payment Service is characterised by the different events that mark a change in the status of the transaction.
   These events and the resulting changes in transaction status play a crucial role in the payment process. All financial reporting is based on the status of transactions and any possible action for a transaction, whether performed by the merchant, the financial institution or by the payment system, depends on the actual status.
- 
-The following diagram shows the typical flow of a transaction through the different main payment statuses.  
-  
-Diagram
 
-.. image:: images/TransactionFlow_3Dsecure.jpeg
-   :name: transaction flow 3Dsecure
-  
+Diagram
+  The following diagram shows the typical flow of a transaction through the different main payment statuses.
+
+.. figure:: images/TransactionFlow_3Dsecure.jpeg
+   :align: center
+   :alt: Typical Transaction Flow with 3-D Secure authentication
+
+   Figure: Typical Transaction Flow with 3-D Secure authentication

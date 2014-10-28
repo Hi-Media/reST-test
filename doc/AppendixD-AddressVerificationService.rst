@@ -1,17 +1,17 @@
 .. _AppendixD-AddressVerificationService:
 
-===========================================
+==========================================
 Appendix D - Add ress Verification Service
-===========================================
+==========================================
 
 Description
   The Address Verification Service (AVS) is a system that allows e-commerce merchants to check a cardholder's billing address. AVS provides merchants with a key indicator that helps verify whether or not a transaction is valid.
 
 The table below lists the available result codes as returned in the API response messages.
-  
+
 .. table:: Table: AVS Result Codes
   :class: table-with-wrap
-  
+
   ========  ===================  =====================
   Code      Description          What it means?
   ========  ===================  =====================

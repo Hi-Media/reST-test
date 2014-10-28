@@ -15,6 +15,8 @@ Resource        		                                            Description
 **GET**   /rest/v1/transaction						                Request information about an existant transaction.
 ==================================================================  =======================================================
 
+**Contents:**
+
 .. toctree::
     :maxdepth: 2
 
