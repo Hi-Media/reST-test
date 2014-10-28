@@ -27,7 +27,7 @@ Procedure
 Configuration Parameters
 ------------------------
 
-.. table:: 
+.. table::
   :class: table-with-wrap
 
   =====================  ===========================================================================
@@ -36,7 +36,7 @@ Configuration Parameters
   Notification URL       The URL or IP on which you want to receive server-to-server notifications.
   ---------------------  ---------------------------------------------------------------------------
   Request method         The method you wish to receive the requests:
-                         
+
                          - XML
                          - HTTP POST
   ---------------------  ---------------------------------------------------------------------------
@@ -49,19 +49,19 @@ Response Fields
 
 The following table lists and describes the response fields received on the :term:`notification` call.
 
-.. table:: 
+.. table::
   :class: table-with-wrap
 
   ==========================  ===================================================================================================================================================================
   Field Name                  Description
   ==========================  ===================================================================================================================================================================
   state                       Transaction state. Value must be a member of the following list.
-  
+
   							  -	completed
   							  -	pending
   							  -	declined
   							  -	error
-  
+
                               Please report to the following section below *Transaction Workflow* for further details.
   reason                      Optional element. Reason why transaction was declined.
   test                        True if the transaction is a testing transaction, otherwise false.
@@ -116,17 +116,19 @@ The following table lists and describes the response fields received on the :ter
   Fraud_screening             Result of the :term:`Fraud screening`.
   - scoring                   Total score assigned to the transaction (main risk indicator).
   - result                    The overall result of risk assessment returned by the Payment Gateway.Value must be a member of the following list.
-                                - pending: rules were not checked
-                                - accepted: transaction accepted.
-                                - blocked: transaction rejected due to system rules.
-                                - :term:`challenged`  :transaction has been marked for review.
+
+                              - pending: rules were not checked
+                              - accepted: transaction accepted.
+                              - blocked: transaction rejected due to system rules.
+                              - :term:`challenged`  :transaction has been marked for review.
   - review                    The decision made when the overall risk result returns challenged.
-  
+
                               An empty value means no review is required.
                               Value must be a member of the following list.
-                                - pending: a decision to release or cancel the transaction is pending.
-                                - allowed: the transaction has been released for processing.
-                                - denied: the transaction has been cancelled.
+
+                              - pending: a decision to release or cancel the transaction is pending.
+                              - allowed: the transaction has been released for processing.
+                              - denied: the transaction has been cancelled.
   --------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
   Order                       Information about the customer and his order.
    - Id                       Unique identifier of the order as provided by Merchant.
@@ -149,9 +151,9 @@ Response fields specific to the payment product
 Credit Card payments
   The following table lists and describes the response fields returned for transactions by credit/debit card. (see :term:`Payment product`)
 
-.. table:: 
-  :class: table-with-wrap  
-  
+.. table::
+  :class: table-with-wrap
+
   ==========================  ===================================================================================================================================================================
   Field Name                  Description
   ==========================  ===================================================================================================================================================================
@@ -187,7 +189,7 @@ Depending on the transaction state there are five options to action:
 
 .. table:: Truth table for "not"
   :class: table-with-wrap
-  
+
   ==========================  ===================================================================================================================================================================
   Transaction state           Description
   ==========================  ===================================================================================================================================================================

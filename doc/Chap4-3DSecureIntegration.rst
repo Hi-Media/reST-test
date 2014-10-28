@@ -1,8 +1,8 @@
 .. _Chap4-3DSecureIntegration:
 
-======================
-3-D Secure Integration
-======================
+==================================
+Chapter 4 - 3-D Secure Integration
+==================================
 
 ------------
 Introduction
@@ -60,7 +60,7 @@ Procedure
 
 Proceed as follow to carry out a transaction:
 
-.. table:: 
+.. table::
   :class: table-with-wrap
 
   ======  ======================================================================================================================================================================================================================================================================================================================
@@ -73,7 +73,7 @@ Proceed as follow to carry out a transaction:
   ------  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   **3**	  If the Issuer is participating for the card range, the Directory sends a Verify Enrollment Request message to the Issuer ACS to determine whether authentication is available for the account number.
   **4**   The ACS returns a Verify Enrolment Response to the Directory Serve
-  
+
           - **IF** Authentication is available for this card number **THEN** the response provides the URL of the ACS where the cardholder can be authenticated.
           - **IF** Authentication is not available **THEN** the Merchant server receives a Cardholder Not Enrolled or Authentication Not Available message and returns the transaction to the Merchant's commerce server to proceed with a standard transaction processing.
   ------  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -96,19 +96,24 @@ The following table lists the Enrollment message and status:
 .. table:: Table: Enrollment Message and Status
   :class: table-with-wrap
 
-  =======  =========================  ==============================  ============  ===================================================================================================================================================================================================
-  Status   Enrollment Message         3-D Secure Available?           :term:`ECI`   Description
-  =======  =========================  ==============================  ============  ===================================================================================================================================================================================================
-  Y        Authentication Available   Yes                                           Card is enrolled in the :term:`3-D Secure` program and the payer is eligible for authentication processing.
-  N        Cardholder Not Enrolled    No                              6             Card is not enrolled in 3-D Secure program.
-                                                                                    Card is eligible for authentication processing (it is within the card associations range of accepted cards) but the card-issuing bank does not participate in the 3-D Secure program.
-                                                                                    **Chargeback Liability Shift** If the cardholder later disputes the purchase, the issuer may not submit a chargeback to the merchant.
-  U        Unable to Authenticate     No                              7             The card associations were unable to verify if the cardholder is enrolled in the :term:`3-D Secure` program.
-                                                                                    Merchants can choose to accept the card nonetheless and proceed the purchase as non-authenticated when submitting the authorization.
-                                                                                    **Chargeback Liability Shift** The Acquirer/Merchant retains liability if the cardholder later disputes making the purchase.
-  E        *Any error message here*   No                              7             An error occurred during the enrollment verification process.
-                                                                                    Chargeback Liability Shift: The card can be accepted for authorization processing, yet the merchant may not claim a liability shift on this transaction in case of a dispute with the cardholder.
-  =======  =========================  ==============================  ============  ===================================================================================================================================================================================================
+  =======  =========================  =====================  ============  ===================================================================================================================================================================================================
+  Status   Enrollment Message         3-D Secure Available?  :term:`ECI`   Description
+  =======  =========================  =====================  ============  ===================================================================================================================================================================================================
+  Y        Authentication Available   Yes                                  Card is enrolled in the :term:`3-D Secure` program and the payer is eligible for authentication processing.
+  N        Cardholder Not Enrolled    No                     6             Card is not enrolled in 3-D Secure program.
+
+                                                                           Card is eligible for authentication processing (it is within the card associations range of accepted cards) but the card-issuing bank does not participate in the 3-D Secure program.
+
+                                                                           **Chargeback Liability Shift**: If the cardholder later disputes the purchase, the issuer may not submit a chargeback to the merchant.
+  U        Unable to Authenticate     No                     7             The card associations were unable to verify if the cardholder is enrolled in the :term:`3-D Secure` program.
+
+                                                                           Merchants can choose to accept the card nonetheless and proceed the purchase as non-authenticated when submitting the authorization.
+
+                                                                           **Chargeback Liability Shift**: The Acquirer/Merchant retains liability if the cardholder later disputes making the purchase.
+  E        *Any error message here*   No                     7             An error occurred during the enrollment verification process.
+
+                                                                           **Chargeback Liability Shift**: The card can be accepted for authorization processing, yet the merchant may not claim a liability shift on this transaction in case of a dispute with the cardholder.
+  =======  =========================  =====================  ============  ===================================================================================================================================================================================================
 
 The following table lists the Enrollment message and status:
 
@@ -121,15 +126,21 @@ The following table lists the Enrollment message and status:
   Y        Authentication Successful               5             Cardholder was successfully authenticated. The Issuer has authenticated the cardholder by verifying the identity information or password.
   A        Authentication Attempted                6             Authentication could not be performed but a proof of authentication attempt was provided.
   U        Authentication Could Not Be Performed   7             The Issuer is not able to complete the authentication request due to a technical error or other problem.
+
                                                                  Possible reasons include:
+
                                                                  - Invalid type of card such as a Commercial Card or any anonymous Prepaid Card.
                                                                  - Unable to establish an :term:`SSL` session with cardholder browser.
-  N        Authentication Failed	                             The cardholder did not complete authentication and the card should not be accepted for payment.
+  N        Authentication Failed                                 The cardholder did not complete authentication and the card should not be accepted for payment.
+
                                                                  The following are reasons to fail an authentication:
+
                                                                  - Cardholder fails to correctly enter the authentication information
                                                                  - Cardholder cancels the authentication process.
+
                                                                  An authentication failure may be a possible indication of a fraudulent user.
-                                                                 ** :term:`Authorization` request should not be submitted.**
+                                                                 :term:`Authorization` **request should not be submitted**
   E        *Any error message here*                              An error occurred during the authentication process.
+
                                                                  **Authorization request should not be submitted.**
   =======  ======================================  ============  ============================================================================================================================================

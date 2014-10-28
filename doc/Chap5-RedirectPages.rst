@@ -30,18 +30,18 @@ Description
 Default redirect pages
 ----------------------
 
-.. table:: 
+.. table::
   :class: table-with-wrap
 
-  ===================== 	===============================================================================================================================================================================================================================
-  Field Name         		Description
-  ===================== 	===============================================================================================================================================================================================================================
-  Accept page               Page to redirect your customer if transaction was successful.
-  Decline page              Page to redirect your customer if transaction was refused.
-  Pending page              Page to redirect your customer if transaction is pending [1]_.
-  :term:`Cancel` page       Page to redirect your customer if transaction was cancelled.
-  Exception page            Page to which the customer's browser is redirected after a system failure or when the payment gateway is temporarily unavailable. If page is not defined, the default page for exceptions is displayed by the payment gateway.
-  =====================  	===============================================================================================================================================================================================================================
+  =====================  ===============================================================================================================================================================================================================================
+  Field Name             Description
+  =====================  ===============================================================================================================================================================================================================================
+  Accept page            Page to redirect your customer if transaction was successful.
+  Decline page           Page to redirect your customer if transaction was refused.
+  Pending page           Page to redirect your customer if transaction is pending [1]_.
+  :term:`Cancel` page    Page to redirect your customer if transaction was cancelled.
+  Exception page         Page to which the customer's browser is redirected after a system failure or when the payment gateway is temporarily unavailable. If page is not defined, the default page for exceptions is displayed by the payment gateway.
+  =====================  ===============================================================================================================================================================================================================================
 
 -------------------
 Feedback Parameters
@@ -61,7 +61,7 @@ Fields sent
 
 The following table lists and describes the fields sent to your redirect pages.
 
-.. table:: 
+.. table::
   :class: table-with-wrap
 
   ==========================  =================================================================================================================================================================================
@@ -70,13 +70,13 @@ The following table lists and describes the fields sent to your redirect pages.
   orderid                     Unique identifier of the order as provided by Merchant.
   cid                         Unique identifier of the customer as provided by Merchant.
   state                       Transaction state. Value must be a member of the following list.
-  
+
                               - completed
                               - pending
                               - declined
                               - error
-  
-  
+
+
                               Please report to the following section below - Transaction Workflow - for further details.
   --------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   status						Transaction status. A list of available statuses can be found in the appendices.
@@ -96,18 +96,18 @@ The following table lists and describes the fields sent to your redirect pages.
   score                       Total score assigned to the transaction (main risk indicator).
   --------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   fraud                       The overall result of risk assessment returned by the Payment Gateway.
-  
+
                               Value must be a member of the following list:
-                              
+
                               - pending:             rules were not checked.
                               - accepted:            transaction accepted.
                               - blocked:             transaction rejected due to system rules.
                               - :term:`challenged`:  transaction has been marked for review.
   --------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   review                      The decision made when the overall risk result returns challenged. An empty value means no review is required.
-  
+
                               Value must be a member of the following list:
-                              
+
                               - Pending:  a decision to release or cancel the transaction is pending.
                               - Allowed:  the transaction has been released for processing.
                               - Denied:   the transaction has been cancelled.
