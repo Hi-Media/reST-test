@@ -51,8 +51,8 @@ The HiPay TPP payment gateway can return multiple errors for any operation.
   Code      Message                          Description                                                               Correcting this error
   ========  ===============================  ========================================================================  ===================================
   1020001   No route to acquirer             The requested payment product is not configured for your account.         Contact your account manager for resolution
-  1020002   Unsupported ECI                  The specified ECI is not supported by the gateway.	
-  1020003   Unsupported Payment Product      The specified payment product is not valid.                               Ensure you specified a valid product code.
+  1020002   Unsupported ECI                  The specified :term:`ECI` is not supported by the gateway.	
+  1020003   Unsupported Payment Product      The specified :term:`payment product` is not valid.                       Ensure you specified a valid product code.
   ========  ===============================  ========================================================================  ===================================
 
 
@@ -65,11 +65,11 @@ The HiPay TPP payment gateway can return multiple errors for any operation.
   3000001   Unknown Order                    Order not found.
   3000002   Unknown Transaction              Transaction not found.
   3000003   Unknown Merchant                 Merchant account does not exist.
-  3000101   Unsupported Operation            Unsupported Operation                                                                           Retry the request with a supported operation
+  3000101   Unsupported Operation            Unsupported :term:`Operation`                                                                   Retry the request with a supported operation
   3000102   Unknown IP Address               The IP address cannot be detected. Transaction cannot be processed without a valid IP address.
   3000201   Suspicion of fraud               The transaction has been rejected by the financial institution for reasons of suspected fraud.
   3030001   Fraud Suspicion                  The transaction has been rejected by HiPay for reasons of suspected fraud.  
-  3040001   Unknown Token                    The specified token was not found in the secure vault.	
+  3040001   Unknown Token                    The specified :term:`token` was not found in the secure vault.
   3010001   Unsupported Currency             Currency is not supported	Retry the request with a supported currency
   3010002   Amount Limit Exceeded            The amount exceeds the maximum amount allowed for a single transaction                          Reattempt the request with a lower amount
   3010003   Max Attempts Exceeded            You have exceeded the maximum number of payment attempts for this order	
@@ -87,9 +87,9 @@ The HiPay TPP payment gateway can return multiple errors for any operation.
   ========  =================================================================  ==============================================================================================  ===================================
   Code      Message                                                            Description                                                                                     Correcting this error
   ========  =================================================================  ==============================================================================================  ===================================
-  3020001   Authorization Expired                                              Authorization has expired
+  3020001   Authorization Expired                                              :term:`Authorization` has expired
   3020002   Amount Limit Exceeded                                              Amount specified exceeds allowable limit                                                        Reattempt the request with a lower amount
-  3020101   Not Enabled                                                        Capture feature is not enabled for the merchant                                                 Contact your account manager for resolution
+  3020101   Not Enabled                                                        :term:`Capture` feature is not enabled for the merchant                                         Contact your account manager for resolution
   3020102   Not Allowed                                                        You cannot capture this type of transaction
   3020103   Not Allowed                                                        You cannot partially capture this type of transaction
   3020104   Permission Denied                                                  You do not have permission to capture this transaction                                          You are not the owner of this transaction.
@@ -99,9 +99,9 @@ The HiPay TPP payment gateway can return multiple errors for any operation.
   3020108   Invalid Amount                                                     The capture amount must be a positive amount	                                                   Reattempt with a positive amount
   3020109   Amount Limit Exceeded                                              The capture amount must be less than or equal to the original transaction amount                Reattempt the request with a lower amount
   3020110   Amount Limit Exceeded                                              The partial capture amount must be less than or equal to the remaining amount                   Reattempt the request with a lower amount
-  3020111   Operation Not Permitted                                            The transaction is closed.
+  3020111   :term:`Operation` Not Permitted                                    The transaction is closed.
   3020112   Operation Not Permitted	                                           This transaction cannot be processed because it has been denied by the fraud rule set           You cannot capture a payment after it has been denied by the Fraud Protection Service
-  3020201   Not Enabled                                                        Refund feature is not enabled for the merchant                                                  Contact your account manager for resolution
+  3020201   Not Enabled                                                        :term:`Refund` feature is not enabled for the merchant                                                  Contact your account manager for resolution
   3020202   Not Allowed                                                        You cannot refund this type of transaction
   3020203   Not Allowed                                                        You cannot partially refund this type of transaction	
   3020204   Permission Denied                                                  You do not have permission to refund this transaction                                           You are not the owner of this transaction.
@@ -125,9 +125,9 @@ The HiPay TPP payment gateway can return multiple errors for any operation.
 .. table:: Table: Acquirer Reason Codes
   :class: table-with-wrap  
  
-  ========  =================================================================  ==============================================================================================  ===================================
-  Code      Message                                                            Description                                                                                     Correcting this error
-  ========  =================================================================  ==============================================================================================  ===================================
+  ========  =================================================================  ==============================================================================================  
+  Code      Message                                                            Description                                                                                   
+  ========  =================================================================  ==============================================================================================
   4000001   Declined                                                           The transaction was declined by the acquirer
   4000002   Declined                                                           Payment was refused by the financial institution
   4000003   Insufficient Funds                                                 The shopper's account does not have sufficient funds.
@@ -158,4 +158,4 @@ The HiPay TPP payment gateway can return multiple errors for any operation.
   4010306   Card Blacklisted                                                   The card was rejected by the bank’s fraud system.
   4010307   Unauthorised IP address country                                    The country IP address used is not authorized.
   4010309   Card not in authoriser’s database                                  The credit card number is not in an authorised cards database.
-  ========  =================================================================  ==============================================================================================  ===================================
+  ========  =================================================================  ==============================================================================================
