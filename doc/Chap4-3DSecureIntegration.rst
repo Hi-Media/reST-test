@@ -66,25 +66,27 @@ Proceed as follow to carry out a transaction:
   ======  ======================================================================================================================================================================================================================================================================================================================
   Step    Action
   ======  ======================================================================================================================================================================================================================================================================================================================
-  **1**	  To complete the purchase; the cardholder press the **Buy** or **Submit** button
+  **1**	  Merchant call HiPay API with "authentication_indicator=1" value. - Refer to parameters sent to API method used.
+  ------  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  **2**	  To complete the purchase; the cardholder press the Pay button after filling payment card details in payment page: 
+  
           - This activates the Merchant Plug-In (MPI) and initiates a transaction.
   ------  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **2**	  The MPI identifies the card number and sends it to the Directory Server to determine whether the card is in a participating card range.
-  ------  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **3**	  If the Issuer is participating for the card range, the Directory sends a Verify Enrollment Request message to the Issuer ACS to determine whether authentication is available for the account number.
-  **4**   The ACS returns a Verify Enrolment Response to the Directory Serve
-
+  **3**	  The MPI identifies the card number and sends it to the Directory Server to determine whether the card is in a participating card range.
+  **4**   If the Issuer is participating for the card range, the Directory sends a Verify Enrollment Request message to the Issuer ACS to determine whether authentication is available for the account number.
+  **5**   The ACS returns a Verify Enrollment Response to the Directory Server
+  
           - **IF** Authentication is available for this card number **THEN** the response provides the URL of the ACS where the cardholder can be authenticated.
           - **IF** Authentication is not available **THEN** the Merchant server receives a Cardholder Not Enrolled or Authentication Not Available message and returns the transaction to the Merchant's commerce server to proceed with a standard transaction processing.
   ------  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **5**   The Directory Server forwards the ACS response to the MPI.
-  **6**   The MPI sends an Authentication Request message to the cardholder's browser for routing to the ACS.
-  **7**   The cardholder's browser passes the Authentication Request to the ACS.
-  **8**   The ACS authenticates the cardholder.
-  **9**   The ACS creates, digitally signs, and sends an Authentication Response to the Merchant via the cardholder's browser. The ACS also sends transaction record to the Authentication History Server for storage.
-  **10**  The browser routes the Authentication Response back to the MPI.
-  **11**  The MPI validates the digital signature in the response, verifying that it is from a valid participating Issuer.
-  **12**  The Merchant formats and sends to its Acquirer an Authorization Request message, which includes information from the Issuer's Authentication Response - including the CAVV and the ECI. The Acquirer passes the Authorization Request to the Card Network and the transaction completes through standard processing.
+  **6**   The Directory Server forwards the ACS response to the MPI.
+  **7**   The MPI sends an Authentication Request message to the cardholder's browser for routing to the ACS.
+  **8**   The cardholder's browser passes the Authentication Request to the ACS.
+  **9**   The ACS authenticates the cardholder.
+  **10**  The ACS creates, digitally signs, and sends an Authentication Response to the Merchant via the cardholder's browser. The ACS also sends transaction record to the Authentication History Server for storage.
+  **11**  The browser routes the Authentication Response back to the MPI.
+  **12**  The MPI validates the digital signature in the response, verifying that it is from a valid participating Issuer.
+  **13**  The Merchant formats and sends to its Acquirer an Authorization Request message, which includes information from the Issuer's Authentication Response - including the CAVV and the ECI. The Acquirer passes the Authorization Request to the Card Network and the transaction completes through standard processing.
   ======  ======================================================================================================================================================================================================================================================================================================================
 
 ----------------------
