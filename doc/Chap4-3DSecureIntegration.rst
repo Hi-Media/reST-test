@@ -1,8 +1,8 @@
 .. _Chap4-3DSecureIntegration:
 
-==================================
-Chapter 4 - 3-D Secure Integration
-==================================
+======================
+3-D Secure Integration
+======================
 
 ------------
 Introduction
