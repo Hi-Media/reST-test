@@ -44,7 +44,7 @@ Authentication
   If not, the following header must be included in all HTTP requests.
 
 :term:`Authorization`
-  Basic base64("<API login>:<API password>")
+  Basic ``base64("<API login>:<API password>")``
 
 .. note:: If the login and/or password is wrong, the 401 Unauthorized HTTP Status Code is returned.
 

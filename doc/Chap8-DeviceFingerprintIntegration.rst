@@ -33,14 +33,16 @@ Description
 
 **Recommendation**
 
-.. table:: 
+.. table::
   :class: table-with-wrap
 
   =======================================================================================  =======================================================================================================================================================
   YOU MUST                                                                                 YOU MUST NOT
   =======================================================================================  =======================================================================================================================================================
   1. Include a hidden form field with an ID "ioBB" that will be populated with the value.  1. DO NOT call HiPay TPP fingerprint JavaScript BEFORE including the hidden "ioBB" form field.
-  2. Call the HiPay TPP fingerprint JavaScript function to obtain the blackbox content:    2. DO NOT cache or use local copies of the JavaScript. JavaScript is dynamically generated for each customer and so caching of the script may cause unrelated devices to be identified as the same computer.The script also uses domain cookies to identify devices across subscribers.
+  2. Call the HiPay TPP fingerprint JavaScript function to obtain the blackbox content:    2. DO NOT cache or use local copies of the JavaScript.
+
+                                                                                           JavaScript is dynamically generated for each customer and so caching of the script may cause unrelated devices to be identified as the same computer.The script also uses domain cookies to identify devices across subscribers.
   *https://secure-gateway.allopass.com/gateway/toolbox/fingerprint*.
   =======================================================================================  =======================================================================================================================================================
 
@@ -48,7 +50,7 @@ Description
 Example
 -------
 
-Blackbox generation
+Blackbox generation:
 
 .. code-block:: html
     :linenos:

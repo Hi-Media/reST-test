@@ -46,9 +46,9 @@ Description
 Verification
   To check this point, you just need to concatenate the :term:`passphrase` with the POST content of the query.
 
-  Algorithm verification
+Algorithm verification
+  *Algorithm:*
 
-   *Algorithm:*
     *SHA Signature = SHA1(Raw POST Data + Secret Passphrase)*
 
 URL Redirection
@@ -64,20 +64,20 @@ Verification
   b) The value can't be empty.
   c) The parameter must be sorted in alphabetical order.
 
-  Algorithm verification
-   *Algorithm*
+Algorithm verification
+  *Algorithm:*
 
-  a) paramC = val3
-  b) paramA = val1
-  c) paramB = val2
+    a) paramC = val3
+    b) paramA = val1
+    c) paramB = val2
 
-	*SHA Signature = SHA1SHA1(paramAval1<passphrase>paramBval2<passphrase>paramCval3<passphrase>)*
+    *SHA Signature = SHA1(paramAval1<passphrase>paramBval2<passphrase>paramCval3<passphrase>)*
 
 -------
 Example
 -------
 
-PHP Signature Validation
+PHP Signature Validation:
 
 .. code-block:: php
     :linenos:

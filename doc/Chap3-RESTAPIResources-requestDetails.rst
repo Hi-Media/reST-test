@@ -9,14 +9,18 @@ Description
 URL Parameters
 --------------
 
-.. table:: 
+.. table::
   :class: table-with-wrap
 
   ==========================  ===========  =======  ========  ===============================================================================
   Field Name        	      Format [1]_  Length   Req [2]_  Description
   ==========================  ===========  =======  ========  ===============================================================================
-  {transaction_reference}     N                               The unique identifier of the transaction. Return the detail of an specific transaction. Please refer to the example to see the request rules.
-  orderid                     AN            32                Merchant unique order id. Return all the transactions related to an order id. Please refer to the example to see the request rules.
+  {transaction_reference}     N                               The unique identifier of the transaction.
+
+                                                              Return the detail of an specific transaction. Please refer to the example to see the request rules.
+  orderid                     AN            32                Merchant unique order id.
+
+                                                              Return all the transactions related to an order id. Please refer to the example to see the request rules.
   ==========================  ===========  =======  ========  ===============================================================================
 
 Response Fields
@@ -29,7 +33,7 @@ Examples
 
 The following are examples JSON and XML responses.
 
-Transaction reference example Request
+Transaction reference example Request:
 
 .. code-block:: bash
     :linenos:
@@ -37,7 +41,7 @@ Transaction reference example Request
     $ curl https://secure-gateway.allopass.com/rest/v1/transaction/432241108734 \
         -u "<your API username>:<your API password>"
 
-Order ID example Request
+Order ID example Request:
 
 .. code-block:: bash
     :linenos:
@@ -45,7 +49,7 @@ Order ID example Request
     $ curl https://secure-gateway.allopass.com/rest/v1/transaction?orderid=52035cec9bb77 \
         -u "<your API username>:<your API password>"
 
-XML Response Example
+XML Response Example:
 
 .. code-block:: xml
     :linenos:

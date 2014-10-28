@@ -5,13 +5,13 @@ Maintenance Operations
 
 Description
   To perform maintenance on an existing transaction, make an HTTP POST request to the following resource (see :term:`Operation`)
-  POST /rest/v1/maintenance/transaction/{transaction_reference}
+  ``POST /rest/v1/maintenance/transaction/{transaction_reference}``
 
 The payment gateway supports the following types of maintenance transactions.
 
 .. table:: Table: Types of maintenance transactions
   :class: table-with-wrap
-  
+
   ==================  =============================================================================================================================================================================================================================================
   Operation Type      Description
   ==================  =============================================================================================================================================================================================================================================
@@ -32,24 +32,26 @@ Parameter                  Format   Length   Req   Description
 Request Parameters
 ------------------
 
-.. table:: 
+.. table::
   :class: table-with-wrap
 
   =========================  =======  =======  ====  =================================
   Parameter                  Format   Length   Req   Description
   =========================  =======  =======  ====  =================================
-  :term:`operation`
-  {transaction_reference}    A                 M     The type of operation to process. For further information, report to the previous table - **Table 15: Types of maintenance transactions**
-  amount                     R                 C     Operation amount (e.g., 10.00). Amount is required for partial maintenances. Do not specify amount for full captures or refunds.
-  =========================  =======  =======  ====  =================================
+  :term:`operation`          A                 M     The type of operation to process.
 
+                                                     For further information, report to the previous table - **Table: Types of maintenance transactions**
+  amount                     R                 C     Operation amount (e.g., 10.00).
+
+                                                     Amount is required for partial maintenances. Do not specify amount for full captures or refunds.
+  =========================  =======  =======  ====  =================================
 
 Response Fields
 ---------------
 
 The following table lists and describes the response fields.
 
-.. table:: 
+.. table::
   :class: table-with-wrap
 
   ============================  =====================================================================================================================================

@@ -1,5 +1,7 @@
 .. _Chap5-RedirectPages:
 
+.. include:: common.rst
+
 ==============
 Redirect Pages
 ==============
@@ -40,7 +42,7 @@ Default redirect pages
   Decline page           Page to redirect your customer if transaction was refused.
   Pending page           Page to redirect your customer if transaction is pending [1]_.
   :term:`Cancel` page    Page to redirect your customer if transaction was cancelled.
-  Exception page         Page to which the customer's browser is redirected after a system failure or when the payment gateway is temporarily unavailable. If page is not defined, the default page for exceptions is displayed by the payment gateway.
+  Exception |_| page     Page to which the customer's browser is redirected after a system failure or when the payment gateway is temporarily unavailable. If page is not defined, the default page for exceptions is displayed by the payment gateway.
   =====================  ===============================================================================================================================================================================================================================
 
 -------------------

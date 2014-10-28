@@ -203,6 +203,27 @@ how
 
   Another paragraph.
 
+bla
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+  * Nam rhoncus at sem non finibus.
+    Sed ac porta ex. Vestibulum sollicitudin purus sit amet massa malesuada pulvinar.
+  * Nullam a euismod quam, ut feugiat justo.
+
+Lorem ipsum dolor
+  * Nam rhoncus at sem non finibus.
+    Sed ac porta ex. Vestibulum sollicitudin purus sit amet massa malesuada pulvinar.
+  * Nullam a euismod quam, ut feugiat justo.
+
+  Vivamus non tortor eleifend, tempor ex in, malesuada nisi.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Nam rhoncus at sem non finibus. Sed ac porta ex. Vestibulum sollicitudin purus sit amet massa malesuada pulvinar.
+Nullam a euismod quam, ut feugiat justo. In sed cursus sapien, quis pulvinar eros. Nunc ut erat augue.
+Vivamus non tortor eleifend, tempor ex in, malesuada nisi. Pellentesque fringilla congue mollis.
+
+
+
 .. _hlist:
 
 Horizontal list
@@ -226,18 +247,12 @@ Without title
 
 .. _my-table-wo-title:
 
-================  ===========
-Field Name        Description
-================  ===========
-Notification URL  The URL or IP on which you want to receive server-to-server notifications.
-Request method    The method you wish to receive the requests:
-
-                  - XML
-                  - HTTP POST
-\                 column 1 empty
-5                 - bla
-                  - bla
-================  ===========
+=====  =====
+A      not A
+=====  =====
+False  True
+True   False
+=====  =====
 
 With title
 ----------
@@ -271,12 +286,13 @@ Raw version
 
                                                         - **Sale** indicates transaction is sent for :term:`authorization`, and if approved, is automatically submitted for capture.
                                                         - **Authorization** indicates this transaction is sent for authorization only. The transaction will not be sent for settlement until the transaction is submitted for capture manually by the Merchant
-  payment_product       AN                    M         The payment product (e.g., visa, mastercard, ideal).
+  \                                                     Column 1 empty through ``\`` syntax.
+  description           AN           255      M         - bla
+                                                        - bla
 
-                                                        Depending on the :term:`payment product`, elements specific to the payment method are required (see following tables).
-                                                        Refer to the appendices —*"Appendix A. Payment Products”*— for the full list of available payment products.
-  description           AN           255      M         The order short description.
-  long_description      AN                              Additional order description.
+                                                        An error message is displayed with an explanation of the error situation.
+  long_description      AN                              - bla
+                                                        - bla
   ====================  ===========  =======  ========  =====================================================================================================================================================================================================================================================================
 
 With auto-wrap
@@ -300,41 +316,13 @@ With auto-wrap
 
                                                         - **Sale** indicates transaction is sent for :term:`authorization`, and if approved, is automatically submitted for capture.
                                                         - **Authorization** indicates this transaction is sent for authorization only. The transaction will not be sent for settlement until the transaction is submitted for capture manually by the Merchant
-  payment_product       AN                    M         The payment product (e.g., visa, mastercard, ideal).
+  \                                                     Column 1 empty through ``\`` syntax.
+  description           AN           255      M         - bla
+                                                        - bla
 
-                                                        Depending on the :term:`payment product`, elements specific to the payment method are required (see following tables).
-                                                        Refer to the appendices —*"Appendix A. Payment Products”*— for the full list of available payment products.
-  description           AN           255      M         The order short description.
-  long_description      AN                              Additional order description.
-  ====================  ===========  =======  ========  =====================================================================================================================================================================================================================================================================
-
-Preformatted with auto-wrap
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. code-block:: rest
-
-    .. table:: foo
-      :class: table-with-pre-wrap
-
-.. table:: Table: preformatted with auto-wrap
-  :class: table-with-pre-wrap
-
-  ====================  ===========  =======  ========  =====================================================================================================================================================================================================================================================================
-  Field Name        	Format [1]_  Length   Req [2]_  Description
-  ====================  ===========  =======  ========  =====================================================================================================================================================================================================================================================================
-  orderid               AN           32       M         Unique order id
-  :term:`operation`     AN                              Transaction type.
-
-                                                        Indicates how you want to process the payment. The default transaction type is set in the Merchant Interface (Default payment procedure in the Integration section). A transaction type sent along with the transaction will overwrite the default payment procedure.
-
-                                                        - **Sale** indicates transaction is sent for :term:`authorization`, and if approved, is automatically submitted for capture.
-                                                        - **Authorization** indicates this transaction is sent for authorization only. The transaction will not be sent for settlement until the transaction is submitted for capture manually by the Merchant
-  payment_product       AN                    M         The payment product (e.g., visa, mastercard, ideal).
-
-                                                        Depending on the :term:`payment product`, elements specific to the payment method are required (see following tables).
-                                                        Refer to the appendices —*"Appendix A. Payment Products”*— for the full list of available payment products.
-  description           AN           255      M         The order short description.
-  long_description      AN                              Additional order description.
+                                                        An error message is displayed with an explanation of the error situation.
+  long_description      AN                              - bla
+                                                        - bla
   ====================  ===========  =======  ========  =====================================================================================================================================================================================================================================================================
 
 -----------------
@@ -354,6 +342,28 @@ Aliases
 -------
 
 .. seealso:: http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html#more-about-aliases
+
+-------------------
+Non-breaking spaces
+-------------------
+
+1. Include ``common.rst`` file (in top of file):
+
+.. code-block:: rest
+
+    .. include:: common.rst
+
+2. Insert ``␣|nbsp|␣`` or ``␣|_|␣``:
+
+.. code-block:: rest
+
+    Non-breaking |_| space.
+
+HTML generated:
+
+.. code-block:: html
+
+    Non-breaking&nbsp;space.
 
 ---------
 Footnotes

@@ -5,13 +5,15 @@ Initialize a :term:`hosted payment page`
 
 Introduction
   To perform a hosted payment page, first step consist to make an HTTP POST request to the following resource.
-  POST /rest/v1/hpayment
+
+  ``POST /rest/v1/hpayment``
 
 Payment page Workflow
 ---------------------
 
 Description
   This resource creates an order and returns a forward URL. This forward URL is dedicated to display a payment page with customers’ CSS and validated payment products. After payment form validation, the checkout is processed.
+
   According to transaction state and *authentication_indicator* parameter (*please refer to "3-D Secure" chapter on “GatewayAPI documentation"*), main window is redirect to accept or decline page.
 
 
@@ -26,15 +28,25 @@ Order on a Hosted Payment Page
   ==============================  ===========  =======  ========  ===============================================================================
   orderid                         AN           32       M         Unique order id
   ------------------------------  -----------  -------  --------  -------------------------------------------------------------------------------
-  :term:`operation`               AN           32       M         Transaction type. Indicates how you want to process the payment. The default transaction type is set in the Merchant Interface (Default payment procedure in the Integration section). A transaction type sent along with the transaction will overwrite the default payment procedure.
-  \                                                               - **Sale** indicates transaction is sent for authorization, and if approved, is automatically submitted for :term:`capture`.
-  \                                                               - **:term:`Authorization`** indicates this transaction is sent for authorization only. The transaction will not be sent for settlement until the transaction is submitted for :term:`capture` manually by the Merchant.
+  :term:`operation`               AN           32       M         Transaction type.
+
+                                                                  Indicates how you want to process the payment.
+                                                                  The default transaction type is set in the Merchant Interface (Default payment procedure in the Integration section).
+                                                                  A transaction type sent along with the transaction will overwrite the default payment procedure.
+
+                                                                  - **Sale** indicates transaction is sent for authorization, and if approved, is automatically submitted for :term:`capture`.
+                                                                  - :term:`Authorization` indicates this transaction is sent for authorization only. The transaction will not be sent for settlement until the transaction is submitted for :term:`capture` manually by the Merchant.
   ------------------------------  -----------  -------  --------  -------------------------------------------------------------------------------
   :term:`eci`                     N            1                  Electronic Commerce Indicator (ECI).
+
                                                                   The ECI indicates the security level at which the payment information is processed between the cardholder and merchant.
+
                                                                   Possible values:
+
                                                                   1 = MO/TO (Card Not Present)
+
                                                                   7 = E-commerce with :term:`SSL`/TLS Encryption
+
                                                                   A default ECI value can be set in the preferences page. An ECI value sent along in the transaction will overwrite the default ECI value. Refer to the appendices — "Electronic Commerce Indicator” — on “GatewayAPI” documentation to get further information.
   ------------------------------  -----------  -------  --------  -------------------------------------------------------------------------------
   authentication_indicator        N            1                  Indicates if the :term:`3-D Secure` authentication should be performed for this transaction. Can be used to overrule the merchant level configuration.
@@ -43,20 +55,29 @@ Order on a Hosted Payment Page
   ------------------------------  -----------  -------  --------  -------------------------------------------------------------------------------
   payment_product_list            AN           255                The payment product list separated by a “,” (e.g., visa,mastercard,american-express). *Refer to the appendices — " Appendix A— on “GatewayAPI” documentation for the full list of available payment products.*
   payment_product_category_list   AN           255                The payment product category list separated by “,”. (e.g., credit-card,ewallet). \Refer to the appendices — "Appendix A. Payment Products” — on “GatewayAPI” documentation for the full list of available payment categories.*
-  css                             AN           255                URL to merchant style sheet. Important: H**TTPS** protocol is required.
+  css                             AN           255                URL to merchant style sheet. Important: **HTTPS** protocol is required.
   template                        AN           32                 The template name.
+
                                                                   Possible values:
+
                                                                   - basic-js = For a full page redirection.
                                                                   - iframe-js = For an iframe integration.
   merchant_display_name           AN           32                 The merchant name displayed on payment page, otherwise the name is retrieved from order.
   display_selector                N            1                  Enable/disable the payment products selector.
+
                                                                   Possible values:
+
                                                                   0 = The selector is not displayed
+
                                                                   1 = The selector is displayed
   multi_use                       N            1                  Indicates the tokenization module if the credit card token should be generated either for a single-use or a multi-use.
+
                                                                   Possible values:
+
                                                                   1 = Generate a multi-use token
+
                                                                   0 = Generates a single-use token.
+
                                                                   While a single-use token is typically generated for a short time and for processing a single transaction, multi-use tokens are generally generated for recurrent payments.
   description                     AN           255      M         The order short description.
   long_description                AN                              Additional order description.
@@ -74,12 +95,13 @@ Order on a Hosted Payment Page
   http_accept                     AN                              This element should contain the exact content of the HTTP "Accept" header as sent to the merchant from the customer's browser (Default to "*/*").
   http_user_agent                 AN                              This element should contain the exact content of the HTTP "User-Agent" header as sent to the merchant from the customer's browser (Default to "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)").
   language                        AN                              Locale code of your customer (Default to en_GB – English – Great Britain). This will be used to display payment page in correct language.
+
                                                                   Examples:
+
                                                                   - en_GB
                                                                   - fr_FR
                                                                   - es_ES
                                                                   - it_IT
-                                                                  - …
   cdata1                          AN                              Custom data. You may use these parameters to submit values you wish to receive back in the API response messages or in the notifications, e.g. you can use these parameters to get back session data, user info, etc.
   cdata2
   cdata3

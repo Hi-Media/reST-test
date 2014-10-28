@@ -41,7 +41,8 @@ div.linenodiv pre {
     font-size: inherit;
     line-height: 18px;
 }
-.rst-content table.docutils td ul.last.simple {margin-bottom: 0 !important;}
+.rst-content table.docutils td ul.simple {margin-bottom: 8px !important;}
+.rst-content table.docutils td ul.simple.last {margin-bottom: 0 !important;}
 .wy-table thead th, .rst-content table.docutils thead th, .rst-content table.field-list thead th {
     border-left: solid 1px #e1e4e5;
     background-color: #fff;
