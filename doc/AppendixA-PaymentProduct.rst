@@ -35,7 +35,7 @@ Appendix A - Payment Product
   ===================  =========================  ==============  ======================  =====================
   ideal                iDEAL                      No              No                      
   ing-homepay          ING Home'Pay               No              No               
-  sofort-uberweisung   Sofort Überweisung         No              No  
+  sofort-uberweisung   Sofort Uberweisung         No              No  
   przelewy24           Przelewy24                 Yes             No                      Available only in PLN currency.  
   sisal                Sisal                      No              No                      Max amount 1000 EUR.  
   dexia-directnet      Belfius Direct Net         No              No  

@@ -1,7 +1,7 @@
 .. _AppendixD-AddressVerificationService:
 
 =========================================
-AppendixD - Address Verification Service
+AppendixD - Add ress Verification Service
 =========================================
 
 Description
