@@ -24,6 +24,7 @@ Contents
     AppendixC-ElectronicCommerceIndicator
     AppendixD-AddressVerificationService
     AppendixE-CardVerificationCode
+    AppendixF-DeclineReasonsAndErrorCodes
     test
     glossary
 
