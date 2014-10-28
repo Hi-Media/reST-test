@@ -1,8 +1,8 @@
 .. _AppendixA-PaymentProduct:
 
-=================
-Payment Product
-=================
+============================
+Appendix A - Payment Product
+============================
 
 .. table:: Table: Credit Cards (Category code: credit-card)
   :class: table-with-wrap
