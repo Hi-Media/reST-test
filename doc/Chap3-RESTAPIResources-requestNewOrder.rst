@@ -191,7 +191,7 @@ Overview
 
 The following table lists and describes the response fields.
 
-.. _my-table-wo-title:
+.. table:: 
   :class: table-with-wrap
 
 ============================  =====================================================================================================================================================================
@@ -350,6 +350,9 @@ Response fields specific to the :term:`payment product`
 Credit Card payments
   The following table lists and describes the response fields returned for transactions by credit/debit card.
 
+.. table:: 
+  :class: table-with-wrap  
+  
 =========================  =====================================================================================================================================================================
 Field Name                 Description
 =========================  =====================================================================================================================================================================
