@@ -30,4 +30,25 @@ p + ul.simple {margin-top: -16px}
 .rst-content dl p + ul.simple {
     margin-top: -4px !important;
 }
+.wy-table td, .rst-content table.docutils td, .rst-content table.field-list td, .wy-table th,
+.rst-content table.docutils th, .rst-content table.field-list th {
+    padding: 8px;
+}
+.rst-content table.docutils td {font-size: 90%; line-height: 18px;}
+.rst-content table.docutils td p, .rst-content table.docutils td ul.simple {
+    font-size: inherit;
+    line-height: 18px;
+}
 .rst-content table.docutils td ul.last.simple {margin-bottom: 0 !important;}
+.wy-table thead th, .rst-content table.docutils thead th, .rst-content table.field-list thead th {
+    border-left: solid 1px #e1e4e5;
+    background-color: #fff;
+}
+.wy-table-responsive table.table-with-wrap td, .wy-table-responsive.table-with-wrap table th {
+    white-space: normal;
+    text-align: justify;
+}
+.wy-table-responsive table.table-with-pre-wrap td, .wy-table-responsive.table-with-pre-wrap table th {
+    white-space: pre-line;
+    text-align: justify;
+}

@@ -197,6 +197,9 @@ Horizontal list
 Tables
 ------
 
+Without title
+-------------
+
 .. _my-table-wo-title:
 
 ================  ===========
@@ -205,16 +208,19 @@ Field Name        Description
 Notification URL  The URL or IP on which you want to receive server-to-server notifications.
 Request method    The method you wish to receive the requests:
 
-				  - XML
-				  - HTTP POST
+                  - XML
+                  - HTTP POST
 \                 column 1 empty
 5                 - bla
                   - bla
 ================  ===========
 
+With title
+----------
+
 .. _my-table-with-title:
 
-.. table:: Truth table for "not"
+.. table:: Table: Truth table for "not"
 
     =====  =====
     A      not A
@@ -222,6 +228,90 @@ Request method    The method you wish to receive the requests:
     False  True
     True   False
     =====  =====
+
+With CSS classes
+----------------
+
+Raw version
+~~~~~~~~~~~
+
+.. table:: Table: raw version
+
+  ====================  ===========  =======  ========  =====================================================================================================================================================================================================================================================================
+  Field Name        	Format [1]_  Length   Req [2]_  Description
+  ====================  ===========  =======  ========  =====================================================================================================================================================================================================================================================================
+  orderid               AN           32       M         Unique order id
+  :term:`operation`     AN                              Transaction type.
+
+                                                        Indicates how you want to process the payment. The default transaction type is set in the Merchant Interface (Default payment procedure in the Integration section). A transaction type sent along with the transaction will overwrite the default payment procedure.
+
+                                                        - **Sale** indicates transaction is sent for :term:`authorization`, and if approved, is automatically submitted for capture.
+                                                        - **Authorization** indicates this transaction is sent for authorization only. The transaction will not be sent for settlement until the transaction is submitted for capture manually by the Merchant
+  payment_product       AN                    M         The payment product (e.g., visa, mastercard, ideal).
+
+                                                        Depending on the :term:`payment product`, elements specific to the payment method are required (see following tables).
+                                                        Refer to the appendices —*"Appendix A. Payment Products”*— for the full list of available payment products.
+  description           AN           255      M         The order short description.
+  long_description      AN                              Additional order description.
+  ====================  ===========  =======  ========  =====================================================================================================================================================================================================================================================================
+
+With auto-wrap
+~~~~~~~~~~~~~~
+
+.. code-block:: rest
+
+    .. table:: foo
+      :class: table-with-wrap
+
+.. table:: Table: with auto-wrap
+  :class: table-with-wrap
+
+  ====================  ===========  =======  ========  =====================================================================================================================================================================================================================================================================
+  Field Name        	Format [1]_  Length   Req [2]_  Description
+  ====================  ===========  =======  ========  =====================================================================================================================================================================================================================================================================
+  orderid               AN           32       M         Unique order id
+  :term:`operation`     AN                              Transaction type.
+
+                                                        Indicates how you want to process the payment. The default transaction type is set in the Merchant Interface (Default payment procedure in the Integration section). A transaction type sent along with the transaction will overwrite the default payment procedure.
+
+                                                        - **Sale** indicates transaction is sent for :term:`authorization`, and if approved, is automatically submitted for capture.
+                                                        - **Authorization** indicates this transaction is sent for authorization only. The transaction will not be sent for settlement until the transaction is submitted for capture manually by the Merchant
+  payment_product       AN                    M         The payment product (e.g., visa, mastercard, ideal).
+
+                                                        Depending on the :term:`payment product`, elements specific to the payment method are required (see following tables).
+                                                        Refer to the appendices —*"Appendix A. Payment Products”*— for the full list of available payment products.
+  description           AN           255      M         The order short description.
+  long_description      AN                              Additional order description.
+  ====================  ===========  =======  ========  =====================================================================================================================================================================================================================================================================
+
+Preformatted with auto-wrap
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: rest
+
+    .. table:: foo
+      :class: table-with-pre-wrap
+
+.. table:: Table: preformatted with auto-wrap
+  :class: table-with-pre-wrap
+
+  ====================  ===========  =======  ========  =====================================================================================================================================================================================================================================================================
+  Field Name        	Format [1]_  Length   Req [2]_  Description
+  ====================  ===========  =======  ========  =====================================================================================================================================================================================================================================================================
+  orderid               AN           32       M         Unique order id
+  :term:`operation`     AN                              Transaction type.
+
+                                                        Indicates how you want to process the payment. The default transaction type is set in the Merchant Interface (Default payment procedure in the Integration section). A transaction type sent along with the transaction will overwrite the default payment procedure.
+
+                                                        - **Sale** indicates transaction is sent for :term:`authorization`, and if approved, is automatically submitted for capture.
+                                                        - **Authorization** indicates this transaction is sent for authorization only. The transaction will not be sent for settlement until the transaction is submitted for capture manually by the Merchant
+  payment_product       AN                    M         The payment product (e.g., visa, mastercard, ideal).
+
+                                                        Depending on the :term:`payment product`, elements specific to the payment method are required (see following tables).
+                                                        Refer to the appendices —*"Appendix A. Payment Products”*— for the full list of available payment products.
+  description           AN           255      M         The order short description.
+  long_description      AN                              Additional order description.
+  ====================  ===========  =======  ========  =====================================================================================================================================================================================================================================================================
 
 -----------------
 Cross-referencing
