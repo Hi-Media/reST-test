@@ -68,6 +68,7 @@ The HiPay TPP API attempts to return appropriate HTTP status codes for every req
 These are the HTTP status codes you may receive and their meaning; they are listed below:
 
 .. table:: Table: HTTP status codes
+  :class: table-with-wrap
 
   =======================  =============================================================================
   HTTP status              Description
