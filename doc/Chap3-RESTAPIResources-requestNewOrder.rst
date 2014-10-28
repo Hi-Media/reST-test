@@ -12,6 +12,7 @@ Order Parameters
 ----------------
 
 .. table:: Table: Order-related parameters
+  :class: table-with-wrap
 
   ====================  ===========  =======  ========  =====================================================================================================================================================================================================================================================================
   Field Name        	Format [1]_  Length   Req [2]_  Description
@@ -68,6 +69,7 @@ Overview
 The following table lists the customer related parameters
 
 .. table:: Table: Customer-related parameter
+  :class: table-with-wrap
 
   ====================  ===========  =======  ========  =====================================================================================================================================================================
   Field Name            Format [1]_  Length   Req [2]_  Description
@@ -93,6 +95,7 @@ The following table lists the customer related parameters
 The following table lists the Parameters specific to shipping information
 
 .. table:: Table: Parameters specific to shipping information
+  :class: table-with-wrap
 
   ======================  =========  =======  =====================================================================================================================================================================
   Field Name        	  Format     Length   Description
@@ -117,6 +120,7 @@ Overview
 The following table lists the Parameters specific to credit or debit card payments.
 
 .. table:: Table: Parameters specific to credit or debit card payments
+  :class: table-with-wrap
 
   =========================  ===========  =======  ========  =====================================================================================================================================================================
   Field Name        	     Format [1]_  Length   Req [2]_  Description
@@ -143,6 +147,7 @@ The following table lists the Parameters specific to credit or debit card paymen
 The following table lists the Parameters specific to Qiwi Wallet
 
 .. table:: Table: Parameters specific to Qiwi Wallet
+  :class: table-with-wrap
 
   =========================  ===========  =======  ========  ===============================================================================
   Field Name        	     Format [1]_  Length   Req [2]_  Description
@@ -185,6 +190,9 @@ Overview
   Depending on the :term:`payment product`, the Merchant is supposed to send additional request parameters.
 
 The following table lists and describes the response fields.
+
+.. _my-table-wo-title:
+  :class: table-with-wrap
 
 ============================  =====================================================================================================================================================================
 Field Name                    Description
@@ -389,6 +397,7 @@ Description
 Depending on the transaction state there are five options to action:
 
 .. table:: Table: Transaction states
+  :class: table-with-wrap
 
   ==================  =====================================================================================================================================================================
   Translation state   Description
