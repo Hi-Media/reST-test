@@ -4,6 +4,29 @@
 Test
 ====
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Nam rhoncus at sem non finibus. Sed ac porta ex. Vestibulum sollicitudin purus sit amet massa malesuada pulvinar.
+Nullam a euismod quam, ut feugiat justo. In sed cursus sapien, quis pulvinar eros. Nunc ut erat augue.
+Vivamus non tortor eleifend, tempor ex in, malesuada nisi. Pellentesque fringilla congue mollis.
+
+* Donec quis fringilla leo.
+  Etiam consequat est in dui placerat ultricies. Cras varius quam et tortor viverra suscipit.
+  Integer placerat et odio eu bibendum. Vivamus interdum accumsan auctor.
+  Sed gravida maximus odio ut condimentum.
+* bla bla
+
+Donec quis fringilla leo.
+Etiam consequat est in dui placerat ultricies. Cras varius quam et tortor viverra suscipit.
+Integer placerat et odio eu bibendum. Vivamus interdum accumsan auctor.
+Sed gravida maximus odio ut condimentum.
+Quisque nec risus erat. Nulla facilisi.
+Praesent ut sem ex.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Nam rhoncus at sem non finibus. Sed ac porta ex. Vestibulum sollicitudin purus sit amet massa malesuada pulvinar.
+Nullam a euismod quam, ut feugiat justo. In sed cursus sapien, quis pulvinar eros. Nunc ut erat augue.
+Vivamus non tortor eleifend, tempor ex in, malesuada nisi. Pellentesque fringilla congue mollis.
+
 .. note:: This is a note.
 
 .. hint:: This is a admonition of type `hint`.
@@ -13,15 +36,6 @@ Test
 .. warning:: Warning, this is very **important**!
 
 .. seealso:: This is a admonition of type `seealso`.
-
-.. versionadded:: 2.5
-    The *spam* parameter.
-
-.. versionchanged:: 2.5
-    The *spam* parameter.
-
-.. deprecated:: 3.1
-    Use :func:`spam` instead.
 
 .. seealso::
 
@@ -46,17 +60,10 @@ A figure add to an image an optional caption and an optional legend:
 .. figure:: images/hipay_fullservice.png
     :alt: logo HiPay Fullservice
 
-    This is the caption of the figure (a simple paragraph).
+    Figure: This is the caption of the figure (a simple paragraph).
 
     The legend consists of all elements after the caption. In this
     case, the legend consists of this paragraph.
-
-
-To create a `symbolic link` to use at the command line.
-
-::
-
-    ln -s  "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 
 ----
 Code
@@ -163,21 +170,7 @@ how
   Blank lines are not allowed
   between term and definition.
 
-  test ligne
-
-Other approach
---------------
-
-:what:
-  Definition lists associate a term with
-  a definition.
-
-:how:
-  The term is a one-line phrase, and the
-  definition is one or more paragraphs or
-  body elements, indented relative to the
-  term. Blank lines are not allowed
-  between term and definition.
+  Another paragraph.
 
 .. _hlist:
 

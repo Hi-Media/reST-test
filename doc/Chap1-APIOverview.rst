@@ -25,7 +25,7 @@ HiPay TPP REST API service is protected :
 
 Description
   HiPay TPP REST API allows sending payment data ; that means that the system will be transmitting,
-  and possibly storing card data. (see :term:`PCI DSS`)
+  and possibly storing card data (see :term:`PCI DSS`).
 
 Storage (SAD) information
   The Card Schemes, American Express, Discover Financial Services, JCB International, MasterCard Worldwide and

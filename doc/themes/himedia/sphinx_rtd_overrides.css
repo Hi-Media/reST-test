@@ -1,4 +1,7 @@
-.rst-content dl dd, p {text-align: justify;}
+.rst-content dl dd, p {
+    text-align: justify;
+    line-height: 24px;
+}
 .rst-content dl dt {
     font-weight: bold;
     margin-bottom: 8px;
@@ -50,4 +53,28 @@ div.linenodiv pre {
 .wy-table-responsive table.table-with-pre-wrap td, .wy-table-responsive.table-with-pre-wrap table th {
     white-space: pre-line;
     text-align: justify;
+}
+.rst-content dl p, .rst-content dl table, .rst-content dl ul, .rst-content dl ol {
+    margin-bottom: 8px !important;
+}
+
+.rst-content div.figure p.caption {
+    color: #000;
+    font: italic 85%/1 arial,sans-serif;
+    padding: 1em 0;
+    margin: 0;
+    text-align: left;
+}
+.rst-content div.figure div.legend {
+    color: #777;
+    font: normal 85%/1 arial,sans-serif;
+    padding: 1em 0;
+    margin: 0;
+    text-align: left;
+}
+.rst-content dl p + ul.simple, .rst-content table.docutils p + ul.simple {
+    margin-top: 0 !important;
+}
+.rst-content p + ul.simple {
+    margin-top: -12px !important;
 }
