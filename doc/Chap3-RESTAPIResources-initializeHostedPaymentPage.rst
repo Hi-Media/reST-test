@@ -137,7 +137,7 @@ Response Fields
 The following table lists and describes the response fields.
 
 .. table:: 
-  :class: table-with-wra
+  :class: table-with-wrap
 
   ============================  =====================================================================================================================================
   Field Name                    Description
