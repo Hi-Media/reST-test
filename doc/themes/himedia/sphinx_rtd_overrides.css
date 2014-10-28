@@ -25,8 +25,6 @@ div.linenodiv pre {
     background-color: #f1f1f1;
     color: #666;
 }
-
-p + ul.simple {margin-top: -16px}
 .rst-content dl p + ul.simple {
     margin-top: -4px !important;
 }
@@ -35,6 +33,7 @@ p + ul.simple {margin-top: -16px}
     padding: 8px;
 }
 .rst-content table.docutils td {font-size: 90%; line-height: 18px;}
+.rst-content table.docutils td p {margin-bottom: 8px;}
 .rst-content table.docutils td p, .rst-content table.docutils td ul.simple {
     font-size: inherit;
     line-height: 18px;
