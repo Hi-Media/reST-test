@@ -65,13 +65,13 @@ The HiPay TPP payment gateway can return multiple errors for any operation.
   3000001   Unknown Order                    Order not found.
   3000002   Unknown Transaction              Transaction not found.
   3000003   Unknown Merchant                 Merchant account does not exist.
-  3000101   Unsupported Operation            Unsupported :term:`Operation`                                                                   Retry the request with a supported operation
-  3000102   Unknown IP Address               The IP address cannot be detected. Transaction cannot be processed without a valid IP address.
-  3000201   Suspicion of fraud               The transaction has been rejected by the financial institution for reasons of suspected fraud.
-  3030001   Fraud Suspicion                  The transaction has been rejected by HiPay for reasons of suspected fraud.  
-  3040001   Unknown Token                    The specified :term:`token` was not found in the secure vault.
-  3010001   Unsupported Currency             Currency is not supported	Retry the request with a supported currency
-  3010002   Amount Limit Exceeded            The amount exceeds the maximum amount allowed for a single transaction                          Reattempt the request with a lower amount
+  3000101   Unsupported Operation            Unsupported :term:`Operation`                                                                    Retry the request with a supported operation
+  3000102   Unknown IP Address               The IP address cannot be detected. Transaction cannot be processed without a valid IP address.   
+  3000201   Suspicion of fraud               The transaction has been rejected by the financial institution for reasons of suspected fraud.   
+  3030001   Fraud Suspicion                  The transaction has been rejected by HiPay for reasons of suspected fraud.                       
+  3040001   Unknown Token                    The specified :term:`token` was not found in the secure vault.                                   
+  3010001   Unsupported Currency             Currency is not supported	Retry the request with a supported currency                           
+  3010002   Amount Limit Exceeded            The amount exceeds the maximum amount allowed for a single transaction                           Reattempt the request with a lower amount
   3010003   Max Attempts Exceeded            You have exceeded the maximum number of payment attempts for this order	
   3010004   Duplicate Order                  Order was already processed
   3010005   Checkout Session Expired         This session has expired. Order is no longer valid.
@@ -84,9 +84,9 @@ The HiPay TPP payment gateway can return multiple errors for any operation.
 .. table:: Table: Error codes relating to Maintenance Operations
   :class: table-with-wrap  
  
-  ========  =================================================================  ==============================================================================================  ===================================
+  ========  =================================================================  ==============================================================================================  =========================================================================================================
   Code      Message                                                            Description                                                                                     Correcting this error
-  ========  =================================================================  ==============================================================================================  ===================================
+  ========  =================================================================  ==============================================================================================  =========================================================================================================
   3020001   Authorization Expired                                              :term:`Authorization` has expired
   3020002   Amount Limit Exceeded                                              Amount specified exceeds allowable limit                                                        Reattempt the request with a lower amount
   3020101   Not Enabled                                                        :term:`Capture` feature is not enabled for the merchant                                         Contact your account manager for resolution
@@ -120,7 +120,7 @@ The HiPay TPP payment gateway can return multiple errors for any operation.
   3020401   Not Allowed                                                        You cannot void this type of transaction	
   3020402   Cannot Void                                                        You can void only the original authorization, not a reauthorization
   3020403   Authorization Voided                                               Authorization has already been voided
-  ========  =================================================================  ==============================================================================================  ===================================
+  ========  =================================================================  ==============================================================================================  =========================================================================================================
 
 .. table:: Table: Acquirer Reason Codes
   :class: table-with-wrap  
