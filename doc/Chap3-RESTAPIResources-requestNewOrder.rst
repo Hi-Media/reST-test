@@ -191,7 +191,7 @@ Overview
 
 The following table lists and describes the response fields.
 
-.. table:: 
+.. table:: Table
   :class: table-with-wrap
 
 ============================  =====================================================================================================================================================================
@@ -350,7 +350,7 @@ Response fields specific to the :term:`payment product`
 Credit Card payments
   The following table lists and describes the response fields returned for transactions by credit/debit card.
 
-.. table:: 
+.. table:: Table : Test
   :class: table-with-wrap  
   
 =========================  =====================================================================================================================================================================
