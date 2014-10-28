@@ -22,6 +22,7 @@ Contents
     AppendixA-PaymentProduct
     AppendixB-PaymentStatus
     AppendixC-ElectronicCommerceIndicator
+    AppendixD-AddressVerificationService
     test
     glossary
 
