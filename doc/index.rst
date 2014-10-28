@@ -19,12 +19,7 @@ Contents
     Chap6-ServerToServer
     Chap7-Signatureverif
     Chap8-DeviceFingerprintIntegration
-    AppendixA-PaymentProduct
-    AppendixB-PaymentStatus
-    AppendixC-ElectronicCommerceIndicator
-    AppendixD-AddressVerificationService
-    AppendixE-CardVerificationCode
-    AppendixF-DeclineReasonsAndErrorCodes
+    Appendix
     test
     glossary
 
