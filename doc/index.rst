@@ -19,6 +19,7 @@ Contents
     Chap6-ServerToServer
     Chap7-Signatureverif
     Chap8-DeviceFingerprintIntegration
+	AppendixA-PaymentProduct
     test
     glossary
 
