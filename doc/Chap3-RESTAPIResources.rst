@@ -10,7 +10,7 @@ The following table lists the REST API resources used.
 Resource        		                                            Description
 ==================================================================  =======================================================
 **POST**  /rest/v1/order	                                        Request a new order.
-**POST**  /rest/v1/maintenance/transaction/{transaction_reference}  Perform a maintenance on an existing :term:`transaction`
+**POST**  /rest/v1/maintenance/transaction/{transaction_reference}  Perform a maintenance on an existing transaction
 **POST**  /rest/v1/hpayment		                                    Request an order and initialize a :term:`hosted payment page`
 **GET**   /rest/v1/transaction						                Request information about an existant transaction.
 ==================================================================  =======================================================

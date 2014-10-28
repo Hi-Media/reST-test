@@ -59,9 +59,9 @@ The HiPay TPP payment gateway can return multiple errors for any operation.
 .. table:: Table: Error codes relating to the Checkout Process
   :class: table-with-wrap  
  
-  ========  ===============================  ==============================================================================================  ===================================
-  Code      Message                          Description                                                                                     Correcting this error
-  ========  ===============================  ==============================================================================================  ===================================
+  ========  ===============================  ===============================================================================================  ===================================
+  Code      Message                          Description                                                                                      Correcting this error
+  ========  ===============================  ===============================================================================================  ===================================
   3000001   Unknown Order                    Order not found.
   3000002   Unknown Transaction              Transaction not found.
   3000003   Unknown Merchant                 Merchant account does not exist.
@@ -78,7 +78,7 @@ The HiPay TPP payment gateway can return multiple errors for any operation.
   3010006   Order Completed                  Order has already been completed
   3010007   Order Expired                    Order has expired
   3010008   Order Voided                     Order is voided
-  ========  ===============================  ==============================================================================================  ===================================
+  ========  ===============================  ===============================================================================================  ===================================
  
 
 .. table:: Table: Error codes relating to Maintenance Operations
@@ -96,12 +96,12 @@ The HiPay TPP payment gateway can return multiple errors for any operation.
   3020105   Currency of capture must be the same as currency of authorization  Ensure that the currencies are the same, and retry the request
   3020106   Authorization Completed	                                           Authorization has already been completed	
   3020107   No More	                                                           Maximum number of allowable captures has been reached. No more capture for the authorization.
-  3020108   Invalid Amount                                                     The capture amount must be a positive amount	                                                   Reattempt with a positive amount
+  3020108   Invalid Amount                                                     The capture amount must be a positive amount                                                    Reattempt with a positive amount
   3020109   Amount Limit Exceeded                                              The capture amount must be less than or equal to the original transaction amount                Reattempt the request with a lower amount
   3020110   Amount Limit Exceeded                                              The partial capture amount must be less than or equal to the remaining amount                   Reattempt the request with a lower amount
   3020111   :term:`Operation` Not Permitted                                    The transaction is closed.
   3020112   Operation Not Permitted	                                           This transaction cannot be processed because it has been denied by the fraud rule set           You cannot capture a payment after it has been denied by the Fraud Protection Service
-  3020201   Not Enabled                                                        :term:`Refund` feature is not enabled for the merchant                                                  Contact your account manager for resolution
+  3020201   Not Enabled                                                        :term:`Refund` feature is not enabled for the merchant                                          Contact your account manager for resolution
   3020202   Not Allowed                                                        You cannot refund this type of transaction
   3020203   Not Allowed                                                        You cannot partially refund this type of transaction	
   3020204   Permission Denied                                                  You do not have permission to refund this transaction                                           You are not the owner of this transaction.

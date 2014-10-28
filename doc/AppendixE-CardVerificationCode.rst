@@ -18,7 +18,7 @@ Procedure
 .. warning:: Only a few acquirers return specific CVC check results. For most acquirers, the CVC is assumed to be correct if the transaction is successfully authorized.
 
  
- The table below lists the available result codes as returned in the API response messages.
+The table below lists the available result codes as returned in the API response messages.
   
 .. table:: Table: AVS Result Codes
   :class: table-with-wrap
