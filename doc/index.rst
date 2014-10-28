@@ -21,7 +21,7 @@ Contents
     Chap8-DeviceFingerprintIntegration
     AppendixA-PaymentProduct
     AppendixB-PaymentStatus
-    AppendixC-ElectronicCommerceIndictator
+    AppendixC-ElectronicCommerceIndicator
     test
     glossary
 
