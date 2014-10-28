@@ -73,8 +73,9 @@ Proceed as follow to carry out a transaction:
   ------  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   **3**	  If the Issuer is participating for the card range, the Directory sends a Verify Enrollment Request message to the Issuer ACS to determine whether authentication is available for the account number.
   **4**   The ACS returns a Verify Enrolment Response to the Directory Serve
+  
           - **IF** Authentication is available for this card number **THEN** the response provides the URL of the ACS where the cardholder can be authenticated.
-          - IF Authentication is not available **THEN** the Merchant server receives a Cardholder Not Enrolled or Authentication Not Available message and returns the transaction to the Merchant's commerce server to proceed with a standard transaction processing.
+          - **IF** Authentication is not available **THEN** the Merchant server receives a Cardholder Not Enrolled or Authentication Not Available message and returns the transaction to the Merchant's commerce server to proceed with a standard transaction processing.
   ------  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   **5**   The Directory Server forwards the ACS response to the MPI.
   **6**   The MPI sends an Authentication Request message to the cardholder's browser for routing to the ACS.
