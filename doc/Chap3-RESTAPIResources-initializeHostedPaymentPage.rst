@@ -47,7 +47,7 @@ Order on a Hosted Payment Page
 
                                                                   7 = E-commerce with :term:`SSL`/TLS Encryption
 
-                                                                  A default ECI value can be set in the preferences page. An ECI value sent along in the transaction will overwrite the default ECI value. Refer to the appendices — "Electronic Commerce Indicator” — on “GatewayAPI” documentation to get further information.
+                                                                  A default ECI value can be set in the preferences page. An ECI value sent along in the transaction will overwrite the default ECI value. Refer to the appendices :ref:`Appendix C` on “GatewayAPI” documentation to get further information.
   ------------------------------  -----------  -------  --------  -------------------------------------------------------------------------------
   authentication_indicator        N            1                  Indicates if the :term:`3-D Secure` authentication should be performed for this transaction. Can be used to overrule the merchant level configuration.
                                                                   0 = Bypass authentication
