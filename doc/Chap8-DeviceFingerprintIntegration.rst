@@ -1,5 +1,7 @@
 .. _Chap8-DeviceFingerprintIntegration:
 
+.. _Device fingerprint integration:
+
 ==============================
 Device Fingerprint Integration
 ==============================

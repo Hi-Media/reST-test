@@ -27,7 +27,7 @@ Order Parameters
   payment_product       AN                    M         The payment product (e.g., visa, mastercard, ideal).
 
                                                         Depending on the :term:`payment product`, elements specific to the payment method are required (see following tables).
-                                                        Refer to the appendices: `Appendix A-Payment product`_ for the full list of available payment products  :ref:`Appendix A-Payment product`.
+                                                        Refer to the appendices: :ref:`Appendix A-Payment product` for the full list of available payment products.
   description           AN           255      M         The order short description.
   long_description      AN                              Additional order description.
   currency              A            3        M         Base currency for this order (Default to EUR).
@@ -47,7 +47,7 @@ Order Parameters
   cancel_url            AN                              The URL to return your customer to when he or her decides to abort the payment.
   http_accept           AN                              This element should contain the exact content of the HTTP "Accept" header as sent to the merchant from the customer's browser (Default to "*/*").
   http_user_agent       AN                              This element should contain the exact content of the HTTP "User-Agent" header as sent to the merchant from the customer's browser (Default to "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)").
-  device_fingerprint    AN                              This element should contain the value of the “ioBB” hidden field. (Please refer to `Device fingerprint integration`_)
+  device_fingerprint    AN                              This element should contain the value of the “ioBB” hidden field. (Please refer to :ref:`Device fingerprint integration`)
   language              AN                              Locale code of your customer (Default to **en_GB** – English – Great Britain).
                                                         It may be used for sending confirmation emails to your customer or for displaying payment pages.
 
@@ -63,8 +63,6 @@ Order Parameters
   cdata4
   ====================  ===========  =======  ========  =====================================================================================================================================================================================================================================================================
 
-.. _Appendix A-Payment product: http://hipay-tpp-gateway-api.readthedocs.org/en/latest/AppendixA-PaymentProduct.html  
-.. _Device fingerprint integration: http://hipay-tpp-gateway-api.readthedocs.org/en/latest/Chap8-DeviceFingerprintIntegration.html
   
 Customer Parameters
 -------------------
