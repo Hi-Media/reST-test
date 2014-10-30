@@ -263,7 +263,7 @@ The following table lists and describes the response fields:
   ----------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
   status                        Transaction status.
 
-                                A list of available statuses can be found in the appendices (Appendix B) — Table: :ref:`Transaction status <Transaction statuses>` :ref:`Transaction statuses`
+                                A list of available statuses can be found in the appendices (Appendix B) :ref:`Transaction statuses`
   message                       Transaction message.
   ----------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
   authorizedAmount (json)
