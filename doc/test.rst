@@ -337,6 +337,10 @@ To arbitrary locations in any document…
 
 .. seealso:: http://sphinx-doc.org/markup/inline.html#cross-referencing-arbitrary-locations
 
+* Link to another part of the doc: `Appendix A-Payment product`_
+
+ .. _Appendix A-Payment product: http://hipay-tpp-gateway-api.readthedocs.org/en/latest/AppendixA-PaymentProduct.html  
+
 -------------------
 External link text
 -------------------

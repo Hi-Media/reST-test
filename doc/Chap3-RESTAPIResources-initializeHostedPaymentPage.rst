@@ -124,7 +124,9 @@ Overview
   ==============================  ===========  =======  ========  ===============================================================================
   email                           AN                    M         The customer's e-mail address.
   phone                           AN                              The customer's phone number.
-  birthdate                       N            8                  Birth date of the customer (YYYYMMDD). *For fraud detection reasons.*
+  birthdate                       N            8                  Birth date of the customer (YYYYMMDD). 
+  
+                                                                  *For fraud detection reasons.*
   ------------------------------  -----------  -------  --------  -------------------------------------------------------------------------------
   gender                          A            1                  Gender of the customer (M=male, F=female, U=unknown).
   firstname                       AN                    M         The customer's first name.
