@@ -54,7 +54,7 @@ Order on a Hosted Payment Page
                                                                   1 = Continue if possible
   ------------------------------  -----------  -------  --------  -------------------------------------------------------------------------------
   payment_product_list            AN           255                The payment product list separated by a “,” (e.g., visa,mastercard,american-express). *Refer to the appendices — " Appendix A— on “GatewayAPI” documentation for the full list of available payment products.*
-  payment_product_category_list   AN           255                The payment product category list separated by “,”. (e.g., credit-card,ewallet). \Refer to the appendices — :ref:`Appendix A. Payment Products` — on “GatewayAPI” documentation for the full list of available payment categories.*
+  payment_product_category_list   AN           255                The payment product category list separated by “,”. (e.g., credit-card,ewallet). Refer to the appendices — :ref:`Appendix A. Payment Products` — on “GatewayAPI”   :ref:`hlist` documentation for the full list of available payment categories.*
   css                             AN           255                URL to merchant style sheet. Important: **HTTPS** protocol is required.
   template                        AN           32                 The template name.
 
