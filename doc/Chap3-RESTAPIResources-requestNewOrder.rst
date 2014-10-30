@@ -27,7 +27,7 @@ Order Parameters
   payment_product       AN                    M         The payment product (e.g., visa, mastercard, ideal).
 
                                                         Depending on the :term:`payment product`, elements specific to the payment method are required (see following tables).
-                                                        Refer to the appendices: `Appendix A-Payment product`_ for the full list of available payment products.
+                                                        Refer to the appendices: `Appendix A-Payment product`_ for the full list of available payment products  :ref:`Appendix A-Payment product`.
   description           AN           255      M         The order short description.
   long_description      AN                              Additional order description.
   currency              A            3        M         Base currency for this order (Default to EUR).
