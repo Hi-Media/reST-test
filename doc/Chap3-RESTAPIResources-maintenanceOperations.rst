@@ -9,6 +9,8 @@ Description
 
 The payment gateway supports the following types of maintenance transactions.
 
+.. _Types of maintenance transactions:
+
 .. table:: Table: Types of maintenance transactions
   :class: table-with-wrap
 
@@ -40,7 +42,7 @@ Request Parameters
   =========================  =======  =======  ====  =================================
   :term:`operation`          A                 M     The type of operation to process.
 
-                                                     For further information, report to the previous table - **Table: Types of maintenance transactions**
+                                                     For further information, report to the previous table - :ref:`Types of maintenance transactions`
   amount                     R                 C     Operation amount (e.g., 10.00).
 
                                                      Amount is required for partial maintenances. Do not specify amount for full captures or refunds.
