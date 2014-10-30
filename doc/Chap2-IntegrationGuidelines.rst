@@ -15,8 +15,8 @@ Service Endpoints
 
 There are two endpoints (base URLs) that you can make your API calls to.
 
-- Stage if you are testing your integration, and
-- Production for when you have finished testing and want your application to go live.
+- **Stage** if you are testing your integration, and
+- **Production** for when you have finished testing and want your application to go live.
 
 All URLs referenced in this guide must have one of the following bases:
 
@@ -46,7 +46,7 @@ Authentication
 :term:`Authorization`
   Basic ``base64("<API login>:<API password>")``
 
-.. note:: If the login and/or password is wrong, the 401 Unauthorized HTTP Status Code is returned.
+.. note:: If the login and/or password is wrong, the **401 Unauthorized** HTTP Status Code is returned.
 
 Character Encoding
 ==================
@@ -111,7 +111,8 @@ Authentication
   - Accept: application/xml
   - Accept: application/json, application/xml;q=0.8, */*;q=0.5
 
-  Refer to the RFC 2616 HTTP Accept Header for details.
+  Refer to the RFC 2616 HTTP Accept Header `Link text <http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.1/>`_ for details.
+  
 
 Responses in XML Format
   By default, HiPay TPP REST API returns XML with a root element of <response>.
