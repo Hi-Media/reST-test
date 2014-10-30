@@ -111,7 +111,7 @@ Authentication
   - Accept: application/xml
   - Accept: application/json, application/xml;q=0.8, */*;q=0.5
 
-  Refer to  ` the RFC 2616 HTTP Accept Header<http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.1/>`_ for details.
+  Refer to  `the RFC 2616 HTTP Accept Header <http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.1/>`_ for details.
   
 
 Responses in XML Format
