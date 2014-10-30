@@ -3,6 +3,7 @@
 .. include:: common.rst
 
 .. _Appendix A. Payment Products:
+
 ============================
 Appendix A - Payment Product
 ============================
