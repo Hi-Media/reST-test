@@ -1,5 +1,7 @@
 .. _Chap4-3DSecureIntegration:
 
+.. _3-D Secure:
+
 ======================
 3-D Secure Integration
 ======================

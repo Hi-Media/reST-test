@@ -26,7 +26,7 @@ URL Parameters
 Response Fields
 ---------------
 
-Please refer to section	on *Request a New Order* sub-chapter.
+Please refer to section	on :ref:`Request a New Order` sub-chapter.
 
 Examples
 --------

@@ -5,6 +5,7 @@ Maintenance Operations
 
 Description
   To perform maintenance on an existing transaction, make an HTTP POST request to the following resource (see :term:`Operation`)
+  
   ``POST /rest/v1/maintenance/transaction/{transaction_reference}``
 
 The payment gateway supports the following types of maintenance transactions.
