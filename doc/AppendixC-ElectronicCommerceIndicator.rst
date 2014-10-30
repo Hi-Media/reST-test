@@ -1,5 +1,7 @@
 .. _AppendixC-ElectronicCommerceIndicator:
 
+.. _Appendix C:
+
 ===========================================
 Appendix C - Electronic Commerce Indicator
 ===========================================

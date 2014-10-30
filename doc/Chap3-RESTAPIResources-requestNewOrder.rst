@@ -147,7 +147,7 @@ The following table lists the Parameters specific to credit or debit card paymen
 
                                                              A default ECI value can be set in the preferences page.
                                                              An ECI value sent along in the transaction will overwrite the default ECI value.
-                                                             Refer to the appendices (Appendix C) to get further information.
+                                                             Refer to the appendices (:ref:`Appendix C`) to get further information.
   authentication_indicator   N            1                  Indicates if the :term:`3-D Secure` authentication should be performed. Can be used to overrule the merchant level configuration.
 
                                                              - 0 = Bypass authentication
@@ -261,7 +261,7 @@ The following table lists and describes the response fields:
   ----------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
   status                        Transaction status.
 
-                                A list of available statuses can be found in the appendices (Appendix B) :ref:`Transaction statuses`
+                                A list of available statuses can be found in the appendices (:ref:`Appendix B`) :ref:`Transaction statuses`
   message                       Transaction message.
   ----------------------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
   authorizedAmount (json)

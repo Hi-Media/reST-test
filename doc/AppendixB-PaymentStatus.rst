@@ -1,5 +1,7 @@
 .. _AppendixB-PaymentStatus:
 
+.. _Appendix B:
+
 ========================================
 Appendix B - Payment Status Definitions
 ========================================
