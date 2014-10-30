@@ -340,9 +340,9 @@ To arbitrary locations in any document…
 -------------------
 External link text
 -------------------
-
-Refer to  ` the RFC 2616 HTTP Accept Header<http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.1/>`_ for details.
-
+`Link text <http://example.com/>`_
+Refer to  ` the RFC 2616 HTTP Accept Header <http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.1/>`_ for details.
+ 
 -------
 Aliases
 -------
