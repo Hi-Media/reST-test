@@ -54,7 +54,7 @@ Order on a Hosted Payment Page
                                                                   1 = Continue if possible
   ------------------------------  -----------  -------  --------  -------------------------------------------------------------------------------
   payment_product_list            AN           255                The payment product list separated by a “,” (e.g., visa,mastercard,american-express). *Refer to the appendices — " Appendix A— on “GatewayAPI” documentation for the full list of available payment products.*
-  payment_product_category_list   AN           255                The payment product category list separated by “,”. (e.g., credit-card,ewallet). Refer to the appendices — `Appendix A`_ — on “GatewayAPI” documentation for the full list of available payment categories.*
+  payment_product_category_list   AN           255                The payment product category list separated by “,”. (e.g., credit-card,ewallet). Refer to the appendices: `Appendix A-Payment product`_  on “GatewayAPI” documentation for the full list of available payment categories.*
   css                             AN           255                URL to merchant style sheet. Important: **HTTPS** protocol is required.
   template                        AN           32                 The template name.
 
@@ -107,6 +107,8 @@ Order on a Hosted Payment Page
   cdata3
   cdata4
   ==============================  ===========  =======  ========  ===============================================================================
+
+.. _Appendix A-Payment product: http://hipay-tpp-gateway-api.readthedocs.org/en/latest/AppendixA-PaymentProduct.html  
 
 Customer Parameters
 -------------------
@@ -228,4 +230,3 @@ The following are :term:`CSS` examples to customize your payment page.
 .. [1] The format of the element. Refer to "Table:Available formats of data elements” for the list of available formats.
 .. [2] Specifies whether an element is required or not.
 
-.. _AppendixA: http://hipay-tpp-gateway-api.readthedocs.org/en/latest/AppendixA-PaymentProduct.html
